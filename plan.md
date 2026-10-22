@@ -40,6 +40,8 @@ evaluation of whether those functions are actually relevant.
 
 ## Phase 0 — Project Foundation & Scaffolding
 
+> **Status: ✅ complete.**
+
 **Goal:** Establish a modular Python project so individual methods can be
 compared, with reproducible environments and testing from day one.
 
@@ -66,6 +68,9 @@ empty test suite.
 ---
 
 ## Phase 1 — Repository Parsing & Indexing
+
+> **Status: ✅ complete** (73 tests passing; ruff, black, mypy clean; verified on
+> a live clone of `pallets/click` — 91 files, 1,426 units).
 
 **Goal:** Turn a repository at an exact commit into a metadata-rich,
 searchable code index. (Spec §6.1, §6.2; Roadmap Phase 1)

@@ -1,0 +1,51 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.Python
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+
+# --- Environment / secrets ---
+.env
+*.key
+*.pem
+
+# --- Caches / tooling ---
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# --- RepoMind data (indexes, checkouts, embeddings, DB) ---
+/data/
+*.db
+*.sqlite
+*.sqlite3
+*.faiss
+*.index
+
+# Keep dataset/report directories but ignore their bulky contents.
+/evaluation/datasets/*
+!/evaluation/datasets/.gitkeep
+/evaluation/reports/*
+!/evaluation/reports/.gitkeep
+
+# --- Editor / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Frontend (added in Phase 12) ---
+node_modules/
+frontend/dist/

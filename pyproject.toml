@@ -1,0 +1,103 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repomind"
+version = "0.0.1"
+description = "An NLP-based framework for semantic code retrieval and bug localization."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "RepoMind Team" }]
+keywords = ["nlp", "information-retrieval", "bug-localization", "code-search"]
+
+# Core runtime dependencies needed for the early phases (config + API stub).
+# Heavier ML/retrieval deps are grouped in optional extras below so the base
+# install stays light and CI is fast. Versions are pinned for reproducibility.
+dependencies = [
+    "fastapi==0.115.6",
+    "uvicorn[standard]==0.34.0",
+    "pydantic==2.10.4",
+    "pydantic-settings==2.7.1",
+    "python-dotenv==1.0.1",
+]
+
+[project.optional-dependencies]
+# Phase 1: parsing + ingestion.
+parsing = [
+    "tree-sitter==0.23.2",
+    "tree-sitter-python==0.23.6",
+]
+# Phase 3+: retrieval (lexical, dense, reranking).
+retrieval = [
+    "rank-bm25==0.2.2",
+    "faiss-cpu==1.9.0.post1",
+    "sentence-transformers==3.3.1",
+    "numpy==2.2.1",
+    "scikit-learn==1.6.0",
+]
+# Phase 2: evaluation utilities.
+eval = [
+    "pandas==2.2.3",
+    "numpy==2.2.1",
+]
+# Phase 7: dependency graph.
+graph = [
+    "networkx==3.4.2",
+]
+# Phase 11: persistence.
+storage = [
+    "SQLAlchemy==2.0.36",
+]
+# Developer tooling.
+dev = [
+    "pytest==8.3.4",
+    "pytest-cov==6.0.0",
+    "httpx==0.28.1",
+    "ruff==0.8.4",
+    "black==24.10.0",
+    "mypy==1.14.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["app*", "evaluation*"]
+
+# ---------------------------------------------------------------------------
+# Tooling configuration
+# ---------------------------------------------------------------------------
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+src = ["app", "evaluation", "tests"]
+
+[tool.ruff.lint]
+# A sensible, not-overbearing rule set: pycodestyle, pyflakes, isort,
+# flake8-bugbear, pyupgrade, and comprehensions.
+select = ["E", "F", "I", "B", "UP", "C4", "W"]
+ignore = []
+
+[tool.ruff.lint.isort]
+known-first-party = ["app", "evaluation"]
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+check_untyped_defs = true
+ignore_missing_imports = true
+files = ["app", "evaluation"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-ra -q"
+testpaths = ["tests"]
+pythonpath = ["."]
