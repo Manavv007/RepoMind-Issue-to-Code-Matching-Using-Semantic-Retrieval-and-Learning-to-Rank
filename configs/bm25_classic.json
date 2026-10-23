@@ -1,0 +1,10 @@
+{
+  "k1": 1.2,
+  "b": 0.75,
+  "w_name": 1.0,
+  "w_path": 1.0,
+  "w_doc": 1.0,
+  "w_body": 1.0,
+  "query_tf": "raw",
+  "use_stopwords": true
+}

@@ -20,11 +20,17 @@ See [`project.md`](project.md) for the full specification and
 
 ## Status
 
-Early development. **Phase 0 (foundation)** and **Phase 1 (repository parsing &
-indexing, Python only)** are complete: a repository at an exact commit can be
-parsed with Tree-sitter into functions, methods, and classes with line ranges,
-signatures, docstrings, imports, and syntactic call references, and stored in
-SQLite. See [`plan.md`](plan.md) for what comes next.
+Early development. **Phase 0 (foundation)**, **Phase 1 (repository parsing &
+indexing, Python only)**, **Phase 2 (evaluation harness & dataset)**, and
+**Phase 3 (BM25 lexical baseline)** are complete. A repository at an exact commit
+can be parsed with Tree-sitter into functions, methods, and classes and stored in
+SQLite, and any retriever can be scored on a labeled SWE-bench Lite subset with
+Recall/Hit@k, MRR, nDCG@10, file/function accuracy, latency, and bootstrap
+confidence intervals. A code-aware BM25 retriever is the baseline to beat (held-out
+function hit@5 = 0.53 vs 0.00 for random); query construction (Phase 4) and dense
+retrieval (Phase 5) are next. See
+[`plan.md`](plan.md) for what comes next and
+[`docs/evaluation.md`](docs/evaluation.md) for the benchmark protocol and results.
 
 ## Requirements
 
@@ -83,6 +89,37 @@ non-zero exit status. Notes:
   leaf functions/methods.
 - Call references are *syntactic* (not resolved to definitions).
 
+## Evaluate a retriever (Phase 2)
+
+```bash
+# Score a retriever on the held-out split
+python -m evaluation.run_retrieval_eval \
+    --dataset evaluation/datasets/swebench_lite_subset.jsonl \
+    --retriever bm25 --split test --tag tuned
+
+# Textbook BM25 for comparison, via a config file (or inline JSON)
+python -m evaluation.run_retrieval_eval \
+    --dataset evaluation/datasets/swebench_lite_subset.jsonl \
+    --retriever bm25 --retriever-config configs/bm25_classic.json \
+    --tag classic --split test
+
+# Paired comparison of two runs (same dataset and split)
+python -m evaluation.compare_runs --a <baseline>.json --b <candidate>.json
+
+# Re-tune BM25 on the dev split only
+python -m evaluation.tune_bm25 \
+    --dataset evaluation/datasets/swebench_lite_subset.jsonl
+
+# Rebuild the evaluation set from SWE-bench Lite (downloads rows, clones repos)
+python -m evaluation.build_eval_set --repos psf/requests pallets/flask \
+    --output evaluation/datasets/my_subset.jsonl
+```
+
+Reports (JSON + Markdown) are written to `evaluation/reports/`. Retrievers
+receive only the issue text and the pre-fix code units; gold labels never reach
+them. On Windows, set `REPOMIND_DATA_DIR` to a short path (e.g. `C:\rm`) if git
+reports "Filename too long". See [`docs/evaluation.md`](docs/evaluation.md).
+
 ## Run the API (health check)
 
 ```bash
@@ -110,7 +147,9 @@ app/                 Application packages (parsing, retrieval, graph, api, ...)
   indexing/          Indexing pipeline and CLI
   storage/           SQLite index store
   schemas/           CodeUnit / FileRecord / RepositoryRecord models
-evaluation/          Benchmark datasets, metrics, and eval runners
+  retrieval/         Retriever interface, tokenizer, BM25, random baseline, registry
+evaluation/          Eval schema, labeler, leakage controls, metrics, runner,
+                     eval-set builder; datasets/ and reports/ are committed
 tests/               Test suite
 configs/             Run / preprocessing configuration files
 docs/                Documentation

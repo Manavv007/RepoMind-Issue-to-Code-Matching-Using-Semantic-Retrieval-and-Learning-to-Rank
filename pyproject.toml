@@ -29,9 +29,12 @@ parsing = [
     "tree-sitter==0.23.2",
     "tree-sitter-python==0.23.6",
 ]
-# Phase 3+: retrieval (lexical, dense, reranking).
+# Phase 3+: retrieval. BM25 is implemented in-house (app/retrieval/bm25.py), so
+# only the dense/reranking dependencies are listed here. On CPU-only machines,
+# install torch from https://download.pytorch.org/whl/cpu first.
 retrieval = [
-    "rank-bm25==0.2.2",
+    "torch==2.6.0",
+    "einops==0.8.0",  # required by SweRankEmbed / CodeRankEmbed remote code
     "faiss-cpu==1.9.0.post1",
     "sentence-transformers==3.3.1",
     "numpy==2.2.1",
@@ -71,6 +74,9 @@ include = ["app*", "evaluation*"]
 line-length = 88
 target-version = "py311"
 src = ["app", "evaluation", "tests"]
+# experiments/ holds one-off research scripts behind docs/improvement_findings.md;
+# the .ipynb is generated from notebooks/build_kaggle_notebook.py (which is linted).
+extend-exclude = ["experiments", "notebooks/*.ipynb"]
 
 [tool.ruff.lint]
 # A sensible, not-overbearing rule set: pycodestyle, pyflakes, isort,
@@ -81,9 +87,15 @@ ignore = []
 [tool.ruff.lint.isort]
 known-first-party = ["app", "evaluation"]
 
+[tool.ruff.lint.per-file-ignores]
+# Notebook cell sources live in string literals; long lines there are intentional.
+"notebooks/*" = ["E501"]
+"tests/test_gpu_embeddings.py" = ["E501"]
+
 [tool.black]
 line-length = 88
 target-version = ["py311"]
+extend-exclude = "experiments/"
 
 [tool.mypy]
 python_version = "3.11"
@@ -95,6 +107,12 @@ no_implicit_optional = true
 check_untyped_defs = true
 ignore_missing_imports = true
 files = ["app", "evaluation"]
+
+[[tool.mypy.overrides]]
+# numpy's stubs use 3.12-only syntax; the project targets 3.11, so don't parse them.
+module = ["numpy", "numpy.*", "torch", "torch.*", "sentence_transformers.*"]
+follow_imports = "skip"
+follow_imports_for_stubs = true  # numpy ships .pyi stubs; skip them too
 
 [tool.pytest.ini_options]
 minversion = "8.0"

@@ -1,0 +1,1914 @@
+{
+  "aggregate": {
+    "file": {
+      "metrics": {
+        "hit@10": {
+          "ci_high": 0.9523809523809523,
+          "ci_low": 0.6190476190476191,
+          "mean": 0.8095238095238095,
+          "n": 21
+        },
+        "hit@5": {
+          "ci_high": 0.9047619047619048,
+          "ci_low": 0.5238095238095238,
+          "mean": 0.7142857142857143,
+          "n": 21
+        },
+        "mrr": {
+          "ci_high": 0.6976955782312924,
+          "ci_low": 0.36257842025699166,
+          "mean": 0.5200302343159486,
+          "n": 21
+        },
+        "ndcg@10": {
+          "ci_high": 0.7437616068992059,
+          "ci_low": 0.42489059338869345,
+          "mean": 0.5803929766838289,
+          "n": 21
+        },
+        "recall@10": {
+          "ci_high": 0.9523809523809523,
+          "ci_low": 0.6190476190476191,
+          "mean": 0.8095238095238095,
+          "n": 21
+        },
+        "recall@5": {
+          "ci_high": 0.9047619047619048,
+          "ci_low": 0.5238095238095238,
+          "mean": 0.7142857142857143,
+          "n": 21
+        }
+      },
+      "n_cases": 21
+    },
+    "file_level_cases_with_unreachable_gold_file": 0,
+    "function": {
+      "metrics": {
+        "hit@10": {
+          "ci_high": 0.8,
+          "ci_low": 0.4,
+          "mean": 0.6,
+          "n": 20
+        },
+        "hit@5": {
+          "ci_high": 0.7,
+          "ci_low": 0.2987500000000011,
+          "mean": 0.5,
+          "n": 20
+        },
+        "mrr": {
+          "ci_high": 0.5318782604114413,
+          "ci_low": 0.18559301034444062,
+          "mean": 0.3519048304597504,
+          "n": 20
+        },
+        "ndcg@10": {
+          "ci_high": 0.5700789524960711,
+          "ci_low": 0.21071673133946434,
+          "mean": 0.3950614355119833,
+          "n": 20
+        },
+        "recall@10": {
+          "ci_high": 0.775,
+          "ci_low": 0.35,
+          "mean": 0.575,
+          "n": 20
+        },
+        "recall@5": {
+          "ci_high": 0.7,
+          "ci_low": 0.2987500000000011,
+          "mean": 0.5,
+          "n": 20
+        }
+      },
+      "n_cases": 20
+    },
+    "latency_prepare_seconds": {
+      "max": 1.0969185999992987,
+      "mean": 0.32293931428570694,
+      "median": 0.2822372999999061,
+      "n": 21,
+      "p95": 0.7048297000001185
+    },
+    "latency_retrieve_seconds": {
+      "max": 0.38003740000021935,
+      "mean": 0.21298493809549005,
+      "median": 0.16916980000041804,
+      "n": 21,
+      "p95": 0.372996900000544
+    },
+    "pool_size": {
+      "mean": 1189.5714285714287,
+      "median": 1302.0
+    }
+  },
+  "cases": [
+    {
+      "case_id": "mwaskom__seaborn-3010",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 1,
+      "first_relevant_unit_rank": 1,
+      "function_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "66ea2056f7ed479e",
+      "pool_size": 760,
+      "prepare_seconds": 0.4885601999994833,
+      "repo": "mwaskom/seaborn",
+      "retrieve_seconds": 0.17761909999990166,
+      "split": "dev",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.032018442622950824,
+          "unit_id": "seaborn/_stats/regression.py::PolyFit.__call__:39"
+        },
+        {
+          "rank": 2,
+          "score": 0.031746031746031744,
+          "unit_id": "seaborn/_stats/regression.py::PolyFit._fit_predict:22"
+        },
+        {
+          "rank": 3,
+          "score": 0.02928692699490662,
+          "unit_id": "seaborn/_core/plot.py::Plot._plot:816"
+        },
+        {
+          "rank": 4,
+          "score": 0.027149321266968326,
+          "unit_id": "seaborn/_core/plot.py::Plot.show:789"
+        },
+        {
+          "rank": 5,
+          "score": 0.02638888888888889,
+          "unit_id": "seaborn/_core/plot.py::Plotter._repr_png_:903"
+        },
+        {
+          "rank": 6,
+          "score": 0.025726010101010104,
+          "unit_id": "seaborn/_core/plot.py::Plot.__init__:197"
+        },
+        {
+          "rank": 7,
+          "score": 0.02532201405152225,
+          "unit_id": "seaborn/_core/plot.py::Plotter._compute_stats:1073"
+        },
+        {
+          "rank": 8,
+          "score": 0.023839931885908897,
+          "unit_id": "seaborn/_core/plot.py::Plot.plot:809"
+        },
+        {
+          "rank": 9,
+          "score": 0.02296750619861673,
+          "unit_id": "seaborn/_core/plot.py::Plotter._extract_data:942"
+        },
+        {
+          "rank": 10,
+          "score": 0.022482435597189696,
+          "unit_id": "seaborn/_core/plot.py::Plot._resolve_positionals:231"
+        }
+      ]
+    },
+    {
+      "case_id": "mwaskom__seaborn-3190",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.25,
+        "ndcg@10": 0.43067655807339306,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 4,
+      "first_relevant_unit_rank": 9,
+      "function_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 0.0,
+        "mrr": 0.1111111111111111,
+        "ndcg@10": 0.3010299956639812,
+        "recall@10": 1.0,
+        "recall@5": 0.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "9b238d92c0c8f334",
+      "pool_size": 780,
+      "prepare_seconds": 0.14988799999991897,
+      "repo": "mwaskom/seaborn",
+      "retrieve_seconds": 0.16916980000041804,
+      "split": "dev",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.03278688524590164,
+          "unit_id": "seaborn/_core/plot.py::Plot._plot:823"
+        },
+        {
+          "rank": 2,
+          "score": 0.02946912242686891,
+          "unit_id": "seaborn/_core/plot.py::Plot.add:390"
+        },
+        {
+          "rank": 3,
+          "score": 0.029030910609857977,
+          "unit_id": "seaborn/_core/plot.py::Plot.__init__:200"
+        },
+        {
+          "rank": 4,
+          "score": 0.027745885954841176,
+          "unit_id": "seaborn/_core/plot.py::Plot.scale:605"
+        },
+        {
+          "rank": 5,
+          "score": 0.026200135226504394,
+          "unit_id": "seaborn/categorical.py::catplot:3003"
+        },
+        {
+          "rank": 6,
+          "score": 0.02603002235707442,
+          "unit_id": "seaborn/_core/plot.py::Plotter._setup_scales:1171"
+        },
+        {
+          "rank": 7,
+          "score": 0.02582908163265306,
+          "unit_id": "seaborn/_core/plot.py::Plotter._compute_stats:1080"
+        },
+        {
+          "rank": 8,
+          "score": 0.024056467876692595,
+          "unit_id": "seaborn/_compat.py::norm_from_scale:22"
+        },
+        {
+          "rank": 9,
+          "score": 0.023565323565323565,
+          "unit_id": "seaborn/_core/scales.py::ContinuousBase._setup:322"
+        },
+        {
+          "rank": 10,
+          "score": 0.02332657200811359,
+          "unit_id": "seaborn/_core/scales.py::Scale._setup:105"
+        }
+      ]
+    },
+    {
+      "case_id": "mwaskom__seaborn-3407",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 1,
+      "first_relevant_unit_rank": 3,
+      "function_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.3333333333333333,
+        "ndcg@10": 0.5,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "5c97389236c4b2c5",
+      "pool_size": 801,
+      "prepare_seconds": 0.44949350000024424,
+      "repo": "mwaskom/seaborn",
+      "retrieve_seconds": 0.16783010000017384,
+      "split": "dev",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.03278688524590164,
+          "unit_id": "seaborn/axisgrid.py::pairplot:2005"
+        },
+        {
+          "rank": 2,
+          "score": 0.03200204813108039,
+          "unit_id": "seaborn/axisgrid.py::PairGrid.__init__:1186"
+        },
+        {
+          "rank": 3,
+          "score": 0.029957522915269395,
+          "unit_id": "seaborn/axisgrid.py::PairGrid.map_diag:1431"
+        },
+        {
+          "rank": 4,
+          "score": 0.028370221327967807,
+          "unit_id": "seaborn/axisgrid.py::jointplot:2179"
+        },
+        {
+          "rank": 5,
+          "score": 0.027149321266968326,
+          "unit_id": "seaborn/axisgrid.py::PairGrid._plot_bivariate:1574"
+        },
+        {
+          "rank": 6,
+          "score": 0.026992753623188405,
+          "unit_id": "seaborn/axisgrid.py::PairGrid._map_diag_iter_hue:1513"
+        },
+        {
+          "rank": 7,
+          "score": 0.02625418060200669,
+          "unit_id": "seaborn/relational.py::relplot:792"
+        },
+        {
+          "rank": 8,
+          "score": 0.025568181818181816,
+          "unit_id": "seaborn/axisgrid.py::PairGrid._plot_bivariate_iter_hue:1613"
+        },
+        {
+          "rank": 9,
+          "score": 0.024891774891774892,
+          "unit_id": "seaborn/axisgrid.py::FacetGrid.map_dataframe:759"
+        },
+        {
+          "rank": 10,
+          "score": 0.023667065549793913,
+          "unit_id": "seaborn/axisgrid.py::JointGrid.__init__:1681"
+        }
+      ]
+    },
+    {
+      "case_id": "mwaskom__seaborn-2848",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.3333333333333333,
+        "ndcg@10": 0.5,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 3,
+      "first_relevant_unit_rank": 37,
+      "function_metrics": {
+        "hit@10": 0.0,
+        "hit@5": 0.0,
+        "mrr": 0.02702702702702703,
+        "ndcg@10": 0.0,
+        "recall@10": 0.0,
+        "recall@5": 0.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "98b33e4c546df635",
+      "pool_size": 723,
+      "prepare_seconds": 0.1546213000001444,
+      "repo": "mwaskom/seaborn",
+      "retrieve_seconds": 0.14706399999977293,
+      "split": "dev",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.032266458495966696,
+          "unit_id": "seaborn/axisgrid.py::PairGrid.__init__:1138"
+        },
+        {
+          "rank": 2,
+          "score": 0.030834914611005692,
+          "unit_id": "seaborn/axisgrid.py::pairplot:1976"
+        },
+        {
+          "rank": 3,
+          "score": 0.030536130536130537,
+          "unit_id": "seaborn/categorical.py::_CategoricalPlotterNew._palette_without_hue_backcompat:170"
+        },
+        {
+          "rank": 4,
+          "score": 0.02862400327131466,
+          "unit_id": "seaborn/categorical.py::_CategoricalPlotter.establish_variables:425"
+        },
+        {
+          "rank": 5,
+          "score": 0.027479766610201392,
+          "unit_id": "seaborn/_oldcore.py::HueMapping.__init__:82"
+        },
+        {
+          "rank": 6,
+          "score": 0.026547116736990152,
+          "unit_id": "seaborn/palettes.py::husl_palette:300"
+        },
+        {
+          "rank": 7,
+          "score": 0.02591362126245847,
+          "unit_id": "seaborn/palettes.py::hls_palette:229"
+        },
+        {
+          "rank": 8,
+          "score": 0.025893752088205813,
+          "unit_id": "seaborn/categorical.py::catplot:3588"
+        },
+        {
+          "rank": 9,
+          "score": 0.025388291517323774,
+          "unit_id": "seaborn/categorical.py::_PointPlotter.__init__:1648"
+        },
+        {
+          "rank": 10,
+          "score": 0.02507351803126451,
+          "unit_id": "seaborn/relational.py::relplot:846"
+        }
+      ]
+    },
+    {
+      "case_id": "psf__requests-2317",
+      "file_metrics": {
+        "hit@10": 0.0,
+        "hit@5": 0.0,
+        "mrr": 0.07142857142857142,
+        "ndcg@10": 0.0,
+        "recall@10": 0.0,
+        "recall@5": 0.0
+      },
+      "first_relevant_file_rank": 14,
+      "first_relevant_unit_rank": 25,
+      "function_metrics": {
+        "hit@10": 0.0,
+        "hit@5": 0.0,
+        "mrr": 0.04,
+        "ndcg@10": 0.0,
+        "recall@10": 0.0,
+        "recall@5": 0.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "75228f539fb5b855",
+      "pool_size": 517,
+      "prepare_seconds": 0.18343210000057297,
+      "repo": "psf/requests",
+      "retrieve_seconds": 0.11162960000001476,
+      "split": "dev",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.032266458495966696,
+          "unit_id": "requests/utils.py::to_native_string:655"
+        },
+        {
+          "rank": 2,
+          "score": 0.02854251012145749,
+          "unit_id": "requests/packages/urllib3/fields.py::format_header_param:21"
+        },
+        {
+          "rank": 3,
+          "score": 0.028404512489927477,
+          "unit_id": "requests/utils.py::unquote_header_value:235"
+        },
+        {
+          "rank": 4,
+          "score": 0.027583600982429624,
+          "unit_id": "requests/auth.py::_basic_auth_str:25"
+        },
+        {
+          "rank": 5,
+          "score": 0.027432808155699723,
+          "unit_id": "requests/models.py::PreparedRequest.prepare_url:334"
+        },
+        {
+          "rank": 6,
+          "score": 0.026860955056179775,
+          "unit_id": "requests/packages/urllib3/request.py::RequestMethods.request:52"
+        },
+        {
+          "rank": 7,
+          "score": 0.0264808362369338,
+          "unit_id": "requests/utils.py::get_unicode_from_response:346"
+        },
+        {
+          "rank": 8,
+          "score": 0.0251821349382325,
+          "unit_id": "requests/packages/urllib3/request.py::RequestMethods.request_encode_url:74"
+        },
+        {
+          "rank": 9,
+          "score": 0.023434343434343436,
+          "unit_id": "requests/models.py::Response.__init__:536"
+        },
+        {
+          "rank": 10,
+          "score": 0.023268398268398268,
+          "unit_id": "requests/packages/urllib3/packages/six.py::print_:335"
+        }
+      ]
+    },
+    {
+      "case_id": "psf__requests-2674",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 0.0,
+        "mrr": 0.14285714285714285,
+        "ndcg@10": 0.3333333333333333,
+        "recall@10": 1.0,
+        "recall@5": 0.0
+      },
+      "first_relevant_file_rank": 7,
+      "first_relevant_unit_rank": 27,
+      "function_metrics": {
+        "hit@10": 0.0,
+        "hit@5": 0.0,
+        "mrr": 0.037037037037037035,
+        "ndcg@10": 0.0,
+        "recall@10": 0.0,
+        "recall@5": 0.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "b90cce40de57ff4f",
+      "pool_size": 553,
+      "prepare_seconds": 0.1202143000000433,
+      "repo": "psf/requests",
+      "retrieve_seconds": 0.168829199999891,
+      "split": "dev",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.030303030303030304,
+          "unit_id": "requests/packages/urllib3/connectionpool.py::HTTPConnectionPool._make_request:317"
+        },
+        {
+          "rank": 2,
+          "score": 0.02976190476190476,
+          "unit_id": "requests/packages/urllib3/util/timeout.py::Timeout.read_timeout:211"
+        },
+        {
+          "rank": 3,
+          "score": 0.029726775956284153,
+          "unit_id": "requests/packages/urllib3/connectionpool.py::HTTPConnectionPool._raise_timeout:300"
+        },
+        {
+          "rank": 4,
+          "score": 0.029211087420042643,
+          "unit_id": "requests/packages/urllib3/exceptions.py::RequestError.__init__:27"
+        },
+        {
+          "rank": 5,
+          "score": 0.029138513513513514,
+          "unit_id": "requests/packages/urllib3/util/timeout.py::Timeout.start_connect:169"
+        },
+        {
+          "rank": 6,
+          "score": 0.028474711270410194,
+          "unit_id": "requests/packages/urllib3/__init__.py::disable_warnings:65"
+        },
+        {
+          "rank": 7,
+          "score": 0.027313266443701224,
+          "unit_id": "requests/packages/urllib3/exceptions.py::PoolError.__init__:16"
+        },
+        {
+          "rank": 8,
+          "score": 0.02681010928961749,
+          "unit_id": "requests/packages/urllib3/connectionpool.py::HTTPConnectionPool._get_conn:210"
+        },
+        {
+          "rank": 9,
+          "score": 0.02637768817204301,
+          "unit_id": "requests/packages/urllib3/util/retry.py::Retry._is_connection_error:180"
+        },
+        {
+          "rank": 10,
+          "score": 0.026182294223531334,
+          "unit_id": "requests/packages/urllib3/connectionpool.py::HTTPConnectionPool._get_timeout:288"
+        }
+      ]
+    },
+    {
+      "case_id": "psf__requests-1963",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 1,
+      "first_relevant_unit_rank": 1,
+      "function_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "b5ea6def6d4e5663",
+      "pool_size": 484,
+      "prepare_seconds": 0.093002599999636,
+      "repo": "psf/requests",
+      "retrieve_seconds": 0.13943440000002738,
+      "split": "dev",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.03278688524590164,
+          "unit_id": "requests/sessions.py::SessionRedirectMixin.resolve_redirects:84"
+        },
+        {
+          "rank": 2,
+          "score": 0.03200204813108039,
+          "unit_id": "requests/models.py::Response.is_redirect:603"
+        },
+        {
+          "rank": 3,
+          "score": 0.030621785881252923,
+          "unit_id": "requests/sessions.py::Session.get:397"
+        },
+        {
+          "rank": 4,
+          "score": 0.030309988518943745,
+          "unit_id": "requests/sessions.py::Session.send:466"
+        },
+        {
+          "rank": 5,
+          "score": 0.0293236301369863,
+          "unit_id": "requests/sessions.py::Session.head:417"
+        },
+        {
+          "rank": 6,
+          "score": 0.028484848484848488,
+          "unit_id": "requests/sessions.py::Session.__init__:205"
+        },
+        {
+          "rank": 7,
+          "score": 0.028370221327967807,
+          "unit_id": "requests/sessions.py::Session.request:301"
+        },
+        {
+          "rank": 8,
+          "score": 0.028006267136701922,
+          "unit_id": "requests/sessions.py::Session.options:407"
+        },
+        {
+          "rank": 9,
+          "score": 0.027425373134328357,
+          "unit_id": "requests/sessions.py::Session.post:427"
+        },
+        {
+          "rank": 10,
+          "score": 0.02581612258494337,
+          "unit_id": "requests/packages/urllib3/response.py::HTTPResponse.get_redirect_location:104"
+        }
+      ]
+    },
+    {
+      "case_id": "psf__requests-3362",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.5,
+        "ndcg@10": 0.6309297535714575,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 2,
+      "first_relevant_unit_rank": 4,
+      "function_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.25,
+        "ndcg@10": 0.43067655807339306,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "d59217ae7e692d1c",
+      "pool_size": 596,
+      "prepare_seconds": 0.15821669999968435,
+      "repo": "psf/requests",
+      "retrieve_seconds": 0.13578290000077686,
+      "split": "dev",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.031754032258064516,
+          "unit_id": "requests/models.py::Response.text:757"
+        },
+        {
+          "rank": 2,
+          "score": 0.031544957774465976,
+          "unit_id": "requests/models.py::Response.iter_content:653"
+        },
+        {
+          "rank": 3,
+          "score": 0.03125763125763126,
+          "unit_id": "requests/models.py::Response.json:795"
+        },
+        {
+          "rank": 4,
+          "score": 0.03047794966520434,
+          "unit_id": "requests/utils.py::stream_decode_response_unicode:359"
+        },
+        {
+          "rank": 5,
+          "score": 0.030158730158730156,
+          "unit_id": "requests/utils.py::get_unicode_from_response:385"
+        },
+        {
+          "rank": 6,
+          "score": 0.029857397504456328,
+          "unit_id": "requests/models.py::PreparedRequest.prepare_body:411"
+        },
+        {
+          "rank": 7,
+          "score": 0.02928692699490662,
+          "unit_id": "requests/models.py::Response.iter_lines:702"
+        },
+        {
+          "rank": 8,
+          "score": 0.029211087420042643,
+          "unit_id": "requests/packages/urllib3/response.py::HTTPResponse.stream:332"
+        },
+        {
+          "rank": 9,
+          "score": 0.028814262023217248,
+          "unit_id": "requests/models.py::Response.__init__:546"
+        },
+        {
+          "rank": 10,
+          "score": 0.02782608695652174,
+          "unit_id": "requests/models.py::Response.__iter__:624"
+        }
+      ]
+    },
+    {
+      "case_id": "psf__requests-863",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.5,
+        "ndcg@10": 0.6309297535714575,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 2,
+      "first_relevant_unit_rank": 2,
+      "function_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.5,
+        "ndcg@10": 0.6309297535714575,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "5eee8513f0e6096a",
+      "pool_size": 581,
+      "prepare_seconds": 0.24585010000009788,
+      "repo": "psf/requests",
+      "retrieve_seconds": 0.15408840000054624,
+      "split": "dev",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.032018442622950824,
+          "unit_id": "requests/hooks.py::dispatch_hook:32"
+        },
+        {
+          "rank": 2,
+          "score": 0.031754032258064516,
+          "unit_id": "requests/models.py::Request.register_hook:463"
+        },
+        {
+          "rank": 3,
+          "score": 0.03125763125763126,
+          "unit_id": "requests/sessions.py::Session.request:121"
+        },
+        {
+          "rank": 4,
+          "score": 0.03021353930031804,
+          "unit_id": "requests/sessions.py::Session.__init__:63"
+        },
+        {
+          "rank": 5,
+          "score": 0.029437229437229435,
+          "unit_id": "requests/api.py::request:18"
+        },
+        {
+          "rank": 6,
+          "score": 0.027479766610201392,
+          "unit_id": "requests/models.py::Request.deregister_hook:468"
+        },
+        {
+          "rank": 7,
+          "score": 0.027346637102734665,
+          "unit_id": "requests/auth.py::HTTPKerberosAuth.__call__:380"
+        },
+        {
+          "rank": 8,
+          "score": 0.027212143650499815,
+          "unit_id": "requests/auth.py::AuthBase.__call__:48"
+        },
+        {
+          "rank": 9,
+          "score": 0.026597524255603883,
+          "unit_id": "requests/models.py::Request.__init__:48"
+        },
+        {
+          "rank": 10,
+          "score": 0.02594183740912095,
+          "unit_id": "requests/models.py::Request.send:479"
+        }
+      ]
+    },
+    {
+      "case_id": "psf__requests-2148",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.25,
+        "ndcg@10": 0.43067655807339306,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 4,
+      "first_relevant_unit_rank": 23,
+      "function_metrics": {
+        "hit@10": 0.0,
+        "hit@5": 0.0,
+        "mrr": 0.043478260869565216,
+        "ndcg@10": 0.0,
+        "recall@10": 0.0,
+        "recall@5": 0.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "306903f54cbdb53a",
+      "pool_size": 512,
+      "prepare_seconds": 0.055037399999491754,
+      "repo": "psf/requests",
+      "retrieve_seconds": 0.14978140000039275,
+      "split": "dev",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.028438886647841874,
+          "unit_id": "requests/packages/urllib3/connection.py::HTTPConnection.__init__:85"
+        },
+        {
+          "rank": 2,
+          "score": 0.028381642512077296,
+          "unit_id": "requests/packages/urllib3/contrib/pyopenssl.py::WrappedSocket.recv:171"
+        },
+        {
+          "rank": 3,
+          "score": 0.028083267871170464,
+          "unit_id": "requests/packages/urllib3/response.py::HTTPResponse.__init__:72"
+        },
+        {
+          "rank": 4,
+          "score": 0.026399331662489554,
+          "unit_id": "requests/packages/urllib3/response.py::HTTPResponse.stream:236"
+        },
+        {
+          "rank": 5,
+          "score": 0.026262626262626265,
+          "unit_id": "requests/models.py::Response.content:690"
+        },
+        {
+          "rank": 6,
+          "score": 0.025859192525859193,
+          "unit_id": "requests/packages/urllib3/util/connection.py::is_connection_dropped:12"
+        },
+        {
+          "rank": 7,
+          "score": 0.025693893735130847,
+          "unit_id": "requests/packages/urllib3/connectionpool.py::HTTPConnectionPool._make_request:281"
+        },
+        {
+          "rank": 8,
+          "score": 0.0253441802252816,
+          "unit_id": "requests/packages/urllib3/util/retry.py::Retry._is_connection_error:180"
+        },
+        {
+          "rank": 9,
+          "score": 0.024934585193166076,
+          "unit_id": "requests/sessions.py::SessionRedirectMixin.resolve_redirects:89"
+        },
+        {
+          "rank": 10,
+          "score": 0.024404761904761905,
+          "unit_id": "requests/packages/urllib3/connection.py::VerifiedHTTPSConnection.connect:187"
+        }
+      ]
+    },
+    {
+      "case_id": "pylint-dev__astroid-1978",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 1,
+      "first_relevant_unit_rank": 4,
+      "function_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.25,
+        "ndcg@10": 0.43067655807339306,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "f6baf810e06d4635",
+      "pool_size": 1341,
+      "prepare_seconds": 0.4948174999999537,
+      "repo": "pylint-dev/astroid",
+      "retrieve_seconds": 0.18319630000041798,
+      "split": "dev",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.031754032258064516,
+          "unit_id": "astroid/raw_building.py::InspectBuilder.inspect_build:350"
+        },
+        {
+          "rank": 2,
+          "score": 0.031746031746031744,
+          "unit_id": "astroid/interpreter/_import/util.py::is_namespace:16"
+        },
+        {
+          "rank": 3,
+          "score": 0.031009615384615385,
+          "unit_id": "astroid/nodes/node_classes.py::If.is_sys_guard:3189"
+        },
+        {
+          "rank": 4,
+          "score": 0.03021353930031804,
+          "unit_id": "astroid/raw_building.py::InspectBuilder.imported_member:443"
+        },
+        {
+          "rank": 5,
+          "score": 0.026785714285714288,
+          "unit_id": "astroid/manager.py::AstroidManager.ast_from_module:295"
+        },
+        {
+          "rank": 6,
+          "score": 0.026779422128259338,
+          "unit_id": "astroid/interpreter/_import/spec.py::ImportlibFinder.contribute_to_path:155"
+        },
+        {
+          "rank": 7,
+          "score": 0.026262626262626265,
+          "unit_id": "astroid/brain/brain_numpy_utils.py::_is_a_numpy_module:42"
+        },
+        {
+          "rank": 8,
+          "score": 0.026120660599932594,
+          "unit_id": "astroid/brain/brain_numpy_utils.py::numpy_supports_type_hints:17"
+        },
+        {
+          "rank": 9,
+          "score": 0.024925373134328358,
+          "unit_id": "astroid/decorators.py::cachedproperty.__init__:64"
+        },
+        {
+          "rank": 10,
+          "score": 0.024350649350649352,
+          "unit_id": "astroid/raw_building.py::_safe_has_attribute:327"
+        }
+      ]
+    },
+    {
+      "case_id": "pylint-dev__astroid-1196",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 1,
+      "first_relevant_unit_rank": 1,
+      "function_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "e2d953fbede6365b",
+      "pool_size": 1302,
+      "prepare_seconds": 0.2822372999999061,
+      "repo": "pylint-dev/astroid",
+      "retrieve_seconds": 0.372996900000544,
+      "split": "dev",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.03278688524590164,
+          "unit_id": "astroid/nodes/node_classes.py::Dict.getitem:2349"
+        },
+        {
+          "rank": 2,
+          "score": 0.03200204813108039,
+          "unit_id": "astroid/arguments.py::CallSite._unpack_keywords:84"
+        },
+        {
+          "rank": 3,
+          "score": 0.02844551282051282,
+          "unit_id": "astroid/nodes/node_classes.py::_container_getitem:209"
+        },
+        {
+          "rank": 4,
+          "score": 0.02786377708978328,
+          "unit_id": "astroid/brain/brain_builtin_inference.py::infer_dict_fromkeys:831"
+        },
+        {
+          "rank": 5,
+          "score": 0.027783137179239824,
+          "unit_id": "astroid/nodes/node_classes.py::Const.getitem:1942"
+        },
+        {
+          "rank": 6,
+          "score": 0.02736498731424429,
+          "unit_id": "astroid/nodes/scoped_nodes/scoped_nodes.py::ClassDef.getitem:2721"
+        },
+        {
+          "rank": 7,
+          "score": 0.027149321266968326,
+          "unit_id": "astroid/nodes/scoped_nodes/mixin.py::LocalsDictNodeNG.__getitem__:113"
+        },
+        {
+          "rank": 8,
+          "score": 0.026785714285714288,
+          "unit_id": "astroid/rebuilder.py::TreeRebuilder._get_doc:78"
+        },
+        {
+          "rank": 9,
+          "score": 0.0264301860545992,
+          "unit_id": "astroid/inference.py::_infer_map:146"
+        },
+        {
+          "rank": 10,
+          "score": 0.026334026334026334,
+          "unit_id": "astroid/protocols.py::_resolve_assignment_parts:458"
+        }
+      ]
+    },
+    {
+      "case_id": "pylint-dev__astroid-1866",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 0.0,
+        "mrr": 0.1111111111111111,
+        "ndcg@10": 0.3010299956639812,
+        "recall@10": 1.0,
+        "recall@5": 0.0
+      },
+      "first_relevant_file_rank": 9,
+      "first_relevant_unit_rank": 23,
+      "function_metrics": {
+        "hit@10": 0.0,
+        "hit@5": 0.0,
+        "mrr": 0.043478260869565216,
+        "ndcg@10": 0.0,
+        "recall@10": 0.0,
+        "recall@5": 0.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "f6319db73b731eb6",
+      "pool_size": 1328,
+      "prepare_seconds": 0.3838020000002871,
+      "repo": "pylint-dev/astroid",
+      "retrieve_seconds": 0.19577329999992799,
+      "split": "dev",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.02548435171385991,
+          "unit_id": "astroid/nodes/node_classes.py::If.is_sys_guard:3176"
+        },
+        {
+          "rank": 2,
+          "score": 0.023428302331057214,
+          "unit_id": "astroid/nodes/node_classes.py::If.is_typing_guard:3205"
+        },
+        {
+          "rank": 3,
+          "score": 0.02250764525993884,
+          "unit_id": "astroid/manager.py::AstroidManager.file_from_module_name:269"
+        },
+        {
+          "rank": 4,
+          "score": 0.02217320640817274,
+          "unit_id": "astroid/interpreter/_import/util.py::is_namespace:16"
+        },
+        {
+          "rank": 5,
+          "score": 0.022058823529411763,
+          "unit_id": "astroid/manager.py::AstroidManager.infer_ast_from_something:331"
+        },
+        {
+          "rank": 6,
+          "score": 0.021980676328502417,
+          "unit_id": "astroid/nodes/node_classes.py::UnaryOp.type_errors:4331"
+        },
+        {
+          "rank": 7,
+          "score": 0.021762270845653457,
+          "unit_id": "astroid/bases.py::BoundMethod._infer_type_new_call:488"
+        },
+        {
+          "rank": 8,
+          "score": 0.021364634352305352,
+          "unit_id": "astroid/inference_tip.py::_inference_tip_cached:31"
+        },
+        {
+          "rank": 9,
+          "score": 0.021235955056179777,
+          "unit_id": "astroid/nodes/node_classes.py::BinOp.type_errors:1541"
+        },
+        {
+          "rank": 10,
+          "score": 0.02087775408670931,
+          "unit_id": "astroid/nodes/scoped_nodes/scoped_nodes.py::FunctionDef.infer_call_result:1680"
+        }
+      ]
+    },
+    {
+      "case_id": "pylint-dev__astroid-1268",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 1,
+      "first_relevant_unit_rank": null,
+      "function_metrics": null,
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 0,
+      "pool_sha": "4fa27bf12fc45a4c",
+      "pool_size": 1353,
+      "prepare_seconds": 0.44832990000031714,
+      "repo": "pylint-dev/astroid",
+      "retrieve_seconds": 0.29872490000070684,
+      "split": "dev",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.03252247488101534,
+          "unit_id": "astroid/nodes/as_string.py::AsStringVisitor.__call__:54"
+        },
+        {
+          "rank": 2,
+          "score": 0.03125763125763126,
+          "unit_id": "astroid/nodes/as_string.py::AsStringVisitor.visit_module:416"
+        },
+        {
+          "rank": 3,
+          "score": 0.02578981302385558,
+          "unit_id": "astroid/nodes/as_string.py::AsStringVisitor.visit_call:164"
+        },
+        {
+          "rank": 4,
+          "score": 0.024922600619195046,
+          "unit_id": "astroid/nodes/as_string.py::AsStringVisitor.visit_lambda:397"
+        },
+        {
+          "rank": 5,
+          "score": 0.02438307873090482,
+          "unit_id": "astroid/nodes/as_string.py::AsStringVisitor.visit_setcomp:462"
+        },
+        {
+          "rank": 6,
+          "score": 0.024305555555555552,
+          "unit_id": "astroid/nodes/as_string.py::AsStringVisitor.visit_expr:254"
+        },
+        {
+          "rank": 7,
+          "score": 0.024085750315258513,
+          "unit_id": "astroid/nodes/as_string.py::AsStringVisitor.visit_import:387"
+        },
+        {
+          "rank": 8,
+          "score": 0.02402186421173763,
+          "unit_id": "astroid/nodes/as_string.py::AsStringVisitor.visit_property:640"
+        },
+        {
+          "rank": 9,
+          "score": 0.023634453781512604,
+          "unit_id": "astroid/nodes/node_ng.py::NodeNG.as_string:607"
+        },
+        {
+          "rank": 10,
+          "score": 0.023513328776486674,
+          "unit_id": "astroid/nodes/as_string.py::AsStringVisitor.visit_evaluatedobject:643"
+        }
+      ]
+    },
+    {
+      "case_id": "pylint-dev__astroid-1333",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.3333333333333333,
+        "ndcg@10": 0.5,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 3,
+      "first_relevant_unit_rank": 10,
+      "function_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 0.0,
+        "mrr": 0.1,
+        "ndcg@10": 0.17723928678404774,
+        "recall@10": 0.5,
+        "recall@5": 0.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 2,
+      "pool_sha": "ad8ba433155edefe",
+      "pool_size": 1353,
+      "prepare_seconds": 0.34108910000031756,
+      "repo": "pylint-dev/astroid",
+      "retrieve_seconds": 0.31474920000073325,
+      "split": "dev",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.031754032258064516,
+          "unit_id": "astroid/builder.py::AstroidBuilder.file_build:115"
+        },
+        {
+          "rank": 2,
+          "score": 0.03149801587301587,
+          "unit_id": "astroid/exceptions.py::StatementMissing.__init__:284"
+        },
+        {
+          "rank": 3,
+          "score": 0.02904040404040404,
+          "unit_id": "astroid/modutils.py::load_module_from_file:246"
+        },
+        {
+          "rank": 4,
+          "score": 0.028850145288501453,
+          "unit_id": "astroid/manager.py::AstroidManager.zip_import_data:223"
+        },
+        {
+          "rank": 5,
+          "score": 0.02871794871794872,
+          "unit_id": "astroid/manager.py::AstroidManager.__init__:74"
+        },
+        {
+          "rank": 6,
+          "score": 0.02803921568627451,
+          "unit_id": "astroid/manager.py::AstroidManager.ast_from_file:103"
+        },
+        {
+          "rank": 7,
+          "score": 0.027650648360030512,
+          "unit_id": "astroid/manager.py::AstroidManager.ast_from_module_name:157"
+        },
+        {
+          "rank": 8,
+          "score": 0.027146130794993832,
+          "unit_id": "astroid/exceptions.py::AstroidBuildingError.__init__:87"
+        },
+        {
+          "rank": 9,
+          "score": 0.026289682539682536,
+          "unit_id": "astroid/builder.py::AstroidBuilder._data_build:178"
+        },
+        {
+          "rank": 10,
+          "score": 0.025603392041748205,
+          "unit_id": "astroid/modutils.py::modpath_from_file_with_callback:308"
+        }
+      ]
+    },
+    {
+      "case_id": "pylint-dev__pylint-6506",
+      "file_metrics": {
+        "hit@10": 0.0,
+        "hit@5": 0.0,
+        "mrr": 0.08333333333333333,
+        "ndcg@10": 0.0,
+        "recall@10": 0.0,
+        "recall@5": 0.0
+      },
+      "first_relevant_file_rank": 12,
+      "first_relevant_unit_rank": 19,
+      "function_metrics": {
+        "hit@10": 0.0,
+        "hit@5": 0.0,
+        "mrr": 0.05263157894736842,
+        "ndcg@10": 0.0,
+        "recall@10": 0.0,
+        "recall@5": 0.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "f112577ca4161098",
+      "pool_size": 1869,
+      "prepare_seconds": 1.0969185999992987,
+      "repo": "pylint-dev/pylint",
+      "retrieve_seconds": 0.3470028000001548,
+      "split": "dev",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.031754032258064516,
+          "unit_id": "pylint/config/exceptions.py::_UnrecognizedOptionError.__init__:17"
+        },
+        {
+          "rank": 2,
+          "score": 0.031024531024531024,
+          "unit_id": "pylint/epylint.py::py_run:146"
+        },
+        {
+          "rank": 3,
+          "score": 0.02967032967032967,
+          "unit_id": "pylint/__init__.py::run_pylint:17"
+        },
+        {
+          "rank": 4,
+          "score": 0.028381642512077296,
+          "unit_id": "pylint/config/arguments_manager.py::_ArgumentsManager.load_command_line_configuration:597"
+        },
+        {
+          "rank": 5,
+          "score": 0.02736498731424429,
+          "unit_id": "pylint/lint/run.py::Run.__init__:92"
+        },
+        {
+          "rank": 6,
+          "score": 0.027031963470319637,
+          "unit_id": "pylint/__init__.py::run_symilar:50"
+        },
+        {
+          "rank": 7,
+          "score": 0.02661064425770308,
+          "unit_id": "pylint/config/help_formatter.py::_HelpFormatter.get_long_description:32"
+        },
+        {
+          "rank": 8,
+          "score": 0.025937081659973226,
+          "unit_id": "pylint/lint/pylinter.py::PyLinter.__init__:233"
+        },
+        {
+          "rank": 9,
+          "score": 0.0251661918328585,
+          "unit_id": "pylint/lint/base_options.py::_make_run_options:395"
+        },
+        {
+          "rank": 10,
+          "score": 0.02512945476698142,
+          "unit_id": "pylint/__init__.py::modify_sys_path:60"
+        }
+      ]
+    },
+    {
+      "case_id": "pylint-dev__pylint-5859",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 1,
+      "first_relevant_unit_rank": 1,
+      "function_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "ba886eb5d1f6630e",
+      "pool_size": 1606,
+      "prepare_seconds": 0.7048297000001185,
+      "repo": "pylint-dev/pylint",
+      "retrieve_seconds": 0.35110640000038984,
+      "split": "dev",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.03278688524590164,
+          "unit_id": "pylint/checkers/misc.py::EncodingChecker.open:119"
+        },
+        {
+          "rank": 2,
+          "score": 0.031754032258064516,
+          "unit_id": "pylint/checkers/misc.py::EncodingChecker.process_tokens:155"
+        },
+        {
+          "rank": 3,
+          "score": 0.02900988017658188,
+          "unit_id": "pylint/lint/pylinter.py::PyLinter._report_evaluation:1390"
+        },
+        {
+          "rank": 4,
+          "score": 0.025914384123339348,
+          "unit_id": "pylint/testutils/decorator.py::set_config_directly:56"
+        },
+        {
+          "rank": 5,
+          "score": 0.02541827541827542,
+          "unit_id": "pylint/config/option_manager_mixin.py::OptionsManagerMixIn._parse_toml:299"
+        },
+        {
+          "rank": 6,
+          "score": 0.025218810265539238,
+          "unit_id": "pylint/lint/pylinter.py::PyLinter.make_options:221"
+        },
+        {
+          "rank": 7,
+          "score": 0.024137478682933228,
+          "unit_id": "pylint/lint/pylinter.py::PyLinter.check:1042"
+        },
+        {
+          "rank": 8,
+          "score": 0.02318840579710145,
+          "unit_id": "pylint/testutils/decorator.py::set_config:12"
+        },
+        {
+          "rank": 9,
+          "score": 0.022344322344322345,
+          "unit_id": "pylint/testutils/get_test_info.py::_get_tests_info:11"
+        },
+        {
+          "rank": 10,
+          "score": 0.02220873786407767,
+          "unit_id": "pylint/__init__.py::modify_sys_path:64"
+        }
+      ]
+    },
+    {
+      "case_id": "pylint-dev__pylint-7114",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.25,
+        "ndcg@10": 0.43067655807339306,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 4,
+      "first_relevant_unit_rank": 4,
+      "function_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.25,
+        "ndcg@10": 0.43067655807339306,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "58259bffca993c63",
+      "pool_size": 2133,
+      "prepare_seconds": 0.36565730000074836,
+      "repo": "pylint-dev/pylint",
+      "retrieve_seconds": 0.16742690000046423,
+      "split": "dev",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.031746031746031744,
+          "unit_id": "pylint/utils/utils.py::register_plugins:184"
+        },
+        {
+          "rank": 2,
+          "score": 0.03131881575727918,
+          "unit_id": "pylint/epylint.py::lint:64"
+        },
+        {
+          "rank": 3,
+          "score": 0.03021353930031804,
+          "unit_id": "pylint/__init__.py::modify_sys_path:80"
+        },
+        {
+          "rank": 4,
+          "score": 0.029051670471052088,
+          "unit_id": "pylint/lint/expand_modules.py::expand_modules:64"
+        },
+        {
+          "rank": 5,
+          "score": 0.02782608695652174,
+          "unit_id": "pylint/lint/pylinter.py::PyLinter.set_current_module:791"
+        },
+        {
+          "rank": 6,
+          "score": 0.02552166934189406,
+          "unit_id": "pylint/utils/linterstats.py::LinterStats.init_single_module:162"
+        },
+        {
+          "rank": 7,
+          "score": 0.025,
+          "unit_id": "pylint/lint/pylinter.py::PyLinter.should_analyze_file:551"
+        },
+        {
+          "rank": 8,
+          "score": 0.023346828609986506,
+          "unit_id": "pylint/config/arguments_manager.py::_ArgumentsManager.__init__:63"
+        },
+        {
+          "rank": 9,
+          "score": 0.02303921568627451,
+          "unit_id": "pylint/config/config_file_parser.py::_ConfigurationFileParser.__init__:30"
+        },
+        {
+          "rank": 10,
+          "score": 0.022023809523809525,
+          "unit_id": "pylint/checkers/imports.py::ImportsChecker._add_imported_module:826"
+        }
+      ]
+    },
+    {
+      "case_id": "pylint-dev__pylint-7080",
+      "file_metrics": {
+        "hit@10": 0.0,
+        "hit@5": 0.0,
+        "mrr": 0.02857142857142857,
+        "ndcg@10": 0.0,
+        "recall@10": 0.0,
+        "recall@5": 0.0
+      },
+      "first_relevant_file_rank": 35,
+      "first_relevant_unit_rank": null,
+      "function_metrics": {
+        "hit@10": 0.0,
+        "hit@5": 0.0,
+        "mrr": 0.0,
+        "ndcg@10": 0.0,
+        "recall@10": 0.0,
+        "recall@5": 0.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "62c0a8e044684b18",
+      "pool_size": 2107,
+      "prepare_seconds": 0.09680019999996148,
+      "repo": "pylint-dev/pylint",
+      "retrieve_seconds": 0.1816196999998283,
+      "split": "dev",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.024675324675324677,
+          "unit_id": "pylint/config/arguments_manager.py::_ArgumentsManager.__init__:63"
+        },
+        {
+          "rank": 2,
+          "score": 0.024336928009326728,
+          "unit_id": "pylint/lint/run.py::Run.__init__:113"
+        },
+        {
+          "rank": 3,
+          "score": 0.023821721311475412,
+          "unit_id": "pylint/config/arguments_manager.py::_ArgumentsManager._generate_config_file:675"
+        },
+        {
+          "rank": 4,
+          "score": 0.022759237949111367,
+          "unit_id": "pylint/lint/pylinter.py::PyLinter.__init__:269"
+        },
+        {
+          "rank": 5,
+          "score": 0.02268649064342476,
+          "unit_id": "pylint/testutils/_primer/primer.py::Primer.__init__:21"
+        },
+        {
+          "rank": 6,
+          "score": 0.02224469160768453,
+          "unit_id": "pylint/config/arguments_manager.py::_ArgumentsManager.read_config_file:502"
+        },
+        {
+          "rank": 7,
+          "score": 0.021686969361387965,
+          "unit_id": "pylint/lint/base_options.py::_make_linter_options:37"
+        },
+        {
+          "rank": 8,
+          "score": 0.02139344262295082,
+          "unit_id": "pylint/__init__.py::modify_sys_path:70"
+        },
+        {
+          "rank": 9,
+          "score": 0.020913721253279827,
+          "unit_id": "pylint/config/callback_actions.py::_GenerateRCFileAction.__call__:257"
+        },
+        {
+          "rank": 10,
+          "score": 0.019931607230092817,
+          "unit_id": "pylint/config/find_default_config_files.py::find_default_config_files:42"
+        }
+      ]
+    },
+    {
+      "case_id": "pylint-dev__pylint-7228",
+      "file_metrics": {
+        "hit@10": 0.0,
+        "hit@5": 0.0,
+        "mrr": 0.06666666666666667,
+        "ndcg@10": 0.0,
+        "recall@10": 0.0,
+        "recall@5": 0.0
+      },
+      "first_relevant_file_rank": 15,
+      "first_relevant_unit_rank": null,
+      "function_metrics": {
+        "hit@10": 0.0,
+        "hit@5": 0.0,
+        "mrr": 0.0,
+        "ndcg@10": 0.0,
+        "recall@10": 0.0,
+        "recall@5": 0.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "bdefbb894947425c",
+      "pool_size": 2132,
+      "prepare_seconds": 0.29857709999942017,
+      "repo": "pylint-dev/pylint",
+      "retrieve_seconds": 0.158820999999989,
+      "split": "dev",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.028404512489927477,
+          "unit_id": "pylint/__init__.py::run_pylint:27"
+        },
+        {
+          "rank": 2,
+          "score": 0.026742734890354787,
+          "unit_id": "pylint/config/arguments_manager.py::_ArgumentsManager.read_config_file:502"
+        },
+        {
+          "rank": 3,
+          "score": 0.026144907723855092,
+          "unit_id": "pylint/epylint.py::py_run:145"
+        },
+        {
+          "rank": 4,
+          "score": 0.0259915611814346,
+          "unit_id": "pylint/config/callback_actions.py::_GenerateRCFileAction.__call__:257"
+        },
+        {
+          "rank": 5,
+          "score": 0.025726010101010104,
+          "unit_id": "pylint/lint/run.py::Run.__init__:113"
+        },
+        {
+          "rank": 6,
+          "score": 0.02490996398559424,
+          "unit_id": "pylint/testutils/_primer/primer.py::Primer.__init__:21"
+        },
+        {
+          "rank": 7,
+          "score": 0.024891774891774892,
+          "unit_id": "pylint/config/arguments_manager.py::_ArgumentsManager.__init__:63"
+        },
+        {
+          "rank": 8,
+          "score": 0.024137478682933228,
+          "unit_id": "pylint/__init__.py::_run_pylint_config:40"
+        },
+        {
+          "rank": 9,
+          "score": 0.022856436866814926,
+          "unit_id": "pylint/pyreverse/main.py::Run.__init__:214"
+        },
+        {
+          "rank": 10,
+          "score": 0.022528411948104194,
+          "unit_id": "pylint/config/config_initialization.py::_config_initialization:20"
+        }
+      ]
+    },
+    {
+      "case_id": "pylint-dev__pylint-7993",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 1,
+      "first_relevant_unit_rank": 1,
+      "function_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "f712723c306be8b8",
+      "pool_size": 2150,
+      "prepare_seconds": 0.17035070000019914,
+      "repo": "pylint-dev/pylint",
+      "retrieve_seconds": 0.38003740000021935,
+      "split": "dev",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.03278688524590164,
+          "unit_id": "pylint/reporters/text.py::TextReporter.on_set_current_module:166"
+        },
+        {
+          "rank": 2,
+          "score": 0.030834914611005692,
+          "unit_id": "pylint/config/help_formatter.py::_HelpFormatter.get_long_description:32"
+        },
+        {
+          "rank": 3,
+          "score": 0.026785714285714288,
+          "unit_id": "doc/exts/pylint_messages.py::_write_messages_list_page:319"
+        },
+        {
+          "rank": 4,
+          "score": 0.026387470207694927,
+          "unit_id": "pylint/checkers/base_checker.py::BaseChecker.create_message_definition_from_tuple:193"
+        },
+        {
+          "rank": 5,
+          "score": 0.025362318840579712,
+          "unit_id": "pylint/reporters/text.py::ColorizedTextReporter.handle_message:290"
+        },
+        {
+          "rank": 6,
+          "score": 0.02429667519181586,
+          "unit_id": "pylint/config/arguments_manager.py::_ArgumentsManager.load_configuration:599"
+        },
+        {
+          "rank": 7,
+          "score": 0.023985497141263423,
+          "unit_id": "pylint/reporters/text.py::ParseableTextReporter.__init__:224"
+        },
+        {
+          "rank": 8,
+          "score": 0.023314014752370917,
+          "unit_id": "pylint/reporters/text.py::TextReporter.write_message:188"
+        },
+        {
+          "rank": 9,
+          "score": 0.021933962264150945,
+          "unit_id": "pylint/config/arguments_manager.py::_ArgumentsManager.read_config_file:508"
+        },
+        {
+          "rank": 10,
+          "score": 0.021527777777777778,
+          "unit_id": "pylint/lint/utils.py::prepare_crash_report:18"
+        }
+      ]
+    }
+  ],
+  "config": {
+    "bootstrap_resamples": 1000,
+    "candidate_pool": "leaf units (function, method) excluding test files",
+    "cutoffs": [
+      5,
+      10
+    ],
+    "depth": 100,
+    "limit": null,
+    "ndcg_k": 10,
+    "retriever": "hybrid",
+    "retriever_params": {
+      "bm25": {
+        "b": 0.75,
+        "k1": 0.9,
+        "query_tf": "log",
+        "use_stopwords": true,
+        "w_body": 1.0,
+        "w_doc": 1.0,
+        "w_name": 3.0,
+        "w_path": 2.0
+      },
+      "dense": {
+        "batch_size": 32,
+        "device": "cpu",
+        "include_path": true,
+        "load_timeout_seconds": 180.0,
+        "max_seq_length": 256,
+        "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+        "query_prefix": "",
+        "revision": null,
+        "trust_remote_code": false
+      },
+      "fusion": {
+        "depth": 200,
+        "rrf_k": 60,
+        "w_bm25": 1.0,
+        "w_dense": 1.0
+      }
+    },
+    "seed": 0,
+    "split": "dev"
+  },
+  "counts": {
+    "cases_in_dataset": 41,
+    "evaluated": 21,
+    "excluded": {
+      "other_split": 20
+    },
+    "selected": 21
+  },
+  "dataset": {
+    "path": "swebench_lite_subset.jsonl",
+    "sha256": "e8a714baaf8831a13d655e2ff9d28702f9617bf8a126bdcf38f81a78b36a903c"
+  },
+  "definitions": {
+    "file level": "The ranked units are collapsed to distinct files (first occurrence kept); relevant files are the Python files the fix modifies.",
+    "function level": "Relevant units are the functions/methods the fix modifies, evaluated only on cases that have at least one such unit.",
+    "hit@k": "1 if at least one relevant item is in the top k (project.md 'Recall@k').",
+    "mrr": "Reciprocal rank of the first relevant item in the returned list (0 if absent), averaged over cases.",
+    "ndcg@k": "Binary-relevance nDCG over the top k.",
+    "recall@k": "Fraction of the case's relevant items found in the top k."
+  },
+  "environment": {
+    "platform": "win32-10.0.26200",
+    "python": "3.13.1",
+    "repomind_commit": "f4e95dff58154faab59313dc57326ebd2e4775e4",
+    "repomind_dirty": true
+  },
+  "failures": [],
+  "generated_at": "2026-10-22T16:52:30+00:00"
+}

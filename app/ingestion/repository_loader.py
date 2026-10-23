@@ -122,12 +122,59 @@ class RepositoryLoader:
         owner, repo = parse_github_url(url)
         clone_url = f"https://github.com/{owner}/{repo}.git"
         canonical = f"github.com/{owner}/{repo}".lower()
-        root, full_sha = self._materialize(
-            clone_url, commit, slug=f"{owner}__{repo}", shallow=commit is None
-        )
+        slug = f"{owner}__{repo}"
+        if commit is None:
+            root, full_sha = self._materialize(clone_url, None, slug=slug, shallow=True)
+        else:
+            # Pinned commits come from a cached bare mirror so that indexing many
+            # revisions of one repository clones the network history only once.
+            mirror = self._ensure_mirror(clone_url, slug, commit)
+            root, full_sha = self._materialize(
+                str(mirror), commit, slug=slug, shallow=False
+            )
         return LoadedRepository(
             root=root, source=canonical, source_type="github", commit=full_sha
         )
+
+    def _ensure_mirror(self, clone_url: str, slug: str, commit: str) -> Path:
+        """Return a bare mirror containing ``commit``, cloning/fetching as needed."""
+        mirror = self.checkouts_dir / "_mirrors" / f"{slug}.git"
+        timeout = self._settings.clone_timeout_seconds
+        if not mirror.exists():
+            mirror.parent.mkdir(parents=True, exist_ok=True)
+            tmp = mirror.with_name(f".tmp-{uuid.uuid4().hex}.git")
+            try:
+                self._git(
+                    [
+                        "clone",
+                        "--quiet",
+                        "--bare",
+                        "--template=",
+                        "--",
+                        clone_url,
+                        str(tmp),
+                    ],
+                    timeout=timeout,
+                )
+                shutil.move(str(tmp), str(mirror))
+            except BaseException:
+                _force_rmtree(tmp)
+                raise
+        if not self._has_commit(mirror, commit):
+            # The revision may be newer than the cached mirror: fetch everything.
+            self._git(
+                ["fetch", "--quiet", "origin", "+refs/*:refs/*"],
+                cwd=mirror,
+                timeout=timeout,
+            )
+        return mirror
+
+    def _has_commit(self, repo_dir: Path, commit: str) -> bool:
+        try:
+            self._git(["cat-file", "-e", f"{commit}^{{commit}}"], cwd=repo_dir)
+        except RepositoryAccessError:
+            return False
+        return True
 
     # ---------------------------------------------------------------- local
     def _load_local(self, raw_path: str, commit: str | None) -> LoadedRepository:
@@ -196,11 +243,13 @@ class RepositoryLoader:
         reused when it already exists.
         """
         self.checkouts_dir.mkdir(parents=True, exist_ok=True)
-        tmp = self.checkouts_dir / f".tmp-{uuid.uuid4().hex}"
+        tmp = self.checkouts_dir / f".t-{uuid.uuid4().hex[:8]}"
         try:
             clone_args = [
                 "-c",
                 "core.symlinks=false",
+                "-c",
+                "core.autocrlf=false",  # byte-exact checkouts on every platform
                 "clone",
                 "--quiet",
                 "--template=",
@@ -222,6 +271,10 @@ class RepositoryLoader:
                     [
                         "-c",
                         "core.symlinks=false",
+                        "-c",
+                        "core.autocrlf=false",
+                        "-c",
+                        "core.longpaths=true",
                         "checkout",
                         "--quiet",
                         "--detach",
@@ -232,7 +285,12 @@ class RepositoryLoader:
                 )
 
             full_sha = self._git(["rev-parse", "HEAD"], cwd=tmp).strip()
-            dest = self.checkouts_dir / f"{slug}__{full_sha}"
+            # Short directory names keep deep repository paths under Windows'
+            # 260-character limit. On the (unlikely) prefix collision, fall back
+            # to the full hash so two revisions never share a directory.
+            dest = self.checkouts_dir / f"{slug}__{full_sha[:12]}"
+            if dest.exists() and self._head_of(dest) != full_sha:
+                dest = self.checkouts_dir / f"{slug}__{full_sha}"
             if dest.exists():
                 _force_rmtree(tmp)
             else:
@@ -241,6 +299,12 @@ class RepositoryLoader:
         except BaseException:
             _force_rmtree(tmp)
             raise
+
+    def _head_of(self, repo_dir: Path) -> str | None:
+        try:
+            return self._git(["rev-parse", "HEAD"], cwd=repo_dir).strip()
+        except RepositoryAccessError:
+            return None
 
     def _git(
         self,
@@ -290,5 +354,10 @@ class RepositoryLoader:
             if token:
                 tail = tail.replace(token, "***")
             logger.debug("git failed: %s", tail)
+            if "Filename too long" in proc.stderr:
+                tail += (
+                    " (Windows path-length limit: set REPOMIND_DATA_DIR to a short "
+                    "directory such as C:\\rm to shorten checkout paths)"
+                )
             raise RepositoryAccessError(error or f"git command failed: {tail}")
         return proc.stdout

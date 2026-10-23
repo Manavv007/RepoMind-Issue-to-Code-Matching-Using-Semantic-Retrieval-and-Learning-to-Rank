@@ -1,0 +1,59 @@
+{
+  "builder": {
+    "annotation_method": "patch-hunk-to-function/v1",
+    "candidate_pool": "leaf units (function, method) excluding test files",
+    "dedup_jaccard_threshold": 0.8,
+    "exclude_patch_leaks": false,
+    "heldout_fraction": 0.4,
+    "heldout_repos": null,
+    "index": {
+      "include_nested_functions": false,
+      "languages": [
+        "python"
+      ],
+      "max_file_size_kb": 1024
+    },
+    "instances": null,
+    "limit": null,
+    "repos": [
+      "psf/requests",
+      "pallets/flask",
+      "mwaskom/seaborn",
+      "pylint-dev/astroid",
+      "pylint-dev/pylint",
+      "pytest-dev/pytest"
+    ],
+    "seed": 0
+  },
+  "counts": {
+    "issue_contains_patch_lines": 2,
+    "issue_mentions_gold_file": 15,
+    "mean_gold_units": 1.048780487804878,
+    "processed": 41,
+    "suitable": 41,
+    "suitable_by_split_and_repo": {
+      "dev": {
+        "mwaskom/seaborn": 4,
+        "psf/requests": 6,
+        "pylint-dev/astroid": 5,
+        "pylint-dev/pylint": 6
+      },
+      "test": {
+        "pallets/flask": 3,
+        "pytest-dev/pytest": 17
+      }
+    },
+    "unsuitable": 0,
+    "unsuitable_reasons": {},
+    "with_function_labels": 39
+  },
+  "created_at": "2026-10-22T07:00:37+00:00",
+  "dataset": "princeton-nlp/SWE-bench_Lite",
+  "dataset_revision": "6ec7bb89b9342f664a54a6e0a6ea6501d3437cc2",
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.1"
+  },
+  "excluded_cases": {},
+  "license_note": "SWE-bench code is MIT-licensed; the Hugging Face dataset card for princeton-nlp/SWE-bench_Lite declares no license. Issue texts come from public GitHub issues of the listed repositories and stay subject to those projects' terms. Used here for non-commercial research evaluation."
+}

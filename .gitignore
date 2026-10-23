@@ -34,11 +34,10 @@ coverage.xml
 *.faiss
 *.index
 
-# Keep dataset/report directories but ignore their bulky contents.
-/evaluation/datasets/*
-!/evaluation/datasets/.gitkeep
-/evaluation/reports/*
-!/evaluation/reports/.gitkeep
+# Evaluation: the built subsets (JSONL + manifest) and reports are small and are
+# committed for reproducibility. Only raw downloads and scratch output are ignored.
+/evaluation/datasets/raw/
+/evaluation/reports/scratch/
 
 # --- Editor / OS ---
 .vscode/

@@ -1,0 +1,14 @@
+{
+  "model_name": "Salesforce/SweRankEmbed-Small",
+  "revision": "745d2a06103a66d3cfa600aa52fc0d3523010daa",
+  "code_revision": "92d97331f1f4b6a366c1f161354b9f3390cc219f",
+  "weights_sha256": "e40687da7f148e684648691facbaa2222503829afb9d21b9b3913034bef14f41",
+  "trust_remote_code": true,
+  "query_prefix": "Represent this query for searching relevant code: ",
+  "max_seq_length": 1024,
+  "batch_size": 8,
+  "include_path": true,
+  "embeddings_path": "data/embeddings/swerank-small-v1",
+  "on_missing": "error",
+  "load_timeout_seconds": 300
+}

@@ -20,10 +20,10 @@ moving on.
 | 1 | Repository parsing & indexing | Metadata-rich code index | 0 |
 | 2 | Evaluation harness & dataset | Benchmark subset + metrics scripts | 0 |
 | 3 | Lexical retrieval (BM25 baseline) | Reproducible baseline + metrics | 1, 2 |
-| 4 | Issue understanding | Query builder, technical-token extraction | 1 |
-| 5 | Dense & hybrid retrieval | Embeddings, FAISS, RRF fusion | 3, 4 |
-| 6 | Reranking & error analysis | Cross-encoder rerank + failure report | 5 |
-| 7 | Dependency-aware context | Code graph + bounded expansion ablation | 1, 6 |
+| 4 | Evaluation scale-up + issue signals | Full SWE-bench Lite set, Acc@k, mention/path signals | 2, 3 |
+| 5 | Code-specific dense & hybrid | SweRankEmbed-Small, GPU-built embedding cache, RRF | 3, 4 |
+| 6 | LLM listwise reranking & error analysis | Rerank top 20-30 with an LLM; failure report | 5 |
+| 7 | Dependency-aware context (lower priority) | Code graph + bounded expansion ablation | 1, 6 |
 | 8 | Ranking & evidence assembly | Transparent score fusion + evidence | 6, 7 |
 | 9 | Diagnosis & patch proposal (optional) | Grounded LLM diagnosis + diff | 8 |
 | 10 | Patch validation (optional) | Isolated sandbox test runner | 9 |
@@ -37,6 +37,27 @@ of relevant functions with valid source locations, plus a repeatable
 evaluation of whether those functions are actually relevant.
 
 ---
+
+## Revision after Phase 3 (2026-10-22)
+
+Phases 4-7 were reordered and re-scoped after measuring what improves on the BM25
+baseline (held-out function hit@5 = 0.53). Full evidence:
+[`docs/improvement_findings.md`](docs/improvement_findings.md).
+
+- **What did not work on this machine (dev split):** a general-purpose embedding
+  model (MiniLM) hurts (hit@5 0.35 vs 0.65), and hybrids with it hurt too. A code
+  embedding model used only to re-sort BM25's top 30 adds almost nothing. A
+  file-level prior hurts.
+- **What helps a little:** boosting functions and files the issue names (dev MRR
+  +0.075; held-out MRR +0.045, not significant; hit@5 unchanged).
+- **What the literature says works:** a code-specific embedding model over the
+  whole repository (SweRankEmbed-Small: 63% Acc@5 vs 32% for BM25 on SWE-bench
+  Lite), then LLM listwise reranking (up to 82%). Both need a GPU or an LLM API.
+- **Measurement is the bottleneck:** with 19 held-out cases, gains under about
+  15 points are invisible. Scaling the evaluation set comes first.
+- **Realistic targets** (now that a baseline exists): code-specific dense or
+  hybrid should beat BM25 on function Acc@5 on the full set; LLM reranking should
+  reach about 70%+. These are the published ranges, to be confirmed here.
 
 ## Phase 0 — Project Foundation & Scaffolding
 
@@ -102,6 +123,19 @@ repository at a recorded commit.
 
 ## Phase 2 — Evaluation Harness & Dataset
 
+> **Status: ✅ complete** (174 tests passing; ruff, black, mypy clean).
+> **Decisions and findings:**
+> - Benchmark: **SWE-bench Lite**. BugsInPy was rejected because it has no bug-report
+>   text (commit ids, patches, and test files only) and no detected license.
+> - Neither benchmark ships function-level labels; they are derived from the gold
+>   patch against the pre-fix index (`patch-hunk-to-function/v1`) and cross-checked.
+> - Subset: 41 cases / 6 repos (21 `dev`, 20 held-out `test`), split by repository.
+>   Rebuilding reproduces the committed JSONL byte for byte.
+> - Random baseline on `test`: function hit@10 = 0.000, file hit@10 = 0.300 (n=20).
+> - Added to the plan: a shared `Retriever` interface (`app/retrieval/base.py`) and a
+>   label-independent candidate pool (leaf units outside test files).
+> - Details, limitations, and reproduction steps: [`docs/evaluation.md`](docs/evaluation.md).
+
 **Goal:** Make measurement possible before building retrieval, so every method
 is judged on the same cases. (Spec §10, §11; begin early.)
 
@@ -134,6 +168,22 @@ score any retriever.
 
 ## Phase 3 — Lexical Retrieval (BM25 Baseline)
 
+> **Status: ✅ complete** (247 tests passing; ruff, black, mypy clean).
+> **Decisions and findings:**
+> - BM25 is implemented in-house (inverted index, field-weighted, code-aware
+>   tokenizer), verified against a brute-force reference; `rank-bm25` was dropped
+>   from the dependencies.
+> - Hyperparameters were tuned on the **dev** split only (72-config grid, selection
+>   rule fixed in advance) and frozen before `test` was evaluated.
+> - Held-out `test` (n=19 function-labeled): tuned BM25 function hit@5 = 0.53,
+>   MRR = 0.335 vs 0.00 / 0.003 for random. Tuning helped MRR modestly
+>   (+0.091 [+0.010, +0.171] over textbook BM25) but not significantly on hit@k.
+> - File localization is easy (hit@10 = 0.95); function localization is the hard
+>   part, and long, noisy issues do worse (inputs to Phases 4-5).
+> - Added to the plan: `evaluation/compare_runs.py` (paired bootstrap between runs),
+>   retriever parameters recorded in every report, and `--retriever-config`/`--tag`.
+> - Details and failure analysis: [`docs/evaluation.md`](docs/evaluation.md) section 9.
+
 **Goal:** Establish the mandatory non-neural baseline. (Spec §6.4, §7.2;
 Roadmap Phase 2)
 
@@ -156,6 +206,18 @@ nDCG@10 numbers on the benchmark subset.
 ---
 
 ## Phase 4 — Issue Understanding
+
+> **Revised scope (2026-10-22): evaluation scale-up + issue signals.**
+> 1. Build the eval set from all function-labeled SWE-bench Lite cases (about 274),
+>    keeping the current `test` repositories held out and adding the rest
+>    (django, sympy, sphinx, matplotlib, ...). Same labeler and leakage controls.
+> 2. Add the literature's **Acc@k** (all gold functions in the top k) next to
+>    hit@k, so numbers are comparable to the papers.
+> 3. Re-measure BM25 on the larger set (CPU-only; a few minutes).
+> 4. Turn the prototype mention/path signals (`experiments/bm25_signals.py`) into a
+>    tested query-understanding module (identifier, traceback, and path
+>    extraction), tuned on `dev`. Expect MRR gains, not big hit@k gains.
+> The original tasks below still apply to step 4.
 
 **Goal:** Extract useful signals from noisy bug reports without destroying
 technical tokens. (Spec §6.3, §7.1)
@@ -181,6 +243,18 @@ retrieval queries plus extracted entities.
 
 ## Phase 5 — Dense & Hybrid Retrieval
 
+> **Revised scope (2026-10-22).** The backend, hybrid fusion, timeouts, and
+> fallback already exist (`app/retrieval/dense.py`, 17 tests). Remaining work:
+> - Default to a **code-specific** model (SweRankEmbed-Small; pin the revision,
+>   since it needs `trust_remote_code`). Generic MiniLM is ruled out by the dev results.
+> - Add a **persistent embedding cache** (keyed by content hash, as in the
+>   experiments) and a one-off **GPU indexing job** (e.g. Colab) that fills it.
+>   Evaluation then only encodes queries, which works on this CPU.
+> - Tune the RRF weights on `dev`; compare dense, hybrid, and BM25 on the scaled
+>   `test` set with paired bootstrap.
+> - Add an explicit, opt-in "fall back to BM25 if dense is unavailable" mode that
+>   records the fallback in the report.
+
 **Goal:** Retrieve conceptually relevant code even with few shared words, then
 fuse with lexical. (Spec §6.4, §7.3; Roadmap Phase 3)
 
@@ -205,6 +279,13 @@ fuse with lexical. (Spec §6.4, §7.3; Roadmap Phase 3)
 
 ## Phase 6 — Reranking & Error Analysis
 
+> **Revised scope (2026-10-22).** Replace the generic cross-encoder
+> (ms-marco-MiniLM, trained on web search) with **LLM listwise reranking** of the
+> top 20-30 candidates, the largest published gain (+10-20 points).
+> **Decision needed before starting:** a hosted LLM API (sends issue text and code
+> to a provider; costs money per issue) or a local model on a GPU. Measure cost
+> and latency per issue alongside accuracy.
+
 **Goal:** Improve the order of a smaller candidate set with a supervised
 relevance model, and understand where methods fail. (Spec §6.5, §7.4;
 Roadmap Phase 4)
@@ -227,6 +308,10 @@ Roadmap Phase 4)
 ---
 
 ## Phase 7 — Dependency-Aware Context (Ablation)
+
+> **Revised priority (2026-10-22): lower.** Many misses are functions BM25 never
+> retrieves. Graph expansion from top candidates (callers and callees of retrieved
+> functions) may help with those, but run it as an ablation after Phases 5 and 6.
 
 **Goal:** Test whether repository relationships improve ranking, with
 controlled expansion. (Spec §6.6, §8; Roadmap Phase 5)

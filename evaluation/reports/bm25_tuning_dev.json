@@ -1,0 +1,2588 @@
+{
+  "all_results": [
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.6949640967498111,
+        "ndcg@10": 0.7420157038645585
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.65,
+        "mrr": 0.513427033492823,
+        "ndcg@10": 0.5524371626162166
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.22916666666666666,
+        "psf/requests": 0.468367889420521,
+        "pylint-dev/astroid": 0.6354166666666666,
+        "pylint-dev/pylint": 0.6666666666666666
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 0.9,
+        "query_tf": "log",
+        "w_name": 3.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.6537037037037037,
+        "ndcg@10": 0.7093398543046965
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.65,
+        "mrr": 0.5087729735228839,
+        "ndcg@10": 0.5490800445767098
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.27374031007751937,
+        "psf/requests": 0.5358178053830228,
+        "pylint-dev/astroid": 0.6330645161290323,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 1.5,
+        "query_tf": "log",
+        "w_name": 3.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.6457211870255348,
+        "ndcg@10": 0.6936440863395396
+      },
+      "function": {
+        "hit@10": 0.75,
+        "hit@5": 0.7,
+        "mrr": 0.5033120581304006,
+        "ndcg@10": 0.5610050122413135
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.42039800995024873,
+        "psf/requests": 0.47521929824561404,
+        "pylint-dev/astroid": 0.55,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 1.5,
+        "query_tf": "raw",
+        "w_name": 3.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.6560776942355889,
+        "ndcg@10": 0.7119673396115554
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.65,
+        "mrr": 0.5028681586270871,
+        "ndcg@10": 0.5438535594215289
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.23171768707482993,
+        "psf/requests": 0.5443181818181818,
+        "pylint-dev/astroid": 0.6328125,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 1.5,
+        "query_tf": "log",
+        "w_name": 3.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.8571428571428571,
+        "mrr": 0.6855459355459356,
+        "ndcg@10": 0.7245835752143875
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.7,
+        "mrr": 0.5025527009222661,
+        "ndcg@10": 0.5477197786179612
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.22916666666666666,
+        "psf/requests": 0.43906455862977606,
+        "pylint-dev/astroid": 0.625,
+        "pylint-dev/pylint": 0.6666666666666666
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.5,
+        "k1": 0.9,
+        "query_tf": "raw",
+        "w_name": 1.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.6563397581254724,
+        "ndcg@10": 0.7122775784659562
+      },
+      "function": {
+        "hit@10": 0.65,
+        "hit@5": 0.65,
+        "mrr": 0.5014520202020203,
+        "ndcg@10": 0.5280803155822424
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.23169191919191917,
+        "psf/requests": 0.5378787878787878,
+        "pylint-dev/astroid": 0.6354166666666666,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 0.9,
+        "query_tf": "log",
+        "w_name": 1.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.644064454064454,
+        "ndcg@10": 0.6880829671448304
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.65,
+        "mrr": 0.49975864637154965,
+        "ndcg@10": 0.5425335568981369
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.2738095238095238,
+        "psf/requests": 0.5335016835016835,
+        "pylint-dev/astroid": 0.5913978494623656,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 1.5,
+        "query_tf": "log",
+        "w_name": 3.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.6535336356764928,
+        "ndcg@10": 0.7093398543046965
+      },
+      "function": {
+        "hit@10": 0.65,
+        "hit@5": 0.65,
+        "mrr": 0.49953610967038076,
+        "ndcg@10": 0.5280803155822424
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.22916666666666666,
+        "psf/requests": 0.5352184047836221,
+        "pylint-dev/astroid": 0.6323529411764706,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 1.5,
+        "query_tf": "log",
+        "w_name": 1.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.7619047619047619,
+        "mrr": 0.6446222859266337,
+        "ndcg@10": 0.6921847710954195
+      },
+      "function": {
+        "hit@10": 0.75,
+        "hit@5": 0.65,
+        "mrr": 0.49674397920087576,
+        "ndcg@10": 0.5548628664499227
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.3998015873015873,
+        "psf/requests": 0.4670566502463054,
+        "pylint-dev/astroid": 0.55,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 1.5,
+        "query_tf": "raw",
+        "w_name": 3.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.8571428571428571,
+        "mrr": 0.6512138188608777,
+        "ndcg@10": 0.6986872061268231
+      },
+      "function": {
+        "hit@10": 0.75,
+        "hit@5": 0.7,
+        "mrr": 0.4954939792008758,
+        "ndcg@10": 0.5562247907225873
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.23273809523809522,
+        "psf/requests": 0.49648786717752236,
+        "pylint-dev/astroid": 0.625,
+        "pylint-dev/pylint": 0.5833333333333334
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 0.9,
+        "query_tf": "raw",
+        "w_name": 3.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.8571428571428571,
+        "mrr": 0.6864983164983165,
+        "ndcg@10": 0.7245835752143875
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.7,
+        "mrr": 0.4939685314685315,
+        "ndcg@10": 0.5411732909393883
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.22916666666666666,
+        "psf/requests": 0.4104506604506604,
+        "pylint-dev/astroid": 0.625,
+        "pylint-dev/pylint": 0.6666666666666666
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.5,
+        "k1": 0.9,
+        "query_tf": "raw",
+        "w_name": 1.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.645719954648526,
+        "ndcg@10": 0.7037924794261388
+      },
+      "function": {
+        "hit@10": 0.65,
+        "hit@5": 0.65,
+        "mrr": 0.49293622111371266,
+        "ndcg@10": 0.5215338279036696
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.23182624113475175,
+        "psf/requests": 0.5390749601275917,
+        "pylint-dev/astroid": 0.5909090909090909,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 1.5,
+        "query_tf": "log",
+        "w_name": 3.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.6739577882435025,
+        "ndcg@10": 0.7241582419641597
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.65,
+        "mrr": 0.49216956654456656,
+        "ndcg@10": 0.5360093070283938
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.21666666666666667,
+        "psf/requests": 0.43593559218559214,
+        "pylint-dev/astroid": 0.5902777777777778,
+        "pylint-dev/pylint": 0.6666666666666666
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.5,
+        "k1": 1.5,
+        "query_tf": "log",
+        "w_name": 1.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.643963443963444,
+        "ndcg@10": 0.7018479588742536
+      },
+      "function": {
+        "hit@10": 0.65,
+        "hit@5": 0.65,
+        "mrr": 0.4908549783549783,
+        "ndcg@10": 0.5215338279036696
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.22916666666666666,
+        "psf/requests": 0.5341991341991342,
+        "pylint-dev/astroid": 0.5904761904761905,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 1.5,
+        "query_tf": "log",
+        "w_name": 1.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.6656746031746031,
+        "ndcg@10": 0.7196015597681537
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.65,
+        "mrr": 0.4868256743256743,
+        "ndcg@10": 0.532839957606055
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.22916666666666666,
+        "psf/requests": 0.46356421356421357,
+        "pylint-dev/astroid": 0.6346153846153846,
+        "pylint-dev/pylint": 0.5833333333333334
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 0.9,
+        "query_tf": "log",
+        "w_name": 1.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.6656746031746031,
+        "ndcg@10": 0.7196015597681537
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.65,
+        "mrr": 0.4859193342888995,
+        "ndcg@10": 0.532839957606055
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.22916666666666666,
+        "psf/requests": 0.4605430801082975,
+        "pylint-dev/astroid": 0.6346153846153846,
+        "pylint-dev/pylint": 0.5833333333333334
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 0.9,
+        "query_tf": "log",
+        "w_name": 1.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.6246153846153847,
+        "ndcg@10": 0.6781561579781256
+      },
+      "function": {
+        "hit@10": 0.75,
+        "hit@5": 0.7,
+        "mrr": 0.48436223401012135,
+        "ndcg@10": 0.5478272978311518
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.29518779342723006,
+        "psf/requests": 0.4871933621933622,
+        "pylint-dev/astroid": 0.5625,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 1.5,
+        "query_tf": "raw",
+        "w_name": 3.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.8571428571428571,
+        "mrr": 0.6396698073168662,
+        "ndcg@10": 0.6891513396745343
+      },
+      "function": {
+        "hit@10": 0.75,
+        "hit@5": 0.7,
+        "mrr": 0.4839642857142857,
+        "ndcg@10": 0.5469338750037716
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.23273809523809522,
+        "psf/requests": 0.48583333333333334,
+        "pylint-dev/astroid": 0.5833333333333334,
+        "pylint-dev/pylint": 0.5833333333333334
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 0.9,
+        "query_tf": "raw",
+        "w_name": 3.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8571428571428571,
+        "mrr": 0.6631815044858523,
+        "ndcg@10": 0.7204911050434121
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.7,
+        "mrr": 0.4818181818181818,
+        "ndcg@10": 0.5311606311644851
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.22916666666666666,
+        "psf/requests": 0.4116161616161616,
+        "pylint-dev/astroid": 0.5625,
+        "pylint-dev/pylint": 0.6666666666666666
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.5,
+        "k1": 1.5,
+        "query_tf": "raw",
+        "w_name": 1.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.8571428571428571,
+        "mrr": 0.6308390022675736,
+        "ndcg@10": 0.682916589504465
+      },
+      "function": {
+        "hit@10": 0.75,
+        "hit@5": 0.7,
+        "mrr": 0.48128198294243074,
+        "ndcg@10": 0.5447426874618289
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.2620646766169154,
+        "psf/requests": 0.4851190476190476,
+        "pylint-dev/astroid": 0.5833333333333334,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 0.9,
+        "query_tf": "raw",
+        "w_name": 3.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.8571428571428571,
+        "mrr": 0.6391156462585034,
+        "ndcg@10": 0.6891513396745343
+      },
+      "function": {
+        "hit@10": 0.75,
+        "hit@5": 0.7,
+        "mrr": 0.4809558823529412,
+        "ndcg@10": 0.5447426874618289
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.22034313725490196,
+        "psf/requests": 0.4840686274509804,
+        "pylint-dev/astroid": 0.625,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 0.9,
+        "query_tf": "raw",
+        "w_name": 3.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.8571428571428571,
+        "mrr": 0.6393772893772893,
+        "ndcg@10": 0.6891513396745343
+      },
+      "function": {
+        "hit@10": 0.75,
+        "hit@5": 0.7,
+        "mrr": 0.48062134502923975,
+        "ndcg@10": 0.5447426874618289
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.21944444444444444,
+        "psf/requests": 0.48355263157894735,
+        "pylint-dev/astroid": 0.625,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 0.9,
+        "query_tf": "raw",
+        "w_name": 1.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.6228271728271728,
+        "ndcg@10": 0.6760693127000851
+      },
+      "function": {
+        "hit@10": 0.75,
+        "hit@5": 0.7,
+        "mrr": 0.47985714285714287,
+        "ndcg@10": 0.5434449227472665
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.29523809523809524,
+        "psf/requests": 0.4804761904761905,
+        "pylint-dev/astroid": 0.55,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 1.5,
+        "query_tf": "raw",
+        "w_name": 3.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.8571428571428571,
+        "mrr": 0.639484126984127,
+        "ndcg@10": 0.6891513396745343
+      },
+      "function": {
+        "hit@10": 0.75,
+        "hit@5": 0.7,
+        "mrr": 0.47957796391752583,
+        "ndcg@10": 0.5434226849384369
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.21924398625429553,
+        "psf/requests": 0.48020833333333335,
+        "pylint-dev/astroid": 0.625,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 0.9,
+        "query_tf": "raw",
+        "w_name": 1.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.6583994708994709,
+        "ndcg@10": 0.714054184889596
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.65,
+        "mrr": 0.47942405730234683,
+        "ndcg@10": 0.526293469927482
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.23177083333333331,
+        "psf/requests": 0.46439963545226703,
+        "pylint-dev/astroid": 0.59375,
+        "pylint-dev/pylint": 0.5833333333333334
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 0.9,
+        "query_tf": "log",
+        "w_name": 3.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8571428571428571,
+        "mrr": 0.666921768707483,
+        "ndcg@10": 0.7205122839089642
+      },
+      "function": {
+        "hit@10": 0.75,
+        "hit@5": 0.7,
+        "mrr": 0.47924836601307186,
+        "ndcg@10": 0.5412314973964942
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.21666666666666667,
+        "psf/requests": 0.4481481481481482,
+        "pylint-dev/astroid": 0.6323529411764706,
+        "pylint-dev/pylint": 0.5833333333333334
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.5,
+        "k1": 1.5,
+        "query_tf": "log",
+        "w_name": 3.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.6571850962607265,
+        "ndcg@10": 0.7133668095980843
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.65,
+        "mrr": 0.47919674975732623,
+        "ndcg@10": 0.526293469927482
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.2319756554307116,
+        "psf/requests": 0.4632034632034632,
+        "pylint-dev/astroid": 0.6358695652173914,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 0.9,
+        "query_tf": "log",
+        "w_name": 3.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.6577972709551657,
+        "ndcg@10": 0.7133668095980843
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.65,
+        "mrr": 0.4789950086145739,
+        "ndcg@10": 0.526293469927482
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.2319139194139194,
+        "psf/requests": 0.46287408243929984,
+        "pylint-dev/astroid": 0.6354166666666666,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 0.9,
+        "query_tf": "log",
+        "w_name": 3.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.8571428571428571,
+        "mrr": 0.6615971747550695,
+        "ndcg@10": 0.7070088015749332
+      },
+      "function": {
+        "hit@10": 0.75,
+        "hit@5": 0.7,
+        "mrr": 0.4789292497625831,
+        "ndcg@10": 0.5443177660797331
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.23225308641975306,
+        "psf/requests": 0.44159544159544156,
+        "pylint-dev/astroid": 0.625,
+        "pylint-dev/pylint": 0.5833333333333334
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.5,
+        "k1": 0.9,
+        "query_tf": "raw",
+        "w_name": 3.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.657598858256753,
+        "ndcg@10": 0.7133668095980843
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.65,
+        "mrr": 0.47685825647782165,
+        "ndcg@10": 0.5246783030440144
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.22916666666666666,
+        "psf/requests": 0.45758307714829455,
+        "pylint-dev/astroid": 0.6354166666666666,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 0.9,
+        "query_tf": "log",
+        "w_name": 1.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.8571428571428571,
+        "mrr": 0.631667538810396,
+        "ndcg@10": 0.682916589504465
+      },
+      "function": {
+        "hit@10": 0.75,
+        "hit@5": 0.7,
+        "mrr": 0.47677094920281793,
+        "ndcg@10": 0.5412765153654986
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.26120689655172413,
+        "psf/requests": 0.4845430107526882,
+        "pylint-dev/astroid": 0.5625,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 0.9,
+        "query_tf": "raw",
+        "w_name": 1.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.6655328798185941,
+        "ndcg@10": 0.7190529686648441
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.65,
+        "mrr": 0.4748434148434148,
+        "ndcg@10": 0.5241022823855395
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.21666666666666667,
+        "psf/requests": 0.4338624338624339,
+        "pylint-dev/astroid": 0.6317567567567568,
+        "pylint-dev/pylint": 0.5833333333333334
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.5,
+        "k1": 1.5,
+        "query_tf": "log",
+        "w_name": 1.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.6287899700943179,
+        "ndcg@10": 0.6905079354048687
+      },
+      "function": {
+        "hit@10": 0.65,
+        "hit@5": 0.65,
+        "mrr": 0.47351229688186214,
+        "ndcg@10": 0.5096268032608153
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.22916666666666666,
+        "psf/requests": 0.44832381788903525,
+        "pylint-dev/astroid": 0.6325757575757576,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 1.5,
+        "query_tf": "log",
+        "w_name": 1.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.8571428571428571,
+        "mrr": 0.6319083694083694,
+        "ndcg@10": 0.682916589504465
+      },
+      "function": {
+        "hit@10": 0.75,
+        "hit@5": 0.7,
+        "mrr": 0.4716052075072693,
+        "ndcg@10": 0.536876197259864
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.21924398625429553,
+        "psf/requests": 0.4814102564102564,
+        "pylint-dev/astroid": 0.5833333333333334,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 0.9,
+        "query_tf": "raw",
+        "w_name": 1.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.6235042735042735,
+        "ndcg@10": 0.6760693127000851
+      },
+      "function": {
+        "hit@10": 0.75,
+        "hit@5": 0.7,
+        "mrr": 0.4711928104575163,
+        "ndcg@10": 0.5374744557271687
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.25,
+        "psf/requests": 0.47342047930283226,
+        "pylint-dev/astroid": 0.5625,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 1.5,
+        "query_tf": "raw",
+        "w_name": 1.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.6578231292517007,
+        "ndcg@10": 0.7128182184947748
+      },
+      "function": {
+        "hit@10": 0.75,
+        "hit@5": 0.65,
+        "mrr": 0.46955357142857146,
+        "ndcg@10": 0.5331527287115955
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.21666666666666667,
+        "psf/requests": 0.44375000000000003,
+        "pylint-dev/astroid": 0.5904761904761905,
+        "pylint-dev/pylint": 0.5833333333333334
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.5,
+        "k1": 1.5,
+        "query_tf": "log",
+        "w_name": 3.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.7619047619047619,
+        "mrr": 0.6202614379084967,
+        "ndcg@10": 0.6746099974559651
+      },
+      "function": {
+        "hit@10": 0.75,
+        "hit@5": 0.65,
+        "mrr": 0.4683054841809503,
+        "ndcg@10": 0.534218166586553
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.3859106529209622,
+        "psf/requests": 0.3815222897669706,
+        "pylint-dev/astroid": 0.55,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 1.5,
+        "query_tf": "raw",
+        "w_name": 1.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.7619047619047619,
+        "mrr": 0.6204648526077098,
+        "ndcg@10": 0.6746099974559651
+      },
+      "function": {
+        "hit@10": 0.75,
+        "hit@5": 0.65,
+        "mrr": 0.46736735330836454,
+        "ndcg@10": 0.5326029997030854
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.38614232209737825,
+        "psf/requests": 0.3782407407407407,
+        "pylint-dev/astroid": 0.55,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 1.5,
+        "query_tf": "raw",
+        "w_name": 1.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.6227053140096618,
+        "ndcg@10": 0.6760693127000851
+      },
+      "function": {
+        "hit@10": 0.75,
+        "hit@5": 0.7,
+        "mrr": 0.4649074074074074,
+        "ndcg@10": 0.5318170960888957
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.22916666666666666,
+        "psf/requests": 0.47469135802469137,
+        "pylint-dev/astroid": 0.55,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 1.5,
+        "query_tf": "raw",
+        "w_name": 1.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.6202549302549303,
+        "ndcg@10": 0.670508193505376
+      },
+      "function": {
+        "hit@10": 0.65,
+        "hit@5": 0.65,
+        "mrr": 0.464901185770751,
+        "ndcg@10": 0.5030803155822425
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.22916666666666666,
+        "psf/requests": 0.44739789196310936,
+        "pylint-dev/astroid": 0.5909090909090909,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 1.5,
+        "query_tf": "log",
+        "w_name": 1.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.8571428571428571,
+        "mrr": 0.6424242424242423,
+        "ndcg@10": 0.6924524559567538
+      },
+      "function": {
+        "hit@10": 0.75,
+        "hit@5": 0.7,
+        "mrr": 0.463849884683218,
+        "ndcg@10": 0.532839957606055
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.23225308641975306,
+        "psf/requests": 0.4191086691086691,
+        "pylint-dev/astroid": 0.5833333333333334,
+        "pylint-dev/pylint": 0.5833333333333334
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.5,
+        "k1": 1.5,
+        "query_tf": "raw",
+        "w_name": 3.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.8571428571428571,
+        "mrr": 0.6429073342116821,
+        "ndcg@10": 0.6924524559567538
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.7,
+        "mrr": 0.4606351981351981,
+        "ndcg@10": 0.5161732909393882
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.22916666666666666,
+        "psf/requests": 0.4104506604506604,
+        "pylint-dev/astroid": 0.5833333333333334,
+        "pylint-dev/pylint": 0.5833333333333334
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.5,
+        "k1": 1.5,
+        "query_tf": "raw",
+        "w_name": 1.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8571428571428571,
+        "mrr": 0.6388376856118791,
+        "ndcg@10": 0.7029163314039577
+      },
+      "function": {
+        "hit@10": 0.75,
+        "hit@5": 0.7,
+        "mrr": 0.4600566100566101,
+        "ndcg@10": 0.5293737855097246
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.23237179487179485,
+        "psf/requests": 0.4202741702741703,
+        "pylint-dev/astroid": 0.5625,
+        "pylint-dev/pylint": 0.5833333333333334
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.5,
+        "k1": 1.5,
+        "query_tf": "raw",
+        "w_name": 3.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8571428571428571,
+        "mrr": 0.6302840434419382,
+        "ndcg@10": 0.6969642694948325
+      },
+      "function": {
+        "hit@10": 0.75,
+        "hit@5": 0.7,
+        "mrr": 0.4458623799914389,
+        "ndcg@10": 0.5193177660797331
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.23233122362869196,
+        "psf/requests": 0.44243156199677935,
+        "pylint-dev/astroid": 0.5833333333333334,
+        "pylint-dev/pylint": 0.5
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.5,
+        "k1": 0.9,
+        "query_tf": "raw",
+        "w_name": 3.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8571428571428571,
+        "mrr": 0.6335884353741497,
+        "ndcg@10": 0.6958559714896309
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.7,
+        "mrr": 0.4366629179787075,
+        "ndcg@10": 0.49523176840202704
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.21666666666666667,
+        "psf/requests": 0.4438146648672965,
+        "pylint-dev/astroid": 0.6342592592592593,
+        "pylint-dev/pylint": 0.4444444444444444
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.5,
+        "k1": 0.9,
+        "query_tf": "log",
+        "w_name": 3.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8571428571428571,
+        "mrr": 0.6335884353741497,
+        "ndcg@10": 0.6958559714896309
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.65,
+        "mrr": 0.4345363408521303,
+        "ndcg@10": 0.49369948739570113
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.20833333333333331,
+        "psf/requests": 0.4428989139515455,
+        "pylint-dev/astroid": 0.6333333333333333,
+        "pylint-dev/pylint": 0.4444444444444444
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.5,
+        "k1": 0.9,
+        "query_tf": "log",
+        "w_name": 1.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8571428571428571,
+        "mrr": 0.6258786848072562,
+        "ndcg@10": 0.6896212213195614
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.65,
+        "mrr": 0.427156339031339,
+        "ndcg@10": 0.4871529997171282
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.20833333333333331,
+        "psf/requests": 0.44545940170940174,
+        "pylint-dev/astroid": 0.5925925925925926,
+        "pylint-dev/pylint": 0.4444444444444444
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.5,
+        "k1": 0.9,
+        "query_tf": "log",
+        "w_name": 3.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8571428571428571,
+        "mrr": 0.6179421768707483,
+        "ndcg@10": 0.683386471149492
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.65,
+        "mrr": 0.4262954429083461,
+        "ndcg@10": 0.4871529997171282
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.20833333333333331,
+        "psf/requests": 0.4433862433862434,
+        "pylint-dev/astroid": 0.5913978494623656,
+        "pylint-dev/pylint": 0.4444444444444444
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.5,
+        "k1": 0.9,
+        "query_tf": "log",
+        "w_name": 1.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.7619047619047619,
+        "mrr": 0.5897495361781077,
+        "ndcg@10": 0.6614322632218905
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.6,
+        "mrr": 0.3946943592038529,
+        "ndcg@10": 0.46266210087405363
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.21983122362869198,
+        "psf/requests": 0.4198653198653199,
+        "pylint-dev/astroid": 0.5925925925925926,
+        "pylint-dev/pylint": 0.3541666666666667
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 1.5,
+        "query_tf": "binary",
+        "w_name": 3.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.5790069057926202,
+        "ndcg@10": 0.6533557120137217
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.6,
+        "mrr": 0.390980980980981,
+        "ndcg@10": 0.45979418724502796
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.22013888888888888,
+        "psf/requests": 0.4211711711711712,
+        "pylint-dev/astroid": 0.5717592592592593,
+        "pylint-dev/pylint": 0.3541666666666667
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 1.5,
+        "query_tf": "binary",
+        "w_name": 3.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.7619047619047619,
+        "mrr": 0.5787492700536179,
+        "ndcg@10": 0.6522597888905614
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.6,
+        "mrr": 0.38690575138495914,
+        "ndcg@10": 0.4559921276066981
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.22028985507246376,
+        "psf/requests": 0.42192646366875036,
+        "pylint-dev/astroid": 0.5952380952380952,
+        "pylint-dev/pylint": 0.32407407407407407
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 0.9,
+        "query_tf": "binary",
+        "w_name": 3.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.7619047619047619,
+        "mrr": 0.5820746713603856,
+        "ndcg@10": 0.6551975130518211
+      },
+      "function": {
+        "hit@10": 0.65,
+        "hit@5": 0.6,
+        "mrr": 0.3857515738369611,
+        "ndcg@10": 0.4416623718795864
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.22018779342723005,
+        "psf/requests": 0.416824494949495,
+        "pylint-dev/astroid": 0.59375,
+        "pylint-dev/pylint": 0.3263888888888889
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 0.9,
+        "query_tf": "binary",
+        "w_name": 1.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.7619047619047619,
+        "mrr": 0.5745001030715317,
+        "ndcg@10": 0.6498136417649709
+      },
+      "function": {
+        "hit@10": 0.65,
+        "hit@5": 0.6,
+        "mrr": 0.38480758582502766,
+        "ndcg@10": 0.4416623718795864
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.2195736434108527,
+        "psf/requests": 0.4154761904761905,
+        "pylint-dev/astroid": 0.5916666666666667,
+        "pylint-dev/pylint": 0.3263888888888889
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 1.5,
+        "query_tf": "binary",
+        "w_name": 1.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.7619047619047619,
+        "mrr": 0.5765079365079365,
+        "ndcg@10": 0.6510455178863824
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.6,
+        "mrr": 0.38234750879756935,
+        "ndcg@10": 0.4525259555103677
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.22063492063492063,
+        "psf/requests": 0.4210812980162825,
+        "pylint-dev/astroid": 0.5733695652173914,
+        "pylint-dev/pylint": 0.32407407407407407
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 0.9,
+        "query_tf": "binary",
+        "w_name": 3.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.7619047619047619,
+        "mrr": 0.5751417233560091,
+        "ndcg@10": 0.6498095514915612
+      },
+      "function": {
+        "hit@10": 0.65,
+        "hit@5": 0.6,
+        "mrr": 0.38180894567336215,
+        "ndcg@10": 0.438196199783256
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.22028985507246376,
+        "psf/requests": 0.4182748538011696,
+        "pylint-dev/astroid": 0.5925925925925926,
+        "pylint-dev/pylint": 0.3125
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 1.5,
+        "query_tf": "binary",
+        "w_name": 3.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.7619047619047619,
+        "mrr": 0.5776180169037313,
+        "ndcg@10": 0.6518963967696018
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.6,
+        "mrr": 0.3815647402245531,
+        "ndcg@10": 0.45264944109915045
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.22034313725490196,
+        "psf/requests": 0.41718789727943045,
+        "pylint-dev/astroid": 0.5721153846153846,
+        "pylint-dev/pylint": 0.3263888888888889
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 0.9,
+        "query_tf": "binary",
+        "w_name": 1.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.5720238095238095,
+        "ndcg@10": 0.6479718407268715
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.6,
+        "mrr": 0.3812125426351461,
+        "ndcg@10": 0.45264944109915045
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.21983122362869198,
+        "psf/requests": 0.41755710414247,
+        "pylint-dev/astroid": 0.5703125,
+        "pylint-dev/pylint": 0.3263888888888889
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 1.5,
+        "query_tf": "binary",
+        "w_name": 1.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.5674242424242424,
+        "ndcg@10": 0.6427793571593259
+      },
+      "function": {
+        "hit@10": 0.65,
+        "hit@5": 0.55,
+        "mrr": 0.378630095749661,
+        "ndcg@10": 0.43552022608819563
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.2058531746031746,
+        "psf/requests": 0.42454435660957396,
+        "pylint-dev/astroid": 0.59375,
+        "pylint-dev/pylint": 0.30448717948717946
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 0.9,
+        "query_tf": "binary",
+        "w_name": 3.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.5706538170823885,
+        "ndcg@10": 0.6464335865521404
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.55,
+        "mrr": 0.3785748353395412,
+        "ndcg@10": 0.44997346740409006
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.20575933075933076,
+        "psf/requests": 0.4215686274509804,
+        "pylint-dev/astroid": 0.5714285714285714,
+        "pylint-dev/pylint": 0.32222222222222224
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 0.9,
+        "query_tf": "binary",
+        "w_name": 1.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.7619047619047619,
+        "mrr": 0.5706254724111867,
+        "ndcg@10": 0.64582105991783
+      },
+      "function": {
+        "hit@10": 0.65,
+        "hit@5": 0.6,
+        "mrr": 0.3779498820412174,
+        "ndcg@10": 0.4347300276869257
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.2206989247311828,
+        "psf/requests": 0.4190274841437632,
+        "pylint-dev/astroid": 0.5717592592592593,
+        "pylint-dev/pylint": 0.3125
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 1.5,
+        "query_tf": "binary",
+        "w_name": 3.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.5756421356421356,
+        "ndcg@10": 0.6364891722682031
+      },
+      "function": {
+        "hit@10": 0.65,
+        "hit@5": 0.55,
+        "mrr": 0.3754040404040404,
+        "ndcg@10": 0.43319774668059974
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.20069444444444443,
+        "psf/requests": 0.41805555555555557,
+        "pylint-dev/astroid": 0.5700757575757576,
+        "pylint-dev/pylint": 0.3194444444444445
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.5,
+        "k1": 1.5,
+        "query_tf": "binary",
+        "w_name": 3.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.577922077922078,
+        "ndcg@10": 0.6514684350018052
+      },
+      "function": {
+        "hit@10": 0.65,
+        "hit@5": 0.55,
+        "mrr": 0.3750692121887774,
+        "ndcg@10": 0.4337509871789001
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.19444444444444442,
+        "psf/requests": 0.40810107766629505,
+        "pylint-dev/astroid": 0.5895833333333333,
+        "pylint-dev/pylint": 0.3194444444444445
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.5,
+        "k1": 1.5,
+        "query_tf": "binary",
+        "w_name": 1.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.585630484077689,
+        "ndcg@10": 0.6585757594457363
+      },
+      "function": {
+        "hit@10": 0.65,
+        "hit@5": 0.55,
+        "mrr": 0.3749797711866677,
+        "ndcg@10": 0.43276687219750765
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.17335858585858585,
+        "psf/requests": 0.4066018272914825,
+        "pylint-dev/astroid": 0.5689102564102564,
+        "pylint-dev/pylint": 0.34848484848484845
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.5,
+        "k1": 1.5,
+        "query_tf": "binary",
+        "w_name": 1.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.5731074481074481,
+        "ndcg@10": 0.6481673187195858
+      },
+      "function": {
+        "hit@10": 0.65,
+        "hit@5": 0.55,
+        "mrr": 0.3749637330754352,
+        "ndcg@10": 0.43319774668059974
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.20057624113475175,
+        "psf/requests": 0.41865079365079366,
+        "pylint-dev/astroid": 0.5700757575757576,
+        "pylint-dev/pylint": 0.31746031746031744
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.5,
+        "k1": 1.5,
+        "query_tf": "binary",
+        "w_name": 3.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.5663767219667841,
+        "ndcg@10": 0.6416901260271979
+      },
+      "function": {
+        "hit@10": 0.65,
+        "hit@5": 0.55,
+        "mrr": 0.37435426610426614,
+        "ndcg@10": 0.4320540539918653
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.20558608058608058,
+        "psf/requests": 0.4089102564102564,
+        "pylint-dev/astroid": 0.5925925925925926,
+        "pylint-dev/pylint": 0.3068181818181818
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 0.9,
+        "query_tf": "binary",
+        "w_name": 1.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.5643970315398887,
+        "ndcg@10": 0.6278000944257238
+      },
+      "function": {
+        "hit@10": 0.65,
+        "hit@5": 0.55,
+        "mrr": 0.3742780170974421,
+        "ndcg@10": 0.4320540539918653
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.20600414078674947,
+        "psf/requests": 0.4230350742447517,
+        "pylint-dev/astroid": 0.5725,
+        "pylint-dev/pylint": 0.3055555555555555
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 0.9,
+        "query_tf": "binary",
+        "w_name": 3.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.7619047619047619,
+        "mrr": 0.5512545655402799,
+        "ndcg@10": 0.6315474025605949
+      },
+      "function": {
+        "hit@10": 0.65,
+        "hit@5": 0.6,
+        "mrr": 0.3566696239610232,
+        "ndcg@10": 0.42063611028920916
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.22004504504504505,
+        "psf/requests": 0.3322814149194124,
+        "pylint-dev/astroid": 0.5916666666666667,
+        "pylint-dev/pylint": 0.31547619047619047
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 1.5,
+        "query_tf": "binary",
+        "w_name": 1.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.7619047619047619,
+        "mrr": 0.5505668934240363,
+        "ndcg@10": 0.6309776325917335
+      },
+      "function": {
+        "hit@10": 0.65,
+        "hit@5": 0.6,
+        "mrr": 0.3563985594237695,
+        "ndcg@10": 0.42063611028920916
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.22034313725490196,
+        "psf/requests": 0.33117913832199547,
+        "pylint-dev/astroid": 0.5916666666666667,
+        "pylint-dev/pylint": 0.31547619047619047
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 1.5,
+        "query_tf": "binary",
+        "w_name": 1.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.5414762486191057,
+        "ndcg@10": 0.6249275648789235
+      },
+      "function": {
+        "hit@10": 0.65,
+        "hit@5": 0.5,
+        "mrr": 0.3392070890107817,
+        "ndcg@10": 0.4060750134838397
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.19719169719169719,
+        "psf/requests": 0.4001028211554527,
+        "pylint-dev/astroid": 0.42473118279569894,
+        "pylint-dev/pylint": 0.3159722222222222
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.5,
+        "k1": 0.9,
+        "query_tf": "binary",
+        "w_name": 3.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.517739984882842,
+        "ndcg@10": 0.6073527912394692
+      },
+      "function": {
+        "hit@10": 0.65,
+        "hit@5": 0.5,
+        "mrr": 0.33807663995163995,
+        "ndcg@10": 0.4054767550165351
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.1941919191919192,
+        "psf/requests": 0.3992063492063492,
+        "pylint-dev/astroid": 0.42342342342342343,
+        "pylint-dev/pylint": 0.3159722222222222
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.5,
+        "k1": 0.9,
+        "query_tf": "binary",
+        "w_name": 1.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.5409471480900052,
+        "ndcg@10": 0.624357794910062
+      },
+      "function": {
+        "hit@10": 0.6,
+        "hit@5": 0.5,
+        "mrr": 0.3349954330523018,
+        "ndcg@10": 0.38870103429304476
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.1922675026123302,
+        "psf/requests": 0.4032356532356532,
+        "pylint-dev/astroid": 0.40389784946236557,
+        "pylint-dev/pylint": 0.3159722222222222
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.5,
+        "k1": 0.9,
+        "query_tf": "binary",
+        "w_name": 3.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.5370521541950113,
+        "ndcg@10": 0.6210566786278425
+      },
+      "function": {
+        "hit@10": 0.6,
+        "hit@5": 0.5,
+        "mrr": 0.3282546760188381,
+        "ndcg@10": 0.38409116950797995
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.16772367703218766,
+        "psf/requests": 0.39811939268461005,
+        "pylint-dev/astroid": 0.4024122807017544,
+        "pylint-dev/pylint": 0.3159722222222222
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.5,
+        "k1": 0.9,
+        "query_tf": "binary",
+        "w_name": 1.0,
+        "w_path": 1.0
+      }
+    }
+  ],
+  "best": {
+    "evaluated": 21,
+    "file": {
+      "hit@10": 0.9047619047619048,
+      "hit@5": 0.8095238095238095,
+      "mrr": 0.6949640967498111,
+      "ndcg@10": 0.7420157038645585
+    },
+    "function": {
+      "hit@10": 0.7,
+      "hit@5": 0.65,
+      "mrr": 0.513427033492823,
+      "ndcg@10": 0.5524371626162166
+    },
+    "function_mrr_by_repo": {
+      "mwaskom/seaborn": 0.22916666666666666,
+      "psf/requests": 0.468367889420521,
+      "pylint-dev/astroid": 0.6354166666666666,
+      "pylint-dev/pylint": 0.6666666666666666
+    },
+    "n_file_cases": 21,
+    "n_function_cases": 20,
+    "params": {
+      "b": 0.75,
+      "k1": 0.9,
+      "query_tf": "log",
+      "w_name": 3.0,
+      "w_path": 2.0
+    }
+  },
+  "classic": {
+    "evaluated": 21,
+    "file": {
+      "hit@10": 0.8571428571428571,
+      "hit@5": 0.8571428571428571,
+      "mrr": 0.6276094276094276,
+      "ndcg@10": 0.6796154732222457
+    },
+    "function": {
+      "hit@10": 0.75,
+      "hit@5": 0.7,
+      "mrr": 0.4654888365602651,
+      "ndcg@10": 0.5318170960888957
+    },
+    "function_mrr_by_repo": {
+      "mwaskom/seaborn": 0.21921768707482991,
+      "psf/requests": 0.48326210826210825,
+      "pylint-dev/astroid": 0.55,
+      "pylint-dev/pylint": 0.5555555555555556
+    },
+    "n_file_cases": 21,
+    "n_function_cases": 20,
+    "params": {
+      "b": 0.75,
+      "k1": 1.2,
+      "query_tf": "raw",
+      "use_stopwords": true,
+      "w_body": 1.0,
+      "w_doc": 1.0,
+      "w_name": 1.0,
+      "w_path": 1.0
+    }
+  },
+  "dataset": "swebench_lite_subset.jsonl",
+  "dataset_sha256": "e8a714baaf8831a13d655e2ff9d28702f9617bf8a126bdcf38f81a78b36a903c",
+  "grid": {
+    "b": [
+      0.5,
+      0.75,
+      0.9
+    ],
+    "k1": [
+      0.9,
+      1.5
+    ],
+    "query_tf": [
+      "binary",
+      "log",
+      "raw"
+    ],
+    "w_name": [
+      1.0,
+      3.0
+    ],
+    "w_path": [
+      1.0,
+      2.0
+    ]
+  },
+  "n_cases": 21,
+  "n_configs": 72,
+  "selection_criterion": "function MRR, then file MRR, then grid order",
+  "sensitivity": {
+    "b": {
+      "0.5": 0.4278787204719441,
+      "0.75": 0.4516785533826652,
+      "0.9": 0.44784178155375937
+    },
+    "k1": {
+      "0.9": 0.4383687294392425,
+      "1.5": 0.4465639741663366
+    },
+    "query_tf": {
+      "binary": 0.37116166096532566,
+      "log": 0.47815436101561826,
+      "raw": 0.4780830334274247
+    },
+    "w_name": {
+      "1.0": 0.44007616058812016,
+      "3.0": 0.4448565430174589
+    },
+    "w_path": {
+      "1.0": 0.440562600590065,
+      "2.0": 0.44437010301551405
+    }
+  },
+  "split": "dev",
+  "spread": {
+    "best": 0.513427033492823,
+    "median": 0.46955357142857146,
+    "worst": 0.3282546760188381
+  },
+  "top": [
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.6949640967498111,
+        "ndcg@10": 0.7420157038645585
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.65,
+        "mrr": 0.513427033492823,
+        "ndcg@10": 0.5524371626162166
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.22916666666666666,
+        "psf/requests": 0.468367889420521,
+        "pylint-dev/astroid": 0.6354166666666666,
+        "pylint-dev/pylint": 0.6666666666666666
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 0.9,
+        "query_tf": "log",
+        "w_name": 3.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.6537037037037037,
+        "ndcg@10": 0.7093398543046965
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.65,
+        "mrr": 0.5087729735228839,
+        "ndcg@10": 0.5490800445767098
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.27374031007751937,
+        "psf/requests": 0.5358178053830228,
+        "pylint-dev/astroid": 0.6330645161290323,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 1.5,
+        "query_tf": "log",
+        "w_name": 3.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.6457211870255348,
+        "ndcg@10": 0.6936440863395396
+      },
+      "function": {
+        "hit@10": 0.75,
+        "hit@5": 0.7,
+        "mrr": 0.5033120581304006,
+        "ndcg@10": 0.5610050122413135
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.42039800995024873,
+        "psf/requests": 0.47521929824561404,
+        "pylint-dev/astroid": 0.55,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 1.5,
+        "query_tf": "raw",
+        "w_name": 3.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.6560776942355889,
+        "ndcg@10": 0.7119673396115554
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.65,
+        "mrr": 0.5028681586270871,
+        "ndcg@10": 0.5438535594215289
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.23171768707482993,
+        "psf/requests": 0.5443181818181818,
+        "pylint-dev/astroid": 0.6328125,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 1.5,
+        "query_tf": "log",
+        "w_name": 3.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.8571428571428571,
+        "mrr": 0.6855459355459356,
+        "ndcg@10": 0.7245835752143875
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.7,
+        "mrr": 0.5025527009222661,
+        "ndcg@10": 0.5477197786179612
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.22916666666666666,
+        "psf/requests": 0.43906455862977606,
+        "pylint-dev/astroid": 0.625,
+        "pylint-dev/pylint": 0.6666666666666666
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.5,
+        "k1": 0.9,
+        "query_tf": "raw",
+        "w_name": 1.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.6563397581254724,
+        "ndcg@10": 0.7122775784659562
+      },
+      "function": {
+        "hit@10": 0.65,
+        "hit@5": 0.65,
+        "mrr": 0.5014520202020203,
+        "ndcg@10": 0.5280803155822424
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.23169191919191917,
+        "psf/requests": 0.5378787878787878,
+        "pylint-dev/astroid": 0.6354166666666666,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 0.9,
+        "query_tf": "log",
+        "w_name": 1.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.644064454064454,
+        "ndcg@10": 0.6880829671448304
+      },
+      "function": {
+        "hit@10": 0.7,
+        "hit@5": 0.65,
+        "mrr": 0.49975864637154965,
+        "ndcg@10": 0.5425335568981369
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.2738095238095238,
+        "psf/requests": 0.5335016835016835,
+        "pylint-dev/astroid": 0.5913978494623656,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 1.5,
+        "query_tf": "log",
+        "w_name": 3.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.9047619047619048,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.6535336356764928,
+        "ndcg@10": 0.7093398543046965
+      },
+      "function": {
+        "hit@10": 0.65,
+        "hit@5": 0.65,
+        "mrr": 0.49953610967038076,
+        "ndcg@10": 0.5280803155822424
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.22916666666666666,
+        "psf/requests": 0.5352184047836221,
+        "pylint-dev/astroid": 0.6323529411764706,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 1.5,
+        "query_tf": "log",
+        "w_name": 1.0,
+        "w_path": 2.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.7619047619047619,
+        "mrr": 0.6446222859266337,
+        "ndcg@10": 0.6921847710954195
+      },
+      "function": {
+        "hit@10": 0.75,
+        "hit@5": 0.65,
+        "mrr": 0.49674397920087576,
+        "ndcg@10": 0.5548628664499227
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.3998015873015873,
+        "psf/requests": 0.4670566502463054,
+        "pylint-dev/astroid": 0.55,
+        "pylint-dev/pylint": 0.5555555555555556
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.9,
+        "k1": 1.5,
+        "query_tf": "raw",
+        "w_name": 3.0,
+        "w_path": 1.0
+      }
+    },
+    {
+      "evaluated": 21,
+      "file": {
+        "hit@10": 0.8571428571428571,
+        "hit@5": 0.8571428571428571,
+        "mrr": 0.6512138188608777,
+        "ndcg@10": 0.6986872061268231
+      },
+      "function": {
+        "hit@10": 0.75,
+        "hit@5": 0.7,
+        "mrr": 0.4954939792008758,
+        "ndcg@10": 0.5562247907225873
+      },
+      "function_mrr_by_repo": {
+        "mwaskom/seaborn": 0.23273809523809522,
+        "psf/requests": 0.49648786717752236,
+        "pylint-dev/astroid": 0.625,
+        "pylint-dev/pylint": 0.5833333333333334
+      },
+      "n_file_cases": 21,
+      "n_function_cases": 20,
+      "params": {
+        "b": 0.75,
+        "k1": 0.9,
+        "query_tf": "raw",
+        "w_name": 3.0,
+        "w_path": 2.0
+      }
+    }
+  ]
+}

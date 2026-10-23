@@ -59,7 +59,7 @@ def test_pinned_commit_checks_out_that_revision(
     old = loader.load(str(repo), commit=first[:10])  # abbreviated hash accepted
     assert old.commit == first  # resolved to the full hash
     assert (old.root / "a.py").read_text().strip() == "VERSION = 1"
-    assert first in old.root.name
+    assert first in old.root.name or first[:12] in old.root.name
 
     new = loader.load(str(repo), commit=second)
     assert (new.root / "a.py").read_text().strip() == "VERSION = 2"
@@ -77,9 +77,7 @@ def test_same_commit_reuses_checkout(
         loader.load(str(repo), commit=sha).root
         == loader.load(str(repo), commit=sha).root
     )
-    leftovers = [
-        p for p in loader.checkouts_dir.iterdir() if p.name.startswith(".tmp-")
-    ]
+    leftovers = [p for p in loader.checkouts_dir.iterdir() if p.name.startswith(".t-")]
     assert leftovers == []
 
 
@@ -90,7 +88,7 @@ def test_unknown_commit_raises_access_error(
     git_repo(repo, {"a.py": "x = 1\n"})
     with pytest.raises(RepositoryAccessError):
         RepositoryLoader(settings).load(str(repo), commit="deadbeef" * 5)
-    leftovers = list(RepositoryLoader(settings).checkouts_dir.glob(".tmp-*"))
+    leftovers = list(RepositoryLoader(settings).checkouts_dir.glob(".t-*"))
     assert leftovers == []
 
 
