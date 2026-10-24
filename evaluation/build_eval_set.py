@@ -363,6 +363,11 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--heldout-repos", nargs="+", help="Repos forming the test split")
     p.add_argument("--heldout-fraction", type=float, default=0.4)
     p.add_argument("--seed", type=int, default=0)
+    p.add_argument(
+        "--checkpoint",
+        type=Path,
+        help="Append each built case here and skip cases already in it (resume)",
+    )
     p.add_argument("--dedup-threshold", type=float, default=0.8)
     p.add_argument(
         "--exclude-patch-leaks",
@@ -370,6 +375,34 @@ def build_parser() -> argparse.ArgumentParser:
         help="Mark cases whose issue quotes lines of the fix as unsuitable",
     )
     return p
+
+
+def load_checkpoint(path: Path | None, wanted: set[str]) -> dict[str, EvalCase]:
+    """Cases already built by an interrupted run (pre-finalization, one per line).
+
+    A truncated last line (crash mid-write) is ignored and rebuilt.
+    """
+    if path is None or not path.exists():
+        return {}
+    done: dict[str, EvalCase] = {}
+    with path.open(encoding="utf-8") as handle:
+        for line in handle:
+            try:
+                case = EvalCase.model_validate_json(line)
+            except ValueError:
+                continue
+            if case.case_id in wanted:
+                done[case.case_id] = case
+    return done
+
+
+def append_checkpoint(path: Path | None, case: EvalCase) -> None:
+    if path is None:
+        return
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("a", encoding="utf-8", newline="\n") as handle:
+        handle.write(case.model_dump_json() + "\n")
+        handle.flush()
 
 
 def main(argv: Sequence[str] | None = None) -> int:
@@ -385,9 +418,20 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     cases: list[EvalCase] = []
     patch_hashes: dict[str, str] = {}
+    done = load_checkpoint(args.checkpoint, {i.instance_id for i in chosen})
+    if done:
+        print(
+            f"Resuming: {len(done)} cases loaded from {args.checkpoint}",
+            file=sys.stderr,
+        )
     for n, inst in enumerate(chosen, start=1):
-        print(f"[{n}/{len(chosen)}] {inst.instance_id}", file=sys.stderr, flush=True)
-        case = build_case(inst, settings=settings, store=store, revision=revision)
+        case = done.get(inst.instance_id)
+        if case is None:
+            print(
+                f"[{n}/{len(chosen)}] {inst.instance_id}", file=sys.stderr, flush=True
+            )
+            case = build_case(inst, settings=settings, store=store, revision=revision)
+            append_checkpoint(args.checkpoint, case)
         cases.append(case)
         patch_hashes[case.case_id] = case.provenance.patch_sha256
 

@@ -1,10 +1,20 @@
 # Can we beat BM25's 53%? Findings (2026-10-22)
 
-**Short answer:** not yet on this laptop. None of the methods that run here in a
-reasonable time beat tuned BM25 on held-out function hit@5 (0.526, n = 19). The
-literature shows two methods that do: a code-specific embedding model run over the
-whole repository, and LLM reranking. Both need resources this machine doesn't
-have (a GPU, or an LLM API). The roadmap has been revised accordingly (`plan.md`).
+**Update (2026-10-23): yes.** With function embeddings computed once on a
+Kaggle GPU, the hybrid of tuned BM25 and SweRankEmbed-Small raises held-out
+function hit@5 from 0.526 to 0.632 and hit@10 from 0.526 to 0.737. It never ranked
+the gold function lower than BM25 did on any of the 19 cases (MRR +0.172, 95% CI
+[+0.077, +0.272]). The hit@5 gain alone is not yet significant (CI [+0.000,
++0.263]). Details: `docs/evaluation.md` section 10. The original analysis below
+is kept as written; its conclusion "not on this laptop" was about doing the
+embedding itself on CPU.
+
+**Original short answer (2026-10-22):** not yet on this laptop. None of the methods
+that run here in a reasonable time beat tuned BM25 on held-out function hit@5
+(0.526, n = 19). The literature shows two methods that do: a code-specific
+embedding model run over the whole repository, and LLM reranking. Both need
+resources this machine doesn't have (a GPU, or an LLM API). The roadmap has been
+revised accordingly (`plan.md`).
 
 All numbers below were produced in this session. Every method was compared on the
 `dev` split. The `test` split was used **once**, to check the single method chosen
@@ -108,7 +118,24 @@ not move the 53%.**
   reboot every load succeeded. Model loading now has a timeout and raises
   `DenseUnavailableError` instead of hanging.
 
-## 6. Reproduce
+## 6. Update: SweRankEmbed-Small over the whole repository (2026-10-23)
+
+Section 2 could only re-sort BM25's top 30 with SweRankEmbed-Small, truncated to
+256 tokens, because CPU encoding was too slow. With all 16,350 functions embedded
+on a GPU (1,024 tokens), the model works as the papers suggest:
+
+| Held-out `test` (n = 19) | fn hit@5 | fn hit@10 | fn MRR |
+|---|---|---|---|
+| BM25 tuned | 0.526 | 0.526 | 0.335 |
+| Dense, SweRankEmbed-Small | 0.632 | 0.737 | 0.410 |
+| Hybrid BM25 + SweRankEmbed | 0.632 | 0.737 | 0.507 |
+
+So the earlier top-30 result reflected the compromises (truncation, BM25-only
+candidates), not the model. Of the four held-out misses BM25 left outside its top
+100 (section 4), dense retrieval finds three: pytest-5413 at rank 4, pytest-5221
+at 16, and pytest-7220 at 68. pytest-5103 is still not found.
+
+## 7. Reproduce
 
 Scripts are in `experiments/`; reports are in `evaluation/reports/`.
 

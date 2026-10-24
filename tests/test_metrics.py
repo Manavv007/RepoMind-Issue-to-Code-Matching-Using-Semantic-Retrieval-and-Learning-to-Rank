@@ -58,7 +58,17 @@ def test_metrics_reject_empty_relevant_sets():
 
 def test_score_ranking_keys_and_values():
     scores = m.score_ranking(RANKED, {"b"}, cutoffs=(1, 5), ndcg_k=10)
-    assert set(scores) == {"hit@1", "recall@1", "hit@5", "recall@5", "mrr", "ndcg@10"}
+    assert set(scores) == {
+        "hit@1",
+        "recall@1",
+        "acc@1",
+        "hit@5",
+        "recall@5",
+        "acc@5",
+        "mrr",
+        "ndcg@10",
+    }
+    assert scores["acc@5"] == 1.0 and scores["acc@1"] == 0.0
     assert scores["hit@1"] == 0.0
     assert scores["hit@5"] == 1.0
     assert scores["mrr"] == 0.5
@@ -112,3 +122,12 @@ def test_latency_summary():
     assert stats["median"] == pytest.approx(0.25)
     assert stats["max"] == 0.4
     assert m.latency_summary([]) is None
+
+
+def test_acc_at_k_requires_all_relevant_items():
+    assert m.acc_at_k(RANKED, {"a", "c"}, 3) == 1.0
+    assert m.acc_at_k(RANKED, {"a", "e"}, 3) == 0.0  # hit@3 would be 1
+    assert m.hit_at_k(RANKED, {"a", "e"}, 3) == 1.0
+    assert m.acc_at_k(RANKED, {"a"}, 1) == m.hit_at_k(RANKED, {"a"}, 1)
+    with pytest.raises(ValueError):
+        m.acc_at_k(RANKED, set(), 5)

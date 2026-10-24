@@ -238,6 +238,20 @@ class BM25Retriever(Retriever):
         tokens = tokenize(query.text, use_stopwords=self.config.use_stopwords)
         return query_weights(tokens, self.config.query_tf)
 
+    def score_all(self, query: RetrievalQuery) -> dict[str, float]:
+        """Raw BM25 score per unit id, for units with any lexical overlap.
+
+        Cheaper than ``retrieve(query, len(pool))`` for callers that combine BM25
+        with other signals: no candidate objects are built.
+        """
+        if self._index is None:
+            raise RuntimeError("prepare() must be called before score_all().")
+        return {
+            self._units[doc_id].unit_id: score
+            for doc_id, score in self._index.score(self._query(query)).items()
+            if score > 0
+        }
+
     def retrieve(self, query: RetrievalQuery, k: int) -> list[RankedCandidate]:
         if self._index is None:
             raise RuntimeError("prepare() must be called before retrieve().")

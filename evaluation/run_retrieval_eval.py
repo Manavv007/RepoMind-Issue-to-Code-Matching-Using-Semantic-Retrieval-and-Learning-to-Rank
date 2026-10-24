@@ -53,6 +53,8 @@ UnitsProvider = Callable[[EvalCase], list[CodeUnit]]
 DEFINITIONS = {
     "hit@k": "1 if at least one relevant item is in the top k (project.md 'Recall@k').",
     "recall@k": "Fraction of the case's relevant items found in the top k.",
+    "acc@k": "1 if all of the case's relevant items are in the top k "
+    "(Acc@k in Agentless/LocAgent/SweRank).",
     "mrr": "Reciprocal rank of the first relevant item in the returned list "
     "(0 if absent), averaged over cases.",
     "ndcg@k": "Binary-relevance nDCG over the top k.",
@@ -230,8 +232,12 @@ def run_evaluation(
     n_resamples: int = 1000,
     seed: int = 0,
     limit: int | None = None,
+    progress: Callable[[int, int, str], None] | None = None,
 ) -> dict[str, Any]:
-    """Evaluate ``retriever`` on ``cases`` and return the report dictionary."""
+    """Evaluate ``retriever`` on ``cases`` and return the report dictionary.
+
+    ``progress(done, total, case_id)`` is called before each case (logging only).
+    """
     exclusions: Counter[str] = Counter()
     selected: list[EvalCase] = []
     for case in sorted(cases, key=lambda c: (c.repo, c.base_commit, c.case_id)):
@@ -247,7 +253,9 @@ def run_evaluation(
     results: list[dict[str, Any]] = []
     failures: list[dict[str, str]] = []
     prepared_key: tuple[str, str] | None = None
-    for case in selected:
+    for n, case in enumerate(selected):
+        if progress is not None:
+            progress(n, len(selected), case.case_id)
         try:
             pool = units_provider(case)
             pool_ids = {u.unit_id for u in pool}
@@ -495,6 +503,9 @@ def main(argv: Sequence[str] | None = None) -> int:
         n_resamples=args.bootstrap,
         seed=args.seed,
         limit=args.limit,
+        progress=lambda n, total, cid: print(
+            f"[{n + 1}/{total}] {cid}", file=sys.stderr, flush=True
+        ),
     )
     report["dataset"] = {"path": args.dataset.name, "sha256": file_sha256(args.dataset)}
 

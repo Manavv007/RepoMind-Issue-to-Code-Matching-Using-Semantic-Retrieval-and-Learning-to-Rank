@@ -373,3 +373,18 @@ def test_select_filters_by_repo_instance_and_limit():
         "o__a-2"
     ]
     assert len(select(insts, ns(limit=3))) == 3
+
+
+def test_checkpoint_resume_skips_built_cases_and_tolerates_truncation(tmp_path):
+    from evaluation.build_eval_set import append_checkpoint, load_checkpoint
+
+    ckpt = tmp_path / "ckpt.jsonl"
+    a, b = _case("a-1", "o/a", "first"), _case("b-1", "o/b", "second")
+    append_checkpoint(ckpt, a)
+    append_checkpoint(ckpt, b)
+    with ckpt.open("a", encoding="utf-8") as handle:
+        handle.write(a.model_dump_json()[:40])  # crash mid-write
+    assert load_checkpoint(ckpt, {"a-1", "b-1"}) == {"a-1": a, "b-1": b}
+    assert set(load_checkpoint(ckpt, {"b-1"})) == {"b-1"}  # other selections ignored
+    assert load_checkpoint(tmp_path / "missing.jsonl", {"a-1"}) == {}
+    assert load_checkpoint(None, {"a-1"}) == {}

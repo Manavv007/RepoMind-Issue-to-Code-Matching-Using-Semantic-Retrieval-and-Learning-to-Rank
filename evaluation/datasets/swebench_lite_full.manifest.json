@@ -1,0 +1,82 @@
+{
+  "builder": {
+    "annotation_method": "patch-hunk-to-function/v1",
+    "candidate_pool": "leaf units (function, method) excluding test files",
+    "dedup_jaccard_threshold": 0.8,
+    "exclude_patch_leaks": false,
+    "heldout_fraction": 0.4,
+    "heldout_repos": [
+      "astropy/astropy",
+      "django/django",
+      "marshmallow-code/marshmallow",
+      "pallets/flask",
+      "pvlib/pvlib-python",
+      "pydicom/pydicom",
+      "pytest-dev/pytest",
+      "sqlfluff/sqlfluff"
+    ],
+    "index": {
+      "include_nested_functions": false,
+      "languages": [
+        "python"
+      ],
+      "max_file_size_kb": 1024
+    },
+    "instances": null,
+    "limit": null,
+    "repos": null,
+    "seed": 0
+  },
+  "counts": {
+    "issue_contains_patch_lines": 19,
+    "issue_mentions_gold_file": 103,
+    "mean_gold_units": 1.0467289719626167,
+    "processed": 323,
+    "suitable": 321,
+    "suitable_by_split_and_repo": {
+      "dev": {
+        "matplotlib/matplotlib": 21,
+        "mwaskom/seaborn": 4,
+        "psf/requests": 6,
+        "pydata/xarray": 5,
+        "pylint-dev/astroid": 5,
+        "pylint-dev/pylint": 6,
+        "pyvista/pyvista": 1,
+        "scikit-learn/scikit-learn": 23,
+        "sphinx-doc/sphinx": 16,
+        "sympy/sympy": 77
+      },
+      "test": {
+        "astropy/astropy": 6,
+        "django/django": 114,
+        "marshmallow-code/marshmallow": 2,
+        "pallets/flask": 3,
+        "pvlib/pvlib-python": 5,
+        "pydicom/pydicom": 5,
+        "pytest-dev/pytest": 17,
+        "sqlfluff/sqlfluff": 5
+      }
+    },
+    "unsuitable": 2,
+    "unsuitable_reasons": {
+      "gold_file_has_syntax_errors": 2
+    },
+    "with_function_labels": 293
+  },
+  "created_at": "2026-10-23T17:55:32+00:00",
+  "dataset": "princeton-nlp/SWE-bench_Lite",
+  "dataset_revision": "6ec7bb89b9342f664a54a6e0a6ea6501d3437cc2",
+  "environment": {
+    "platform": "win32-10.0.26200",
+    "python": "3.13.1"
+  },
+  "excluded_cases": {
+    "matplotlib__matplotlib-24334": [
+      "gold_file_has_syntax_errors"
+    ],
+    "matplotlib__matplotlib-26011": [
+      "gold_file_has_syntax_errors"
+    ]
+  },
+  "license_note": "SWE-bench code is MIT-licensed; the Hugging Face dataset card for princeton-nlp/SWE-bench_Lite declares no license. Issue texts come from public GitHub issues of the listed repositories and stay subject to those projects' terms. Used here for non-commercial research evaluation."
+}

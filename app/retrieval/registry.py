@@ -41,9 +41,16 @@ def _hybrid(seed: int, params: Mapping[str, Any]) -> Retriever:
     return build_hybrid(dict(params))
 
 
+def _bm25_mentions(seed: int, params: Mapping[str, Any]) -> Retriever:
+    from app.retrieval.mention_boost import MentionBoostConfig, MentionBoostRetriever
+
+    return MentionBoostRetriever(MentionBoostConfig(**params))
+
+
 RETRIEVER_FACTORIES: dict[str, RetrieverFactory] = {
     "random": _random,
     "bm25": _bm25,
+    "bm25-mentions": _bm25_mentions,
     "dense": _dense,
     "hybrid": _hybrid,
 }

@@ -258,15 +258,145 @@ with a paired bootstrap CI over cases; reports in `evaluation/reports/compare_*.
 
 These are observations on 19 cases, not established effects.
 
-## 10. Limitations
+## 10. Dense and hybrid retrieval with SweRankEmbed-Small
 
-* **Small sample.** 41 cases (20 held out) detect only large effects. Expect wide
+Code-specific dense retrieval, as planned for Phase 5, run early because the
+embeddings became available (`docs/gpu_embeddings.md`).
+
+**Setup.** Every candidate function was embedded once on a Kaggle Tesla T4 (fp16,
+16,350 unique functions in 124 s) with `Salesforce/SweRankEmbed-Small`, pinned to
+an exact revision and weights hash. The artifacts passed `verify`: format,
+row alignment with the export, config compatibility, full coverage of all 51,844
+pool functions, and an 8-row CPU re-embedding check (minimum cosine 0.9999985).
+At query time only the issue text is encoded, on CPU.
+
+* **Dense:** cosine similarity between the issue and every function
+  (`configs/dense_swerank_small.json`).
+* **Hybrid:** reciprocal rank fusion of tuned BM25 and dense, with equal weights,
+  `rrf_k` = 60 and 200 candidates from each (`configs/hybrid_swerank_small.json`).
+  These are untuned defaults.
+
+Nothing was tuned on `test`. Hybrid was named as the candidate from `dev` results
+before `test` was run.
+
+### Results
+
+Mean [95% bootstrap CI]; "fn" = function level, n = cases scored (function/file).
+
+| Method | Split | fn hit@5 | fn hit@10 | fn MRR | fn nDCG@10 | file hit@10 | file MRR |
+|---|---|---|---|---|---|---|---|
+| BM25 tuned | test (n=19/20) | 0.526 [0.316, 0.737] | 0.526 [0.316, 0.737] | 0.335 [0.187, 0.496] | 0.374 [0.203, 0.551] | 0.950 [0.850, 1.000] | 0.554 [0.404, 0.701] |
+| Dense | test (n=19/20) | 0.632 [0.421, 0.842] | 0.737 [0.526, 0.895] | 0.410 [0.241, 0.597] | 0.461 [0.296, 0.623] | 1.000 [1.000, 1.000] | 0.668 [0.505, 0.808] |
+| **Hybrid** | test (n=19/20) | 0.632 [0.421, 0.842] | 0.737 [0.526, 0.895] | 0.507 [0.326, 0.690] | 0.535 [0.351, 0.715] | 0.950 [0.850, 1.000] | 0.687 [0.520, 0.835] |
+| BM25 tuned | dev (n=20/21) | 0.650 | 0.700 | 0.513 | 0.552 | 0.905 | 0.695 |
+| Dense | dev (n=20/21) | 0.700 | 0.750 | 0.506 | 0.561 | 0.952 | 0.761 |
+| Hybrid | dev (n=20/21) | 0.700 | 0.750 | 0.560 | 0.601 | 0.952 | 0.773 |
+
+Paired differences on `test`, B - A against tuned BM25 (`evaluation/reports/compare_test_bm25-tuned_vs_*.md`):
+
+| Metric | Dense | Hybrid |
+|---|---|---|
+| fn hit@5 | +0.105 [+0.000, +0.263], W/T/L 2/17/0 | +0.105 [+0.000, +0.263], 2/17/0 |
+| fn hit@10 | **+0.211 [+0.053, +0.421]**, 4/15/0 | **+0.211 [+0.053, +0.421]**, 4/15/0 |
+| fn MRR | +0.075 [-0.102, +0.253], 10/3/6 | **+0.172 [+0.077, +0.272]**, 13/6/0 |
+| fn nDCG@10 | +0.087 [-0.065, +0.233], 7/7/5 | **+0.160 [+0.078, +0.248]**, 9/10/0 |
+| file MRR | +0.113 [-0.013, +0.252], 8/8/4 | **+0.133 [+0.033, +0.239]**, 8/10/2 |
+
+Bold: the interval excludes zero (no multiple-comparison correction).
+
+* **Hybrid is the best method so far.** It never loses a case to BM25 at the
+  function level. Its gains on hit@10, MRR and nDCG@10 are significant on `test`.
+* **Dense alone finds more functions but orders them less consistently**
+  (MRR wins/losses 10/6).
+* **hit@5 goes from 0.53 to 0.63** for both, but the interval ends at zero, so
+  that gain is not yet confirmed.
+* **Cost:** about 2 s per query on CPU (encoding the issue), against about 4 ms for BM25.
+  Function vectors are computed once on a GPU.
+
+These are 19 held-out cases, 17 from pytest. Confirming them is why the
+evaluation set is being scaled up (Phase 4, section 11).
+
+## 11. Full SWE-bench Lite evaluation set (Phase 4)
+
+The 41-case subset is too small to confirm gains under about 15 points, so the
+evaluation set was rebuilt from **all of SWE-bench Lite** with the same labeler,
+leakage controls, and candidate-pool rule.
+
+```bash
+python -m evaluation.build_eval_set \
+    --heldout-repos astropy/astropy django/django marshmallow-code/marshmallow \
+        pallets/flask pvlib/pvlib-python pydicom/pydicom pytest-dev/pytest sqlfluff/sqlfluff \
+    --checkpoint data/build_full.ckpt.jsonl \
+    --output evaluation/datasets/swebench_lite_full.jsonl
+```
+
+* 323 instances processed, **321 suitable** (2 excluded: gold file has syntax
+  errors), **293 with function labels**. 19 issues quote lines of the fix
+  (flagged, not dropped). The build took about 2 h 25 min on this laptop; it can be
+  resumed (`--checkpoint`).
+* **Split, fixed before any full-set result:** the old subset's repositories keep
+  their split (pytest and flask stay held out). The 12 new repositories were split
+  by the seeded hash (`assign_splits`, seed 0, fraction 0.5).
+  * `dev` (164 cases): sympy 77, scikit-learn 23, matplotlib 21, sphinx 16,
+    pylint 6, requests 6, astroid 5, xarray 5, seaborn 4, pyvista 1.
+  * `test` (157 cases): django 114, pytest 17, astropy 6, pvlib 5, pydicom 5,
+    sqlfluff 5, flask 3, marshmallow 2.
+* Every report now also includes **acc@k** (all gold functions in the top k), the
+  metric used by Agentless, LocAgent and SweRank.
+* The full `test` split is dominated by django (73%), as SWE-bench Lite itself is.
+
+### BM25 on the full set
+
+| Split | n (fn/file) | fn hit@5 | fn acc@5 | fn hit@10 | fn acc@10 | fn MRR | file hit@10 | file MRR |
+|---|---|---|---|---|---|---|---|---|
+| dev | 150/164 | 0.520 [0.440, 0.600] | 0.460 [0.380, 0.533] | 0.587 | 0.540 | 0.355 [0.294, 0.419] | 0.805 | 0.619 |
+| test | 143/157 | 0.594 [0.510, 0.672] | 0.566 [0.483, 0.643] | 0.671 | 0.657 | 0.468 [0.393, 0.538] | 0.854 | 0.642 |
+
+Mean candidate pool: 11,628 functions per case on `dev`, 6,032 on `test`. Retrieval
+takes 25-45 ms per query. BM25 settings are the ones tuned on the old 21-case
+`dev`; they were not re-tuned.
+
+Our full-set BM25 is far stronger than the BM25 in the SweRank and LocAgent papers
+(function Acc@5 31.8 on SWE-bench Lite). The number is not directly comparable:
+their set has 274 cases, and their tokenization and documents differ. But it
+confirms the code-aware tokenizer and field weights matter.
+
+### Issue-mention signals (`--retriever bm25-mentions`)
+
+`app/issue_understanding/entities.py` extracts names, file paths and dotted modules
+the issue mentions. `app/retrieval/mention_boost.py` adds them to normalized BM25,
+with weights chosen on the old `dev` (`w_mention` 0.25, `w_path` 0.5). Paired
+against BM25 (`evaluation/reports/compare_full_*_bm25-tuned_vs_bm25-mentions.md`):
+
+| Split | fn hit@5 | fn acc@5 | fn MRR | file MRR |
+|---|---|---|---|---|
+| dev (n=150/164) | +0.013 [-0.033, +0.067] | +0.000 | **+0.030 [+0.005, +0.058]** | **+0.037 [+0.009, +0.064]** |
+| test (n=143/157) | +0.000 [-0.028, +0.028] | +0.007 | +0.007 [-0.020, +0.036] | +0.015 [-0.010, +0.041] |
+
+The small `dev` gain in ranking quality **does not carry over to `test`**
+(function MRR wins/ties/losses 14/106/23). The mention boost is kept as an
+optional retriever but is not part of the default pipeline.
+
+### Not yet run on the full set
+
+Dense and hybrid retrieval (section 10) need function embeddings for the new
+repositories: a new export and Kaggle GPU run (`docs/gpu_embeddings.md`).
+Their gains are therefore still measured only on the 19-case subset.
+
+## 12. Limitations
+
+* **Small sample (subset).** The 41-case subset (20 held out) detects only large
+  effects; the full set (section 11) has 157 held-out cases but is 73% django.
+* **Original subset:** 41 cases (20 held out) detect only large effects. Expect wide
   confidence intervals; prefer paired comparisons and report per-repository results.
 * **Skewed held-out split.** pytest contributes 17 of 20 test cases.
 * **SWE-bench Lite bias.** It favors issues whose fixes are small and well-specified.
 * **Tuning on 21 dev cases.** BM25 hyperparameters are weakly identified at this
   sample size (section 9); prefer the classic configuration when an untuned
   reference is required.
+* **Test split reuse.** `test` has now been scored for BM25, the issue-mention
+  experiment, and dense/hybrid. Each method was fixed beforehand, but the split
+  is no longer untouched; the scaled-up set adds fresh held-out repositories.
 * **Pool definition matters.** Including test code or class units changes absolute
   numbers; compare only runs with the same pool rule (recorded in each report).
 * **Windows path length.** Deep repositories (astroid, pytest) can exceed the

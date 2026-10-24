@@ -1,0 +1,1835 @@
+{
+  "aggregate": {
+    "file": {
+      "metrics": {
+        "hit@10": {
+          "ci_high": 1.0,
+          "ci_low": 0.85,
+          "mean": 0.95,
+          "n": 20
+        },
+        "hit@5": {
+          "ci_high": 1.0,
+          "ci_low": 0.75,
+          "mean": 0.9,
+          "n": 20
+        },
+        "mrr": {
+          "ci_high": 0.8350624999999999,
+          "ci_low": 0.520251893939394,
+          "mean": 0.6870454545454545,
+          "n": 20
+        },
+        "ndcg@10": {
+          "ci_high": 0.8752694744652744,
+          "ci_low": 0.6050971261702667,
+          "mean": 0.7476689310182436,
+          "n": 20
+        },
+        "recall@10": {
+          "ci_high": 1.0,
+          "ci_low": 0.85,
+          "mean": 0.95,
+          "n": 20
+        },
+        "recall@5": {
+          "ci_high": 1.0,
+          "ci_low": 0.75,
+          "mean": 0.9,
+          "n": 20
+        }
+      },
+      "n_cases": 20
+    },
+    "file_level_cases_with_unreachable_gold_file": 0,
+    "function": {
+      "metrics": {
+        "hit@10": {
+          "ci_high": 0.8947368421052632,
+          "ci_low": 0.5263157894736842,
+          "mean": 0.7368421052631579,
+          "n": 19
+        },
+        "hit@5": {
+          "ci_high": 0.8421052631578947,
+          "ci_low": 0.42105263157894735,
+          "mean": 0.631578947368421,
+          "n": 19
+        },
+        "mrr": {
+          "ci_high": 0.690227559480894,
+          "ci_low": 0.32601475189242923,
+          "mean": 0.5070454292958809,
+          "n": 19
+        },
+        "ndcg@10": {
+          "ci_high": 0.7145971376179276,
+          "ci_low": 0.35113630428303205,
+          "mean": 0.5346161376719077,
+          "n": 19
+        },
+        "recall@10": {
+          "ci_high": 0.868421052631579,
+          "ci_low": 0.47368421052631576,
+          "mean": 0.6842105263157895,
+          "n": 19
+        },
+        "recall@5": {
+          "ci_high": 0.8157894736842105,
+          "ci_low": 0.39473684210526316,
+          "mean": 0.6052631578947368,
+          "n": 19
+        }
+      },
+      "n_cases": 19
+    },
+    "latency_prepare_seconds": {
+      "max": 0.8890261999986251,
+      "mean": 0.24913856000021042,
+      "median": 0.2020659500012698,
+      "n": 20,
+      "p95": 0.48907344499984934
+    },
+    "latency_retrieve_seconds": {
+      "max": 3.706602700000076,
+      "mean": 1.9683811899993089,
+      "median": 1.7641311999996105,
+      "n": 20,
+      "p95": 3.665406139996776
+    },
+    "pool_size": {
+      "mean": 1343.15,
+      "median": 1439.5
+    }
+  },
+  "cases": [
+    {
+      "case_id": "pallets__flask-5063",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.2,
+        "ndcg@10": 0.38685280723454163,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 5,
+      "first_relevant_unit_rank": 14,
+      "function_metrics": {
+        "hit@10": 0.0,
+        "hit@5": 0.0,
+        "mrr": 0.07142857142857142,
+        "ndcg@10": 0.0,
+        "recall@10": 0.0,
+        "recall@5": 0.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "c816ac4886909082",
+      "pool_size": 360,
+      "prepare_seconds": 0.2502055000004475,
+      "repo": "pallets/flask",
+      "retrieve_seconds": 2.0911635999982536,
+      "split": "test",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.03200204813108039,
+          "unit_id": "src/flask/app.py::Flask.__init__:367"
+        },
+        {
+          "rank": 2,
+          "score": 0.03131881575727918,
+          "unit_id": "src/flask/blueprints.py::Blueprint.register:271"
+        },
+        {
+          "rank": 3,
+          "score": 0.03128054740957967,
+          "unit_id": "src/flask/app.py::Flask.register_blueprint:984"
+        },
+        {
+          "rank": 4,
+          "score": 0.030886196246139225,
+          "unit_id": "src/flask/blueprints.py::Blueprint.__init__:172"
+        },
+        {
+          "rank": 5,
+          "score": 0.03055037313432836,
+          "unit_id": "src/flask/blueprints.py::BlueprintSetupState.add_url_rule:85"
+        },
+        {
+          "rank": 6,
+          "score": 0.028790389395194696,
+          "unit_id": "src/flask/app.py::Flask.url_for:1595"
+        },
+        {
+          "rank": 7,
+          "score": 0.028665028665028666,
+          "unit_id": "src/flask/blueprints.py::BlueprintSetupState.__init__:39"
+        },
+        {
+          "rank": 8,
+          "score": 0.02817460317460317,
+          "unit_id": "src/flask/scaffold.py::Scaffold.add_url_rule:439"
+        },
+        {
+          "rank": 9,
+          "score": 0.02782608695652174,
+          "unit_id": "src/flask/scaffold.py::Scaffold.route:407"
+        },
+        {
+          "rank": 10,
+          "score": 0.0273972602739726,
+          "unit_id": "src/flask/blueprints.py::Blueprint.add_url_rule:407"
+        }
+      ]
+    },
+    {
+      "case_id": "pallets__flask-4992",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 1,
+      "first_relevant_unit_rank": 1,
+      "function_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "cbf84b4969a05f14",
+      "pool_size": 363,
+      "prepare_seconds": 0.05594839999685064,
+      "repo": "pallets/flask",
+      "retrieve_seconds": 1.1395636999986891,
+      "split": "test",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.03278688524590164,
+          "unit_id": "src/flask/config.py::Config.from_file:232"
+        },
+        {
+          "rank": 2,
+          "score": 0.03225806451612903,
+          "unit_id": "src/flask/config.py::Config.from_pyfile:165"
+        },
+        {
+          "rank": 3,
+          "score": 0.030536130536130537,
+          "unit_id": "src/flask/json/__init__.py::load:108"
+        },
+        {
+          "rank": 4,
+          "score": 0.03036576949620428,
+          "unit_id": "src/flask/scaffold.py::Scaffold.open_resource:333"
+        },
+        {
+          "rank": 5,
+          "score": 0.029709507042253523,
+          "unit_id": "src/flask/app.py::Flask.open_instance_resource:648"
+        },
+        {
+          "rank": 6,
+          "score": 0.029273504273504274,
+          "unit_id": "src/flask/helpers.py::send_file:391"
+        },
+        {
+          "rank": 7,
+          "score": 0.029030910609857977,
+          "unit_id": "src/flask/config.py::Config.from_object:194"
+        },
+        {
+          "rank": 8,
+          "score": 0.02857142857142857,
+          "unit_id": "src/flask/app.py::Flask.__init__:367"
+        },
+        {
+          "rank": 9,
+          "score": 0.02803921568627451,
+          "unit_id": "src/flask/config.py::Config.from_mapping:275"
+        },
+        {
+          "rank": 10,
+          "score": 0.027912386121341344,
+          "unit_id": "src/flask/helpers.py::send_from_directory:519"
+        }
+      ]
+    },
+    {
+      "case_id": "pallets__flask-4045",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 1,
+      "first_relevant_unit_rank": 4,
+      "function_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.25,
+        "ndcg@10": 0.2640681225725909,
+        "recall@10": 0.5,
+        "recall@5": 0.5
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 2,
+      "pool_sha": "e929d94b0d8da09e",
+      "pool_size": 350,
+      "prepare_seconds": 0.16246500000124797,
+      "repo": "pallets/flask",
+      "retrieve_seconds": 0.22684839999783435,
+      "split": "test",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.03128054740957967,
+          "unit_id": "src/flask/blueprints.py::Blueprint.register:255"
+        },
+        {
+          "rank": 2,
+          "score": 0.031024531024531024,
+          "unit_id": "src/flask/blueprints.py::BlueprintSetupState.__init__:32"
+        },
+        {
+          "rank": 3,
+          "score": 0.030886196246139225,
+          "unit_id": "src/flask/helpers.py::url_for:191"
+        },
+        {
+          "rank": 4,
+          "score": 0.03047794966520434,
+          "unit_id": "src/flask/blueprints.py::Blueprint.add_url_rule:353"
+        },
+        {
+          "rank": 5,
+          "score": 0.029571646010002173,
+          "unit_id": "src/flask/blueprints.py::BlueprintSetupState.add_url_rule:77"
+        },
+        {
+          "rank": 6,
+          "score": 0.027046783625730993,
+          "unit_id": "src/flask/scaffold.py::Scaffold.__init__:89"
+        },
+        {
+          "rank": 7,
+          "score": 0.026830135039090264,
+          "unit_id": "src/flask/wrappers.py::Request.blueprint:72"
+        },
+        {
+          "rank": 8,
+          "score": 0.026742734890354787,
+          "unit_id": "src/flask/debughelpers.py::explain_template_loading_attempts:113"
+        },
+        {
+          "rank": 9,
+          "score": 0.02654569892473118,
+          "unit_id": "src/flask/scaffold.py::Scaffold.add_url_rule:438"
+        },
+        {
+          "rank": 10,
+          "score": 0.026151315789473682,
+          "unit_id": "src/flask/app.py::Flask.add_url_rule:1032"
+        }
+      ]
+    },
+    {
+      "case_id": "pytest-dev__pytest-5103",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.3333333333333333,
+        "ndcg@10": 0.5,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 3,
+      "first_relevant_unit_rank": null,
+      "function_metrics": {
+        "hit@10": 0.0,
+        "hit@5": 0.0,
+        "mrr": 0.0,
+        "ndcg@10": 0.0,
+        "recall@10": 0.0,
+        "recall@5": 0.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "56738865e4c367b1",
+      "pool_size": 1390,
+      "prepare_seconds": 0.46802329999991343,
+      "repo": "pytest-dev/pytest",
+      "retrieve_seconds": 1.825149699998292,
+      "split": "test",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.028949545078577336,
+          "unit_id": "doc/en/example/assertion/failure_demo.py::TestSpecialisedExplanations.test_eq_list_long:66"
+        },
+        {
+          "rank": 2,
+          "score": 0.02871794871794872,
+          "unit_id": "src/_pytest/reports.py::_report_unserialization_failure:268"
+        },
+        {
+          "rank": 3,
+          "score": 0.027984344422700584,
+          "unit_id": "src/_pytest/assertion/rewrite.py::AssertionRewriter.visit_Assert:814"
+        },
+        {
+          "rank": 4,
+          "score": 0.027637721755368813,
+          "unit_id": "src/_pytest/assertion/rewrite.py::_write_pyc:343"
+        },
+        {
+          "rank": 5,
+          "score": 0.02581612258494337,
+          "unit_id": "doc/en/example/assertion/failure_demo.py::TestSpecialisedExplanations.test_in_list:80"
+        },
+        {
+          "rank": 6,
+          "score": 0.025396825396825397,
+          "unit_id": "src/_pytest/assertion/rewrite.py::AssertionRewritingHook.find_module:84"
+        },
+        {
+          "rank": 7,
+          "score": 0.0251821349382325,
+          "unit_id": "doc/en/example/assertion/failure_demo.py::TestSpecialisedExplanations.test_eq_list:63"
+        },
+        {
+          "rank": 8,
+          "score": 0.024393871783430016,
+          "unit_id": "doc/en/example/assertion/failure_demo.py::TestSpecialisedExplanations.test_eq_longer_list:77"
+        },
+        {
+          "rank": 9,
+          "score": 0.023752012882447666,
+          "unit_id": "src/_pytest/python.py::pytest_pycollect_makeitem:206"
+        },
+        {
+          "rank": 10,
+          "score": 0.02347781217750258,
+          "unit_id": "src/_pytest/assertion/rewrite.py::_rewrite_test:374"
+        }
+      ]
+    },
+    {
+      "case_id": "pytest-dev__pytest-5495",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 1,
+      "first_relevant_unit_rank": 1,
+      "function_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "f4c6e791c750cc8b",
+      "pool_size": 1373,
+      "prepare_seconds": 0.17702360000112094,
+      "repo": "pytest-dev/pytest",
+      "retrieve_seconds": 0.5865138000008301,
+      "split": "test",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.03252247488101534,
+          "unit_id": "src/_pytest/assertion/util.py::_compare_eq_sequence:256"
+        },
+        {
+          "rank": 2,
+          "score": 0.032018442622950824,
+          "unit_id": "src/_pytest/assertion/util.py::_diff_text:166"
+        },
+        {
+          "rank": 3,
+          "score": 0.03125763125763126,
+          "unit_id": "src/_pytest/assertion/util.py::_compare_eq_iterable:241"
+        },
+        {
+          "rank": 4,
+          "score": 0.03057889822595705,
+          "unit_id": "src/_pytest/assertion/util.py::_compare_eq_set:289"
+        },
+        {
+          "rank": 5,
+          "score": 0.03021353930031804,
+          "unit_id": "src/_pytest/assertion/util.py::_compare_eq_dict:304"
+        },
+        {
+          "rank": 6,
+          "score": 0.02964426877470356,
+          "unit_id": "src/_pytest/assertion/rewrite.py::_format_assertmsg:346"
+        },
+        {
+          "rank": 7,
+          "score": 0.028484848484848488,
+          "unit_id": "src/_pytest/assertion/__init__.py::pytest_runtest_setup:94"
+        },
+        {
+          "rank": 8,
+          "score": 0.026988636363636364,
+          "unit_id": "src/_pytest/assertion/rewrite.py::AssertionRewriter.visit_Assert:663"
+        },
+        {
+          "rank": 9,
+          "score": 0.02694394213381555,
+          "unit_id": "src/_pytest/assertion/rewrite.py::AssertionRewritingHook.__init__:33"
+        },
+        {
+          "rank": 10,
+          "score": 0.025937081659973226,
+          "unit_id": "src/_pytest/assertion/util.py::_notin_text:375"
+        }
+      ]
+    },
+    {
+      "case_id": "pytest-dev__pytest-5227",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 1,
+      "first_relevant_unit_rank": null,
+      "function_metrics": null,
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 0,
+      "pool_sha": "bc943f1e0dcf8918",
+      "pool_size": 1385,
+      "prepare_seconds": 0.33656410000185133,
+      "repo": "pytest-dev/pytest",
+      "retrieve_seconds": 1.1637502999983553,
+      "split": "test",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.0315136476426799,
+          "unit_id": "src/_pytest/logging.py::pytest_addoption:83"
+        },
+        {
+          "rank": 2,
+          "score": 0.0304147465437788,
+          "unit_id": "src/_pytest/logging.py::ColoredLevelFormatter.__init__:38"
+        },
+        {
+          "rank": 3,
+          "score": 0.025873015873015874,
+          "unit_id": "src/_pytest/logging.py::LoggingPlugin.set_log_path:463"
+        },
+        {
+          "rank": 4,
+          "score": 0.025728708679368183,
+          "unit_id": "src/_pytest/logging.py::LogCaptureFixture.record_tuples:267"
+        },
+        {
+          "rank": 5,
+          "score": 0.025528455284552845,
+          "unit_id": "src/_pytest/logging.py::get_actual_log_level:348"
+        },
+        {
+          "rank": 6,
+          "score": 0.02538152610441767,
+          "unit_id": "src/_pytest/_code/_py2traceback.py::format_exception_only:15"
+        },
+        {
+          "rank": 7,
+          "score": 0.02383854801571177,
+          "unit_id": "src/_pytest/python.py::Metafunc._validate_if_using_arg_names:1104"
+        },
+        {
+          "rank": 8,
+          "score": 0.023458810692853244,
+          "unit_id": "src/_pytest/python.py::pytest_addoption:64"
+        },
+        {
+          "rank": 9,
+          "score": 0.023057644110275687,
+          "unit_id": "src/_pytest/fixtures.py::FixtureRequest._factorytraceback:610"
+        },
+        {
+          "rank": 10,
+          "score": 0.022947475777664456,
+          "unit_id": "src/_pytest/logging.py::LoggingPlugin._setup_cli_logging:430"
+        }
+      ]
+    },
+    {
+      "case_id": "pytest-dev__pytest-5692",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 1,
+      "first_relevant_unit_rank": 1,
+      "function_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "e4bb1314137a559e",
+      "pool_size": 1376,
+      "prepare_seconds": 0.14792809999926249,
+      "repo": "pytest-dev/pytest",
+      "retrieve_seconds": 1.4203280000001541,
+      "split": "test",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.032266458495966696,
+          "unit_id": "src/_pytest/junitxml.py::LogXML.pytest_sessionfinish:643"
+        },
+        {
+          "rank": 2,
+          "score": 0.03225806451612903,
+          "unit_id": "src/_pytest/junitxml.py::pytest_addoption:381"
+        },
+        {
+          "rank": 3,
+          "score": 0.031009615384615385,
+          "unit_id": "src/_pytest/junitxml.py::record_property:293"
+        },
+        {
+          "rank": 4,
+          "score": 0.03057889822595705,
+          "unit_id": "src/_pytest/junitxml.py::record_testsuite_property:351"
+        },
+        {
+          "rank": 5,
+          "score": 0.03055037313432836,
+          "unit_id": "src/_pytest/junitxml.py::_NodeReporter.record_testreport:116"
+        },
+        {
+          "rank": 6,
+          "score": 0.03009207275993712,
+          "unit_id": "src/_pytest/junitxml.py::LogXML.__init__:467"
+        },
+        {
+          "rank": 7,
+          "score": 0.02967032967032967,
+          "unit_id": "src/_pytest/reports.py::TestReport.__init__:284"
+        },
+        {
+          "rank": 8,
+          "score": 0.029211087420042643,
+          "unit_id": "src/_pytest/junitxml.py::LogXML.pytest_runtest_logreport:533"
+        },
+        {
+          "rank": 9,
+          "score": 0.02904040404040404,
+          "unit_id": "src/_pytest/junitxml.py::_NodeReporter.to_xml:147"
+        },
+        {
+          "rank": 10,
+          "score": 0.028169014084507043,
+          "unit_id": "src/_pytest/junitxml.py::LogXML._get_global_properties_node:681"
+        }
+      ]
+    },
+    {
+      "case_id": "pytest-dev__pytest-11148",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 1,
+      "first_relevant_unit_rank": 1,
+      "function_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "0e2651f747cfe03b",
+      "pool_size": 1802,
+      "prepare_seconds": 0.8890261999986251,
+      "repo": "pytest-dev/pytest",
+      "retrieve_seconds": 3.4721371000014187,
+      "split": "test",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.0315136476426799,
+          "unit_id": "src/_pytest/pathlib.py::import_path:486"
+        },
+        {
+          "rank": 2,
+          "score": 0.029571646010002173,
+          "unit_id": "src/_pytest/logging.py::LoggingPlugin.__init__:618"
+        },
+        {
+          "rank": 3,
+          "score": 0.028814262023217248,
+          "unit_id": "src/_pytest/python.py::Module._importtestmodule:613"
+        },
+        {
+          "rank": 4,
+          "score": 0.028612012987012988,
+          "unit_id": "src/_pytest/pathlib.py::insert_missing_modules:627"
+        },
+        {
+          "rank": 5,
+          "score": 0.028588564574170333,
+          "unit_id": "src/_pytest/_py/path.py::LocalPath.pyimport:1070"
+        },
+        {
+          "rank": 6,
+          "score": 0.026767330130404943,
+          "unit_id": "src/_pytest/logging.py::pytest_addoption:238"
+        },
+        {
+          "rank": 7,
+          "score": 0.026597524255603883,
+          "unit_id": "src/_pytest/logging.py::LoggingPlugin.pytest_runtestloop:757"
+        },
+        {
+          "rank": 8,
+          "score": 0.02603648424543947,
+          "unit_id": "src/_pytest/main.py::Session.collect:681"
+        },
+        {
+          "rank": 9,
+          "score": 0.025989268947015427,
+          "unit_id": "src/_pytest/junitxml.py::LogXML.__init__:465"
+        },
+        {
+          "rank": 10,
+          "score": 0.024675324675324677,
+          "unit_id": "src/_pytest/main.py::pytest_addoption:50"
+        }
+      ]
+    },
+    {
+      "case_id": "pytest-dev__pytest-5413",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 0.0,
+        "mrr": 0.16666666666666666,
+        "ndcg@10": 0.3562071871080222,
+        "recall@10": 1.0,
+        "recall@5": 0.0
+      },
+      "first_relevant_file_rank": 6,
+      "first_relevant_unit_rank": 16,
+      "function_metrics": {
+        "hit@10": 0.0,
+        "hit@5": 0.0,
+        "mrr": 0.0625,
+        "ndcg@10": 0.0,
+        "recall@10": 0.0,
+        "recall@5": 0.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "59846b395193aec8",
+      "pool_size": 1371,
+      "prepare_seconds": 0.10431909999897471,
+      "repo": "pytest-dev/pytest",
+      "retrieve_seconds": 3.2355744000014965,
+      "split": "test",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.030886196246139225,
+          "unit_id": "src/_pytest/python_api.py::RaisesContext.__init__:710"
+        },
+        {
+          "rank": 2,
+          "score": 0.029051670471052088,
+          "unit_id": "src/_pytest/python_api.py::raises:543"
+        },
+        {
+          "rank": 3,
+          "score": 0.02786377708978328,
+          "unit_id": "src/_pytest/fixtures.py::FixtureLookupError.__init__:696"
+        },
+        {
+          "rank": 4,
+          "score": 0.02782608695652174,
+          "unit_id": "src/_pytest/python_api.py::RaisesContext.__exit__:720"
+        },
+        {
+          "rank": 5,
+          "score": 0.0264808362369338,
+          "unit_id": "src/_pytest/fixtures.py::FixtureRequest.raiseerror:454"
+        },
+        {
+          "rank": 6,
+          "score": 0.02552166934189406,
+          "unit_id": "src/_pytest/fixtures.py::FixtureLookupError.formatrepr:702"
+        },
+        {
+          "rank": 7,
+          "score": 0.024696969696969696,
+          "unit_id": "src/_pytest/fixtures.py::FixtureLookupErrorRepr.__init__:748"
+        },
+        {
+          "rank": 8,
+          "score": 0.02393753200204813,
+          "unit_id": "src/_pytest/python_api.py::approx:337"
+        },
+        {
+          "rank": 9,
+          "score": 0.02345679012345679,
+          "unit_id": "src/_pytest/nodes.py::Node._repr_failure_py:238"
+        },
+        {
+          "rank": 10,
+          "score": 0.022988505747126436,
+          "unit_id": "src/_pytest/python_api.py::RaisesContext.__enter__:716"
+        }
+      ]
+    },
+    {
+      "case_id": "pytest-dev__pytest-7168",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 1,
+      "first_relevant_unit_rank": 1,
+      "function_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "d8c1651222848274",
+      "pool_size": 1462,
+      "prepare_seconds": 0.3128130000004603,
+      "repo": "pytest-dev/pytest",
+      "retrieve_seconds": 3.706602700000076,
+      "split": "test",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.03225806451612903,
+          "unit_id": "src/_pytest/_io/saferepr.py::_format_repr_exception:15"
+        },
+        {
+          "rank": 2,
+          "score": 0.0288981288981289,
+          "unit_id": "src/_pytest/main.py::wrap_session:178"
+        },
+        {
+          "rank": 3,
+          "score": 0.027500922849760058,
+          "unit_id": "src/_pytest/_code/code.py::FormattedExcinfo.repr_traceback_entry:769"
+        },
+        {
+          "rank": 4,
+          "score": 0.027271052146674038,
+          "unit_id": "src/_pytest/_code/code.py::ExceptionInfo.__repr__:543"
+        },
+        {
+          "rank": 5,
+          "score": 0.027205882352941177,
+          "unit_id": "src/_pytest/python.py::Module._importtestmodule:507"
+        },
+        {
+          "rank": 6,
+          "score": 0.026860955056179775,
+          "unit_id": "src/_pytest/_io/saferepr.py::SafeRepr.repr_instance:54"
+        },
+        {
+          "rank": 7,
+          "score": 0.026736111111111113,
+          "unit_id": "src/_pytest/config/__init__.py::Config.notify_exception:869"
+        },
+        {
+          "rank": 8,
+          "score": 0.026289682539682536,
+          "unit_id": "src/_pytest/_io/saferepr.py::_try_repr_or_str:6"
+        },
+        {
+          "rank": 9,
+          "score": 0.026200135226504394,
+          "unit_id": "src/_pytest/nodes.py::Node._repr_failure_py:320"
+        },
+        {
+          "rank": 10,
+          "score": 0.026153846153846153,
+          "unit_id": "src/_pytest/_code/code.py::FormattedExcinfo.repr_excinfo:869"
+        }
+      ]
+    },
+    {
+      "case_id": "pytest-dev__pytest-8365",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 1,
+      "first_relevant_unit_rank": 2,
+      "function_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.5,
+        "ndcg@10": 0.6309297535714575,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "d34f98497d31c5f1",
+      "pool_size": 1622,
+      "prepare_seconds": 0.37953570000172476,
+      "repo": "pytest-dev/pytest",
+      "retrieve_seconds": 1.7984103999988292,
+      "split": "test",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.03200204813108039,
+          "unit_id": "src/_pytest/tmpdir.py::TempPathFactory.mktemp:78"
+        },
+        {
+          "rank": 2,
+          "score": 0.0315136476426799,
+          "unit_id": "src/_pytest/tmpdir.py::TempPathFactory.getbasetemp:102"
+        },
+        {
+          "rank": 3,
+          "score": 0.030886196246139225,
+          "unit_id": "src/_pytest/tmpdir.py::tmp_path:217"
+        },
+        {
+          "rank": 4,
+          "score": 0.029513888888888888,
+          "unit_id": "src/_pytest/tmpdir.py::get_user:151"
+        },
+        {
+          "rank": 5,
+          "score": 0.029437229437229435,
+          "unit_id": "src/_pytest/tmpdir.py::TempdirFactory.mktemp:142"
+        },
+        {
+          "rank": 6,
+          "score": 0.0293236301369863,
+          "unit_id": "src/_pytest/cacheprovider.py::Cache.makedir:123"
+        },
+        {
+          "rank": 7,
+          "score": 0.029206349206349208,
+          "unit_id": "src/_pytest/tmpdir.py::TempPathFactory.__init__:35"
+        },
+        {
+          "rank": 8,
+          "score": 0.02900988017658188,
+          "unit_id": "src/_pytest/tmpdir.py::_mk_tmp:191"
+        },
+        {
+          "rank": 9,
+          "score": 0.0288981288981289,
+          "unit_id": "src/_pytest/tmpdir.py::tmpdir:199"
+        },
+        {
+          "rank": 10,
+          "score": 0.028381642512077296,
+          "unit_id": "src/_pytest/tmpdir.py::TempPathFactory.from_config:54"
+        }
+      ]
+    },
+    {
+      "case_id": "pytest-dev__pytest-5221",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.5,
+        "ndcg@10": 0.6309297535714575,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 2,
+      "first_relevant_unit_rank": 89,
+      "function_metrics": {
+        "hit@10": 0.0,
+        "hit@5": 0.0,
+        "mrr": 0.011235955056179775,
+        "ndcg@10": 0.0,
+        "recall@10": 0.0,
+        "recall@5": 0.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "e15ab1964d81210a",
+      "pool_size": 1385,
+      "prepare_seconds": 0.0760733999995864,
+      "repo": "pytest-dev/pytest",
+      "retrieve_seconds": 0.26578670000162674,
+      "split": "test",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.032018442622950824,
+          "unit_id": "src/_pytest/fixtures.py::fixture:998"
+        },
+        {
+          "rank": 2,
+          "score": 0.0304147465437788,
+          "unit_id": "src/_pytest/fixtures.py::FixtureRequest._getscopeitem:620"
+        },
+        {
+          "rank": 3,
+          "score": 0.030303030303030304,
+          "unit_id": "src/_pytest/fixtures.py::FixtureDef.__repr__:897"
+        },
+        {
+          "rank": 4,
+          "score": 0.03021353930031804,
+          "unit_id": "src/_pytest/fixtures.py::FixtureRequest._compute_fixture_value:516"
+        },
+        {
+          "rank": 5,
+          "score": 0.029418126757516764,
+          "unit_id": "src/_pytest/fixtures.py::FixtureRequest._check_scope:596"
+        },
+        {
+          "rank": 6,
+          "score": 0.029083245521601686,
+          "unit_id": "src/_pytest/fixtures.py::FixtureDef.__init__:814"
+        },
+        {
+          "rank": 7,
+          "score": 0.028958333333333336,
+          "unit_id": "src/_pytest/fixtures.py::get_scope_package:91"
+        },
+        {
+          "rank": 8,
+          "score": 0.0287391216352965,
+          "unit_id": "src/_pytest/fixtures.py::scope2index:683"
+        },
+        {
+          "rank": 9,
+          "score": 0.028373015873015873,
+          "unit_id": "src/_pytest/python.py::_find_parametrized_scope:1134"
+        },
+        {
+          "rank": 10,
+          "score": 0.028371628371628373,
+          "unit_id": "src/_pytest/setuponly.py::_show_fixture_action:53"
+        }
+      ]
+    },
+    {
+      "case_id": "pytest-dev__pytest-7220",
+      "file_metrics": {
+        "hit@10": 0.0,
+        "hit@5": 0.0,
+        "mrr": 0.09090909090909091,
+        "ndcg@10": 0.0,
+        "recall@10": 0.0,
+        "recall@5": 0.0
+      },
+      "first_relevant_file_rank": 11,
+      "first_relevant_unit_rank": 73,
+      "function_metrics": {
+        "hit@10": 0.0,
+        "hit@5": 0.0,
+        "mrr": 0.0136986301369863,
+        "ndcg@10": 0.0,
+        "recall@10": 0.0,
+        "recall@5": 0.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "65cfcf1d55575abf",
+      "pool_size": 1504,
+      "prepare_seconds": 0.19615279999925406,
+      "repo": "pytest-dev/pytest",
+      "retrieve_seconds": 3.5478296000001137,
+      "split": "test",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.03252247488101534,
+          "unit_id": "src/_pytest/monkeypatch.py::MonkeyPatch.chdir:275"
+        },
+        {
+          "rank": 2,
+          "score": 0.03125763125763126,
+          "unit_id": "src/_pytest/assertion/rewrite.py::try_makedirs:1035"
+        },
+        {
+          "rank": 3,
+          "score": 0.030303030303030304,
+          "unit_id": "src/_pytest/assertion/rewrite.py::get_cache_dir:1055"
+        },
+        {
+          "rank": 4,
+          "score": 0.03021353930031804,
+          "unit_id": "src/_pytest/tmpdir.py::TempPathFactory.getbasetemp:80"
+        },
+        {
+          "rank": 5,
+          "score": 0.028588564574170333,
+          "unit_id": "src/_pytest/main.py::pytest_addoption:41"
+        },
+        {
+          "rank": 6,
+          "score": 0.02844551282051282,
+          "unit_id": "src/_pytest/_code/code.py::Code.path:74"
+        },
+        {
+          "rank": 7,
+          "score": 0.026289682539682536,
+          "unit_id": "src/_pytest/config/findpaths.py::determine_setup:114"
+        },
+        {
+          "rank": 8,
+          "score": 0.025458570524984188,
+          "unit_id": "src/_pytest/assertion/rewrite.py::_write_pyc:298"
+        },
+        {
+          "rank": 9,
+          "score": 0.02532051282051282,
+          "unit_id": "src/_pytest/pathlib.py::on_rm_rf_error:50"
+        },
+        {
+          "rank": 10,
+          "score": 0.025278219395866455,
+          "unit_id": "src/_pytest/assertion/rewrite.py::AssertionRewritingHook._early_rewrite_bailout:154"
+        }
+      ]
+    },
+    {
+      "case_id": "pytest-dev__pytest-8906",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.5,
+        "ndcg@10": 0.6309297535714575,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 2,
+      "first_relevant_unit_rank": 2,
+      "function_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.5,
+        "ndcg@10": 0.6309297535714575,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "2e588c969df1734d",
+      "pool_size": 1637,
+      "prepare_seconds": 0.20065570000224398,
+      "repo": "pytest-dev/pytest",
+      "retrieve_seconds": 1.7298520000003919,
+      "split": "test",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.03252247488101534,
+          "unit_id": "src/_pytest/outcomes.py::skip:123"
+        },
+        {
+          "rank": 2,
+          "score": 0.03200204813108039,
+          "unit_id": "src/_pytest/python.py::Module._importtestmodule:572"
+        },
+        {
+          "rank": 3,
+          "score": 0.03125,
+          "unit_id": "src/_pytest/outcomes.py::importorskip:180"
+        },
+        {
+          "rank": 4,
+          "score": 0.031024531024531024,
+          "unit_id": "src/_pytest/outcomes.py::Skipped.__init__:56"
+        },
+        {
+          "rank": 5,
+          "score": 0.03009207275993712,
+          "unit_id": "src/_pytest/skipping.py::evaluate_condition:85"
+        },
+        {
+          "rank": 6,
+          "score": 0.030090497737556562,
+          "unit_id": "src/_pytest/skipping.py::evaluate_skip_marks:167"
+        },
+        {
+          "rank": 7,
+          "score": 0.029437229437229435,
+          "unit_id": "src/_pytest/skipping.py::pytest_configure:46"
+        },
+        {
+          "rank": 8,
+          "score": 0.027149321266968326,
+          "unit_id": "src/_pytest/python_api.py::raises:779"
+        },
+        {
+          "rank": 9,
+          "score": 0.027071520029266508,
+          "unit_id": "src/_pytest/mark/structures.py::MarkGenerator.__getattr__:499"
+        },
+        {
+          "rank": 10,
+          "score": 0.02684684684684685,
+          "unit_id": "bench/skip.py::test_foo:6"
+        }
+      ]
+    },
+    {
+      "case_id": "pytest-dev__pytest-11143",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 1,
+      "first_relevant_unit_rank": 2,
+      "function_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.5,
+        "ndcg@10": 0.6309297535714575,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "d4568ba234b99515",
+      "pool_size": 1802,
+      "prepare_seconds": 0.13894280000022263,
+      "repo": "pytest-dev/pytest",
+      "retrieve_seconds": 3.663237899996602,
+      "split": "test",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.03252247488101534,
+          "unit_id": "src/_pytest/assertion/rewrite.py::_rewrite_test:335"
+        },
+        {
+          "rank": 2,
+          "score": 0.032018442622950824,
+          "unit_id": "src/_pytest/assertion/rewrite.py::AssertionRewriter.run:660"
+        },
+        {
+          "rank": 3,
+          "score": 0.028438886647841874,
+          "unit_id": "src/_pytest/assertion/rewrite.py::_read_pyc:346"
+        },
+        {
+          "rank": 4,
+          "score": 0.02786377708978328,
+          "unit_id": "src/_pytest/assertion/rewrite.py::AssertionRewritingHook.exec_module:127"
+        },
+        {
+          "rank": 5,
+          "score": 0.027783137179239824,
+          "unit_id": "src/_pytest/assertion/rewrite.py::AssertionRewritingHook.find_spec:82"
+        },
+        {
+          "rank": 6,
+          "score": 0.027443609022556388,
+          "unit_id": "src/_pytest/config/__init__.py::_iter_rewritable_modules:833"
+        },
+        {
+          "rank": 7,
+          "score": 0.026862026862026864,
+          "unit_id": "src/_pytest/assertion/rewrite.py::rewrite_asserts:395"
+        },
+        {
+          "rank": 8,
+          "score": 0.026470588235294117,
+          "unit_id": "src/_pytest/assertion/__init__.py::register_assert_rewrite:47"
+        },
+        {
+          "rank": 9,
+          "score": 0.026022913256955812,
+          "unit_id": "src/_pytest/assertion/rewrite.py::AssertionRewritingHook.__init__:59"
+        },
+        {
+          "rank": 10,
+          "score": 0.026013513513513515,
+          "unit_id": "src/_pytest/assertion/rewrite.py::AssertionRewritingHook.mark_rewrite:242"
+        }
+      ]
+    },
+    {
+      "case_id": "pytest-dev__pytest-7373",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 1,
+      "first_relevant_unit_rank": 1,
+      "function_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 0.8772153153380493,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 2,
+      "pool_sha": "23b63778fa4a0cfe",
+      "pool_size": 1540,
+      "prepare_seconds": 0.3206357000017306,
+      "repo": "pytest-dev/pytest",
+      "retrieve_seconds": 0.9718604999980016,
+      "split": "test",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.032266458495966696,
+          "unit_id": "src/_pytest/mark/evaluate.py::MarkEvaluator._istrue:82"
+        },
+        {
+          "rank": 2,
+          "score": 0.03200204813108039,
+          "unit_id": "src/_pytest/skipping.py::pytest_runtest_setup:83"
+        },
+        {
+          "rank": 3,
+          "score": 0.031054405392392875,
+          "unit_id": "src/_pytest/mark/evaluate.py::MarkEvaluator.istrue:57"
+        },
+        {
+          "rank": 4,
+          "score": 0.030776515151515152,
+          "unit_id": "src/_pytest/mark/evaluate.py::cached_eval:21"
+        },
+        {
+          "rank": 5,
+          "score": 0.03028233151183971,
+          "unit_id": "src/_pytest/skipping.py::pytest_configure:43"
+        },
+        {
+          "rank": 6,
+          "score": 0.029211087420042643,
+          "unit_id": "src/_pytest/skipping.py::pytest_runtest_makereport:135"
+        },
+        {
+          "rank": 7,
+          "score": 0.02877846790890269,
+          "unit_id": "src/_pytest/mark/evaluate.py::MarkEvaluator._getglobals:76"
+        },
+        {
+          "rank": 8,
+          "score": 0.028205128205128206,
+          "unit_id": "src/_pytest/mark/evaluate.py::MarkEvaluator.__bool__:41"
+        },
+        {
+          "rank": 9,
+          "score": 0.027598020555767037,
+          "unit_id": "src/_pytest/unittest.py::TestCaseFunction.addSkip:214"
+        },
+        {
+          "rank": 10,
+          "score": 0.027071520029266508,
+          "unit_id": "src/_pytest/mark/evaluate.py::MarkEvaluator.getexplanation:128"
+        }
+      ]
+    },
+    {
+      "case_id": "pytest-dev__pytest-7490",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.2,
+        "ndcg@10": 0.38685280723454163,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 5,
+      "first_relevant_unit_rank": 10,
+      "function_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 0.0,
+        "mrr": 0.1,
+        "ndcg@10": 0.17723928678404774,
+        "recall@10": 0.5,
+        "recall@5": 0.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 2,
+      "pool_sha": "063e0f2e051a0bd5",
+      "pool_size": 1527,
+      "prepare_seconds": 0.25641019999966375,
+      "repo": "pytest-dev/pytest",
+      "retrieve_seconds": 3.5226301000002422,
+      "split": "test",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.032266458495966696,
+          "unit_id": "src/_pytest/nodes.py::Node.add_marker:261"
+        },
+        {
+          "rank": 2,
+          "score": 0.02928692699490662,
+          "unit_id": "src/_pytest/fixtures.py::FixtureRequest.applymarker:549"
+        },
+        {
+          "rank": 3,
+          "score": 0.028665028665028666,
+          "unit_id": "src/_pytest/mark/structures.py::MarkGenerator.__getattr__:480"
+        },
+        {
+          "rank": 4,
+          "score": 0.028125,
+          "unit_id": "src/_pytest/python.py::pytest_pycollect_makeitem:214"
+        },
+        {
+          "rank": 5,
+          "score": 0.026878868258178604,
+          "unit_id": "src/_pytest/skipping.py::evaluate_xfail_marks:200"
+        },
+        {
+          "rank": 6,
+          "score": 0.026161328190508135,
+          "unit_id": "src/_pytest/skipping.py::pytest_configure:48"
+        },
+        {
+          "rank": 7,
+          "score": 0.024634110998406025,
+          "unit_id": "src/_pytest/mark/structures.py::get_empty_parameterset_mark:42"
+        },
+        {
+          "rank": 8,
+          "score": 0.02332285115303983,
+          "unit_id": "src/_pytest/mark/structures.py::_XfailMarkDecorator.__call__:409"
+        },
+        {
+          "rank": 9,
+          "score": 0.023296291337528453,
+          "unit_id": "src/_pytest/skipping.py::pytest_runtest_makereport:260"
+        },
+        {
+          "rank": 10,
+          "score": 0.02326468344774981,
+          "unit_id": "src/_pytest/skipping.py::pytest_runtest_setup:232"
+        }
+      ]
+    },
+    {
+      "case_id": "pytest-dev__pytest-9359",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.25,
+        "ndcg@10": 0.43067655807339306,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 4,
+      "first_relevant_unit_rank": 8,
+      "function_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 0.0,
+        "mrr": 0.125,
+        "ndcg@10": 0.31546487678572877,
+        "recall@10": 1.0,
+        "recall@5": 0.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "5ad53b58bff1bbfc",
+      "pool_size": 1656,
+      "prepare_seconds": 0.2052889000005962,
+      "repo": "pytest-dev/pytest",
+      "retrieve_seconds": 3.557490899998811,
+      "split": "test",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.0315136476426799,
+          "unit_id": "src/_pytest/assertion/util.py::assertrepr_compare:138"
+        },
+        {
+          "rank": 2,
+          "score": 0.029437229437229435,
+          "unit_id": "src/_pytest/python_api.py::raises:774"
+        },
+        {
+          "rank": 3,
+          "score": 0.029418126757516764,
+          "unit_id": "src/_pytest/assertion/util.py::_compare_eq_sequence:318"
+        },
+        {
+          "rank": 4,
+          "score": 0.029051670471052088,
+          "unit_id": "src/_pytest/assertion/rewrite.py::AssertionRewriter.visit_Assert:846"
+        },
+        {
+          "rank": 5,
+          "score": 0.02758751902587519,
+          "unit_id": "src/_pytest/assertion/util.py::_diff_text:215"
+        },
+        {
+          "rank": 6,
+          "score": 0.02603648424543947,
+          "unit_id": "src/_pytest/assertion/util.py::_compare_eq_dict:388"
+        },
+        {
+          "rank": 7,
+          "score": 0.02557544757033248,
+          "unit_id": "src/_pytest/assertion/util.py::_compare_eq_set:371"
+        },
+        {
+          "rank": 8,
+          "score": 0.02541827541827542,
+          "unit_id": "src/_pytest/_code/source.py::get_statement_startend2:146"
+        },
+        {
+          "rank": 9,
+          "score": 0.02488202488202488,
+          "unit_id": "src/_pytest/assertion/rewrite.py::AssertionRewriter.run:679"
+        },
+        {
+          "rank": 10,
+          "score": 0.023430301434776885,
+          "unit_id": "src/_pytest/assertion/__init__.py::pytest_runtest_protocol:115"
+        }
+      ]
+    },
+    {
+      "case_id": "pytest-dev__pytest-6116",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.5,
+        "ndcg@10": 0.6309297535714575,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 2,
+      "first_relevant_unit_rank": 2,
+      "function_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.5,
+        "ndcg@10": 0.6309297535714575,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "79de4a87494e5ed0",
+      "pool_size": 1417,
+      "prepare_seconds": 0.20347620000029565,
+      "repo": "pytest-dev/pytest",
+      "retrieve_seconds": 0.6943561999978556,
+      "split": "test",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.029116045245077504,
+          "unit_id": "src/_pytest/runner.py::pytest_make_collect_report:248"
+        },
+        {
+          "rank": 2,
+          "score": 0.027651515151515153,
+          "unit_id": "src/_pytest/main.py::pytest_addoption:46"
+        },
+        {
+          "rank": 3,
+          "score": 0.026919758412424506,
+          "unit_id": "src/_pytest/hookspec.py::pytest_pycollect_makemodule:249"
+        },
+        {
+          "rank": 4,
+          "score": 0.025451688923802042,
+          "unit_id": "src/_pytest/main.py::Session._matchnodes:666"
+        },
+        {
+          "rank": 5,
+          "score": 0.02541827541827542,
+          "unit_id": "src/_pytest/runner.py::collect_one_node:365"
+        },
+        {
+          "rank": 6,
+          "score": 0.024909420289855072,
+          "unit_id": "src/_pytest/config/argparsing.py::Argument._set_opt_strings:253"
+        },
+        {
+          "rank": 7,
+          "score": 0.023746383799421407,
+          "unit_id": "src/_pytest/main.py::Session._perform_collect:457"
+        },
+        {
+          "rank": 8,
+          "score": 0.023685515873015872,
+          "unit_id": "src/_pytest/capture.py::pytest_addoption:20"
+        },
+        {
+          "rank": 9,
+          "score": 0.022857889237199582,
+          "unit_id": "src/_pytest/config/argparsing.py::DropShorterLongHelpFormatter._format_action_invocation:424"
+        },
+        {
+          "rank": 10,
+          "score": 0.02233220666344761,
+          "unit_id": "src/_pytest/doctest.py::pytest_addoption:51"
+        }
+      ]
+    },
+    {
+      "case_id": "pytest-dev__pytest-7432",
+      "file_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "first_relevant_file_rank": 1,
+      "first_relevant_unit_rank": 1,
+      "function_metrics": {
+        "hit@10": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "ndcg@10": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "gold_files": 1,
+      "gold_files_without_candidates": 0,
+      "gold_units": 1,
+      "pool_sha": "f56649d3fc8e0650",
+      "pool_size": 1541,
+      "prepare_seconds": 0.10128350000013597,
+      "repo": "pytest-dev/pytest",
+      "retrieve_seconds": 0.7485377999983029,
+      "split": "test",
+      "status": "ok",
+      "top_candidates": [
+        {
+          "rank": 1,
+          "score": 0.03252247488101534,
+          "unit_id": "src/_pytest/skipping.py::pytest_runtest_makereport:260"
+        },
+        {
+          "rank": 2,
+          "score": 0.03252247488101534,
+          "unit_id": "src/_pytest/skipping.py::pytest_runtest_setup:232"
+        },
+        {
+          "rank": 3,
+          "score": 0.03125763125763126,
+          "unit_id": "src/_pytest/skipping.py::evaluate_skip_marks:159"
+        },
+        {
+          "rank": 4,
+          "score": 0.030798389007344232,
+          "unit_id": "src/_pytest/skipping.py::pytest_runtest_call:247"
+        },
+        {
+          "rank": 5,
+          "score": 0.030776515151515152,
+          "unit_id": "src/_pytest/skipping.py::evaluate_xfail_marks:200"
+        },
+        {
+          "rank": 6,
+          "score": 0.03055037313432836,
+          "unit_id": "src/_pytest/skipping.py::pytest_configure:49"
+        },
+        {
+          "rank": 7,
+          "score": 0.029411764705882353,
+          "unit_id": "src/_pytest/unittest.py::pytest_runtest_makereport:291"
+        },
+        {
+          "rank": 8,
+          "score": 0.0288981288981289,
+          "unit_id": "src/_pytest/outcomes.py::skip:122"
+        },
+        {
+          "rank": 9,
+          "score": 0.027984344422700584,
+          "unit_id": "src/_pytest/skipping.py::pytest_addoption:30"
+        },
+        {
+          "rank": 10,
+          "score": 0.02761904761904762,
+          "unit_id": "src/_pytest/hookspec.py::pytest_runtest_protocol:393"
+        }
+      ]
+    }
+  ],
+  "config": {
+    "bootstrap_resamples": 1000,
+    "candidate_pool": "leaf units (function, method) excluding test files",
+    "cutoffs": [
+      5,
+      10
+    ],
+    "depth": 100,
+    "limit": null,
+    "ndcg_k": 10,
+    "retriever": "hybrid",
+    "retriever_params": {
+      "bm25": {
+        "b": 0.75,
+        "k1": 0.9,
+        "query_tf": "log",
+        "use_stopwords": true,
+        "w_body": 1.0,
+        "w_doc": 1.0,
+        "w_name": 3.0,
+        "w_path": 2.0
+      },
+      "dense": {
+        "batch_size": 8,
+        "code_revision": "92d97331f1f4b6a366c1f161354b9f3390cc219f",
+        "device": "cpu",
+        "embeddings_path": "data/embeddings/swerank-small-v1",
+        "include_path": true,
+        "load_timeout_seconds": 300.0,
+        "max_seq_length": 1024,
+        "model_name": "Salesforce/SweRankEmbed-Small",
+        "on_missing": "error",
+        "query_prefix": "Represent this query for searching relevant code: ",
+        "revision": "745d2a06103a66d3cfa600aa52fc0d3523010daa",
+        "trust_remote_code": true,
+        "weights_sha256": "e40687da7f148e684648691facbaa2222503829afb9d21b9b3913034bef14f41"
+      },
+      "fusion": {
+        "depth": 200,
+        "rrf_k": 60,
+        "w_bm25": 1.0,
+        "w_dense": 1.0
+      }
+    },
+    "seed": 0,
+    "split": "test"
+  },
+  "counts": {
+    "cases_in_dataset": 41,
+    "evaluated": 20,
+    "excluded": {
+      "other_split": 21
+    },
+    "selected": 20
+  },
+  "dataset": {
+    "path": "swebench_lite_subset.jsonl",
+    "sha256": "e8a714baaf8831a13d655e2ff9d28702f9617bf8a126bdcf38f81a78b36a903c"
+  },
+  "definitions": {
+    "file level": "The ranked units are collapsed to distinct files (first occurrence kept); relevant files are the Python files the fix modifies.",
+    "function level": "Relevant units are the functions/methods the fix modifies, evaluated only on cases that have at least one such unit.",
+    "hit@k": "1 if at least one relevant item is in the top k (project.md 'Recall@k').",
+    "mrr": "Reciprocal rank of the first relevant item in the returned list (0 if absent), averaged over cases.",
+    "ndcg@k": "Binary-relevance nDCG over the top k.",
+    "recall@k": "Fraction of the case's relevant items found in the top k."
+  },
+  "environment": {
+    "platform": "win32-10.0.26200",
+    "python": "3.13.1",
+    "repomind_commit": "8479231e60913d079d939033f204b43b9a5264b3",
+    "repomind_dirty": true
+  },
+  "failures": [],
+  "generated_at": "2026-10-23T15:19:50+00:00"
+}

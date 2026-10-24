@@ -207,6 +207,13 @@ nDCG@10 numbers on the benchmark subset.
 
 ## Phase 4 — Issue Understanding
 
+> **Status (2026-10-24): steps 1-4 done.** Full set built: 321 suitable cases,
+> 293 with function labels, 164 `dev` and 157 `test`. acc@k added. Full-set BM25
+> on `test`: function hit@5 0.594, acc@5 0.566, MRR 0.468. The mention-boost
+> module is built and tested; it helped `dev` MRR (+0.030) but not `test` (+0.007,
+> n.s.), so it stays optional. Remaining: dense/hybrid on the full set needs a new
+> GPU export (Phase 5). Details: `docs/evaluation.md` section 11.
+>
 > **Revised scope (2026-10-22): evaluation scale-up + issue signals.**
 > 1. Build the eval set from all function-labeled SWE-bench Lite cases (about 274),
 >    keeping the current `test` repositories held out and adding the rest

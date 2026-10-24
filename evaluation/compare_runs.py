@@ -22,7 +22,7 @@ from typing import Any
 from evaluation.metrics import bootstrap_ci
 
 LEVELS = ("function", "file")
-METRICS = ("hit@5", "hit@10", "mrr", "ndcg@10")
+METRICS = ("hit@5", "hit@10", "acc@5", "acc@10", "mrr", "ndcg@10")
 _FIELD = {"function": "function_metrics", "file": "file_metrics"}
 
 
@@ -59,6 +59,8 @@ def paired_differences(
             continue
         if row[field] is None or other[field] is None:
             continue
+        if metric not in row[field] or metric not in other[field]:
+            continue  # metric added after one of the reports was written
         diffs.append(row[field][metric] - other[field][metric])
         repos.append(row["repo"])
     return diffs, repos

@@ -119,3 +119,10 @@ def test_markdown_and_cli(tmp_path: Path, capsys):
     pb.write_text(json.dumps(report({"c1": 1.0}, sha="different")))
     assert main(["--a", str(pa), "--b", str(pb)]) == 2
     assert main(["--a", str(tmp_path / "missing.json"), "--b", str(pb)]) == 2
+
+
+def test_reports_without_a_newer_metric_still_compare():
+    a, b = report({"c1": 0.0, "c2": 1.0}), report({"c1": 1.0, "c2": 1.0})
+    result = compare(a, b, n_resamples=50)
+    assert result["levels"]["function"]["acc@5"] is None  # absent in both reports
+    assert result["levels"]["function"]["mrr"]["n"] == 2

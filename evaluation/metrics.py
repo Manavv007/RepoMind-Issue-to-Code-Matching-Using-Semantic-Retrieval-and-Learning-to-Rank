@@ -5,6 +5,8 @@ Definitions (also written into every report):
 * **hit@k** — 1 if at least one relevant item is in the top *k*, else 0. This is the
   "Recall@k" of project.md §11 (a case counts if *any* known location is found).
 * **recall@k** — fraction of the case's relevant items found in the top *k*.
+* **acc@k** — 1 if *all* relevant items are in the top *k*: the Acc@k reported by
+  Agentless, LocAgent and SweRank, so numbers are comparable with those papers.
 * **MRR** — reciprocal rank of the first relevant item within the returned list
   (0 if none is returned); averaged over cases.
 * **nDCG@k** — binary-relevance nDCG: DCG of the ranking over the ideal DCG for
@@ -55,6 +57,14 @@ def recall_at_k(ranked: Sequence[str], relevant: Collection[str], k: int) -> flo
     return len(rel & set(ranked[:k])) / len(rel)
 
 
+def acc_at_k(ranked: Sequence[str], relevant: Collection[str], k: int) -> float:
+    """1 if *every* relevant item is in the top k (Agentless/SweRank "Acc@k")."""
+    rel = set(relevant)
+    if not rel:
+        raise ValueError("acc@k is undefined without relevant items.")
+    return 1.0 if rel <= set(ranked[:k]) else 0.0
+
+
 def reciprocal_rank(ranked: Sequence[str], relevant: Collection[str]) -> float:
     rank = rank_of_first(ranked, relevant)
     return 0.0 if rank is None else 1.0 / rank
@@ -85,6 +95,7 @@ def score_ranking(
     for k in cutoffs:
         scores[f"hit@{k}"] = hit_at_k(ranked, relevant, k)
         scores[f"recall@{k}"] = recall_at_k(ranked, relevant, k)
+        scores[f"acc@{k}"] = acc_at_k(ranked, relevant, k)
     scores["mrr"] = reciprocal_rank(ranked, relevant)
     scores[f"ndcg@{ndcg_k}"] = ndcg_at_k(ranked, relevant, ndcg_k)
     return scores
